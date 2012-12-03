@@ -37,6 +37,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
+    diff-lcs (1.1.3)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -53,6 +54,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.19)
     multi_json (1.4.0)
+    oauth (0.4.7)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -79,6 +81,16 @@ GEM
     rake (10.0.2)
     rdoc (3.12)
       json (~> 1.4)
+    rest-client (1.6.7)
+      mime-types (>= 1.16)
+    rspec (2.12.0)
+      rspec-core (~> 2.12.0)
+      rspec-expectations (~> 2.12.0)
+      rspec-mocks (~> 2.12.0)
+    rspec-core (2.12.1)
+    rspec-expectations (2.12.0)
+      diff-lcs (~> 1.1.3)
+    rspec-mocks (2.12.0)
     sass (3.2.3)
     sass-rails (3.2.5)
       railties (~> 3.2.0)
@@ -99,6 +111,12 @@ GEM
     uglifier (1.3.0)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    whos_using_what (0.1.5)
+      json
+      oauth
+      rake
+      rest-client
+      rspec
 
 PLATFORMS
   ruby
@@ -110,3 +128,4 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
+  whos_using_what (~> 0.1.5)
