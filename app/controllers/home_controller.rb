@@ -12,6 +12,9 @@ class HomeController < ApplicationController
 
   def index
 
+    @books = []
+    @books[0] = "tesst"
+
     puts @linkedin_client.people_search_for_company( "84", "software", "sap")
   end
 end
