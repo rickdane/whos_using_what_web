@@ -21,7 +21,7 @@ class PostsController < ApplicationController
 
     #puts @linkedin_client.people_search_for_company( "84", "software", "sap")
 
-    results = @linkedin_client.gather_company_data(@start, nil, nil)
+    results = @linkedin_client.gather_company_data(0, nil, nil)
 
     query = "ruby"
 
