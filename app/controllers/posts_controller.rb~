@@ -19,7 +19,21 @@ class PostsController < ApplicationController
     @books = []
     @books[0] = "tesst"
 
-    puts @linkedin_client.people_search_for_company( "84", "software", "sap")
+    #puts @linkedin_client.people_search_for_company( "84", "software", "sap")
+
+    results = linkedin_client.gather_company_data(@start, nil, nil)
+
+    query = "ruby"
+
+    results.each do |key, value|
+      uses = search_client.search(query, value["websiteUrl"])
+      if (uses)
+        puts value["universalName"] << " probably uses " << query
+      else
+      end
+
+      sleep 1
+    end
 
     respond_to do |format|
       format.html # index.html.erb
