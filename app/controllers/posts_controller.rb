@@ -4,9 +4,8 @@ require 'yaml'
 class PostsController < ApplicationController
 
   def initialize
-    @config = YAML.load_file(File.expand_path("../../../config/linkedin_client.yaml", __FILE__))
 
-    @linkedin_client = LinkedinClient.new(@config["linkedin.api_key"], @config["linkedin.api_secret"], @config["linkedin.user_token"], @config["linkedin.user_secret"], "http://linkedin.com")
+    @linkedin_client = LinkedinClient.new(ENV["linkedin.api_key"], ENV["linkedin.api_secret"], ENV["linkedin.user_token"], ENV["linkedin.user_secret"], "http://linkedin.com")
 
   end
 
