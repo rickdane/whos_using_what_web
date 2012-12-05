@@ -7,6 +7,7 @@ class PostsController < ApplicationController
 
     @linkedin_client = LinkedinClient.new(ENV["linkedin.api_key"], ENV["linkedin.api_secret"], ENV["linkedin.user_token"], ENV["linkedin.user_secret"], "http://linkedin.com")
 
+   @search_client = SearchClient.new
   end
 
 
@@ -26,7 +27,7 @@ class PostsController < ApplicationController
     query = "ruby"
 
     results.each do |key, value|
-      uses = search_client.search(query, value["websiteUrl"])
+      uses = @search_client.search(query, value["websiteUrl"])
       if (uses)
         puts value["universalName"] << " probably uses " << query
       else
