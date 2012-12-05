@@ -1,4 +1,6 @@
 WhosUsingWhatWeb::Application.routes.draw do
-    resources :posts
-    root :to => "posts#index"
+    resources :companies
+    root :to => "home#index"
+
+    get "companies" => "companies#index"
   end

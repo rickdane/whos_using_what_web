@@ -5,9 +5,17 @@ class PostsController < ApplicationController
 
   def initialize
 
+    unless Rails.env.production?
+      @config = YAML.load_file(File.expand_path("../../../config/keys.env", __FILE__))
+      ENV["linkedin.api_key"]= @config["linkedin.api_key"]
+      ENV["linkedin.api_secret"] = @config["linkedin.api_secret"]
+      ENV["linkedin.user_token"] = @config["linkedin.user_token"]
+      ENV["linkedin.user_secret"]= @config["linkedin.user_secret"]
+    end
+
     @linkedin_client = LinkedinClient.new(ENV["linkedin.api_key"], ENV["linkedin.api_secret"], ENV["linkedin.user_token"], ENV["linkedin.user_secret"], "http://linkedin.com")
 
-   @search_client = SearchClient.new
+    @search_client = SearchClient.new
   end
 
 
@@ -16,14 +24,15 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
 
-    puts ".. whos using what"
+
     @books = []
     @books[0] = "tesst"
 
     #puts @linkedin_client.people_search_for_company( "84", "software", "sap")
 
-    results = @linkedin_client.gather_company_data(0, nil, nil)
+    # results = @linkedin_client.gather_company_data(0, nil, nil)
 
+=begin
     query = "ruby"
 
     results.each do |key, value|
@@ -35,11 +44,16 @@ class PostsController < ApplicationController
 
       sleep 1
     end
+=end
 
+
+=begin
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
     end
+=end
+
   end
 
   # GET /posts/1

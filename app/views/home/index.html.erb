@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -18,17 +18,12 @@
   </script>
 </head>
 <div data-role="header">
-  <h1>Listing posts</h1>
+  <h1>Who's Using What home</h1>
 </div>
 
 <div data-role="content">
-  <ul data-role="listview">
-    <% @posts.each do |post| %>
-        <li>
-          <%= link_to post.title, post %>
-          <%= link_to 'edit post', edit_post_path(post), "data-icon" => "gear" %>
-        </li>
-    <% end %>
-  </ul>
+          Who' Using what?
+  <br/>
+  <%= link_to 'New Company', new_company_path %>
 </div>
 </html>

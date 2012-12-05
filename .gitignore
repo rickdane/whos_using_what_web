@@ -15,3 +15,4 @@
 /tmp
 
 /config/linkedin_client.yaml
+/config/*.env
