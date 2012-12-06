@@ -13,6 +13,8 @@ gem 'whos_using_what', '~> 0.1.5'
 gem 'pg'
 gem 'rack'
 gem 'handler'
+gem 'omniauth'
+gem 'omniauth-linkedin'
 
 
 # Gems used only for assets and not required

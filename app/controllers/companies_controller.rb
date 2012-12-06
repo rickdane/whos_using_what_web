@@ -1,9 +1,31 @@
 class CompaniesController < ApplicationController
+
+  before_filter :initial_filter
+
+  #todo make this as mix-in method for use in other controllers
+  def initial_filter
+    @cur_view_user = Hash.new
+
+    logged_in = session[:logged_in]
+
+    if  logged_in == nil
+      logged_in = false
+      #todo figure out how to use template here
+    elsif logged_in
+      #todo remove any sensitive data from view layer user object after clone
+      @cur_view_user["user"] = self.current_user.clone
+    end
+    @cur_view_user["logged_in"] = logged_in
+
+  end
+
   layout "companies"
   # GET /companies
   # GET /companies.json
   def index
     @companies = Company.all
+
+    @current_user ||= User.find_by_id(session[:user_id])
 
     respond_to do |format|
       format.html # index.html.erb

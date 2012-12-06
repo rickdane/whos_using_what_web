@@ -1,6 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
-      xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
   <meta charset="utf-8"/>
@@ -21,12 +20,6 @@
 
 <div data-role="page">
   <div id="container1">
-    <% if @cur_view_user["logged_in"] %>
-        <%= render "shared/menu_logged_in" %>
-    <% else %>
-        <%= render "shared/menu_logged_out" %>
-    <% end %>
-    </br>
     <%= yield %>
   </div>
 </div>
