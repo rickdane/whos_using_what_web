@@ -54,6 +54,7 @@ class CompaniesController < ApplicationController
     end
   end
 
+
   # PUT /companies/1
   # PUT /companies/1.json
   def update
