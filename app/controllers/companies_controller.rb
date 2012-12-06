@@ -1,4 +1,5 @@
 class CompaniesController < ApplicationController
+  layout "companies"
   # GET /companies
   # GET /companies.json
   def index
