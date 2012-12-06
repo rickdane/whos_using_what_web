@@ -3,9 +3,9 @@ class SessionsController < ApplicationController
   end
 
   def create
+
     auth_hash = request.env['omniauth.auth']
     @authorization = Authorization.find_by_provider_and_uid(auth_hash["provider"], auth_hash["uid"])
-    @authorization
     #display container variable
     @wrapper_authorization = Hash.new
     if @authorization
@@ -37,5 +37,7 @@ class SessionsController < ApplicationController
     session[:logged_in] = false
     session[:user_id] = nil
     @current_user = nil
+
+    redirect_to :controller => 'companies', :action => 'index'
   end
 end

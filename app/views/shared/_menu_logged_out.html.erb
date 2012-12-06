@@ -1,1 +1,20 @@
-<a href="/auth/linkedin" target="_blank">Sign in</a>
+<script type="text/javascript">
+
+    var pollForLoginStatus = function () {
+        var it = 0
+        var refreshId = setInterval(function () {
+            document.location.reload(true)
+
+            if (it > 12)         {
+                //todo have this pick up on when it is logged in so we can kill it ealier, if possible
+                clearInterval(refreshId);
+            }
+
+            it++;
+        }, 4000);
+    }
+
+</script>
+
+<a href="/auth/linkedin" target="_blank" onclick="pollForLoginStatus()">Sign in</a>
+

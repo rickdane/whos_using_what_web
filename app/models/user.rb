@@ -6,13 +6,9 @@ class User < ActiveRecord::Base
   def apply_omniauth(omniauth)
     case omniauth['provider']
       when 'linkedin'
-        self.apply_facebook(omniauth)
+        self.apply_linkedin(omniauth)
     end
     authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'], :token =>(omniauth['credentials']['token'] rescue nil))
-  end
-
-  def facebook
-    @fb_user ||= FbGraph::User.me(self.authentications.find_by_provider('facebook').token)
   end
 
 
