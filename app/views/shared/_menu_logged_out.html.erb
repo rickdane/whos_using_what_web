@@ -5,13 +5,13 @@
         var refreshId = setInterval(function () {
             document.location.reload(true)
 
-            if (it > 12)         {
+            if (it > 20)         {
                 //todo have this pick up on when it is logged in so we can kill it ealier, if possible
                 clearInterval(refreshId);
             }
 
             it++;
-        }, 4000);
+        }, 3000);
     }
 
 </script>
