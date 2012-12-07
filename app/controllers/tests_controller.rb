@@ -28,7 +28,7 @@ class TestsController < ApplicationController
   # GET /tests/new
   # GET /tests/new.json
   def new
-
+   @test = Test.new
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @test }
