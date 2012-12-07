@@ -12,7 +12,9 @@ end
 gem 'whos_using_what', '~> 0.1.5'
 gem 'pg'
 gem 'rack'
+gem 'mongo'
 gem 'handler'
+gem 'bson_ext'
 gem 'omniauth'
 gem 'omniauth-linkedin'
 
