@@ -26,9 +26,10 @@ if (ENV["mongo.uri"] == nil)
   ENV["mongo.dbname"] = @config["mongo.dbname"]
   ENV["mongo.uri"] = "mongodb://" << ENV["mongo.user"] << ":" << ENV["mongo.pass"] << "@" <<
       ENV["mongo.host"] <<":" << ENV["mongo.port"] <<"/" << ENV["mongo.dbname"]
-
-  @db = get_connection
 end
+
+ get_connection
+
 
 
   def self.get_mongo_connection
