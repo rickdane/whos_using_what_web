@@ -17,7 +17,7 @@ class MongoHelper
 
   end
 
-
+if (ENV["mongo.uri"] == nil)
   @config = YAML.load_file(File.expand_path("../../../config/mongo.env", __FILE__))
   ENV["mongo.host"]= @config["mongo.host"]
   ENV["mongo.port"]= @config["mongo.port"].to_s
@@ -28,6 +28,7 @@ class MongoHelper
       ENV["mongo.host"] <<":" << ENV["mongo.port"] <<"/" << ENV["mongo.dbname"]
 
   @db = get_connection
+end
 
 
   def self.get_mongo_connection
