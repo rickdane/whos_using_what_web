@@ -16,4 +16,5 @@ WhosUsingWhatWeb::Application.routes.draw do
 
   match 'company/create', :to => 'companies#create'
   match 'people/search', :to => 'tests#search'
+
 end

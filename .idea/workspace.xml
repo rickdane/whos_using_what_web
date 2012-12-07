@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4723b746-1f57-4366-90fa-a10e932e7630" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/logic/linkedin_api_client.rb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/tests.html.erb" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/tests/search_results.html.erb" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/app/nosql/mongodb_test.rb" afterPath="$PROJECT_DIR$/app/nosql/mongo_helper.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/companies_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/companies_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/companies/index.html.erb" afterPath="$PROJECT_DIR$/app/views/companies/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/tests_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/tests_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/tests/search_results.html.erb" afterPath="$PROJECT_DIR$/app/views/tests/search_results.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/schema.rb" afterPath="$PROJECT_DIR$/db/schema.rb" />
     </list>
     <ignored path="whos_using_what_web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +27,7 @@
       <file leaf-file-name="tests_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/tests_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="66" column="19" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.0">
+            <state line="21" column="71" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -41,7 +36,25 @@
       <file leaf-file-name="_form.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/tests/_form.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="38" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+            <state line="13" column="35" selection-start="427" selection-end="427" vertical-scroll-proportion="0.48507464">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="form_helper.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_view/helpers/form_helper.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="35" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search_results.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tests/search_results.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="0" selection-start="2" selection-end="2" vertical-scroll-proportion="-1.25">
               <folding />
             </state>
           </provider>
@@ -50,7 +63,7 @@
       <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="45" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
+            <state line="6" column="23" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -80,9 +93,9 @@
         <option value="$PROJECT_DIR$/app/views/layouts/tests.html.erb" />
         <option value="$PROJECT_DIR$/app/logic/linkedin_api_client.rb" />
         <option value="$PROJECT_DIR$/app/views/tests/new.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/tests/search_results.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/tests_controller.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/tests/_form.html.erb" />
       </list>
     </option>
@@ -275,6 +288,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whos_using_what_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whos_using_what_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -541,13 +572,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1537" height="905" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23434344" sideWeight="0.5878553" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23434344" sideWeight="0.23901808" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23434344" sideWeight="0.3397933" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4121447" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -629,13 +660,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_view/helpers/form_helper.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1319" column="10" selection-start="56692" selection-end="56692" vertical-scroll-proportion="8.494432">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/companies.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="145" selection-start="835" selection-end="835" vertical-scroll-proportion="-11.875">
@@ -685,13 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/tests/search_results.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="14" selection-start="14" selection-end="14" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/companies/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="23" selection-start="25" selection-end="53" vertical-scroll-proportion="-1.25">
@@ -708,21 +725,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="45" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0">
+        <state line="6" column="23" selection-start="134" selection-end="134" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/tests_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="19" selection-start="1288" selection-end="1288" vertical-scroll-proportion="0.0">
+        <state line="21" column="71" selection-start="571" selection-end="571" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_view/helpers/form_helper.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="35" selection-start="1204" selection-end="1204" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tests/search_results.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="2" selection-end="2" vertical-scroll-proportion="-1.25">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/tests/_form.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="38" selection-start="38" selection-end="38" vertical-scroll-proportion="0.0">
+        <state line="13" column="35" selection-start="427" selection-end="427" vertical-scroll-proportion="0.48507464">
           <folding />
         </state>
       </provider>
