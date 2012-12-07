@@ -9,11 +9,11 @@ class MongodbTest
 
   def initialize
     @config = YAML.load_file(File.expand_path("../../../config/mongo.env", __FILE__))
-    ENV["mongo.host"]= @config["alex.mongohq.com"]
-    ENV["mongo.port"]= @config["10034"]
-    ENV["mongo.user"]= @config["heroku"]
-    ENV["mongo.pass"]= @config["zexen9090"]
-    ENV["mongo.dbname"] = @config["app9758211"]
+    ENV["mongo.host"]= @config["mongo.host"]
+    ENV["mongo.port"]= @config["mongo.port"]
+    ENV["mongo.user"]= @config["mongo.user"]
+    ENV["mongo.pass"]= @config["mongo.pass"]
+    ENV["mongo.dbname"] = @config["mongo.dbname"]
     ENV["mongo.uri"] = "mongodb://" << ENV["mongo.user"] << ":" << ENV["mongo.pass"] << "@" <<
         ENV["mongo.host"] <<":" << ENV["mongo.port"] <<"/" << ENV["mongo.dbname"]
 
