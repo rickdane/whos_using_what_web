@@ -1,6 +1,14 @@
+require_relative '../nosql/mongo_helper'
+
 class CompaniesController < ApplicationController
 
   before_filter :initial_filter
+
+  def initialize
+
+    @mongo_client = MongoHelper.get_mongo_connection
+
+  end
 
   #todo make this as mix-in method for use in other controllers
   def initial_filter
@@ -19,10 +27,17 @@ class CompaniesController < ApplicationController
 
   end
 
+
   layout "companies"
   # GET /companies
   # GET /companies.json
   def index
+
+    @coll = @mongo_client['test']
+
+
+=begin
+
     @companies = Company.all
 
     @current_user ||= User.find_by_id(session[:user_id])
@@ -31,6 +46,7 @@ class CompaniesController < ApplicationController
       format.html # index.html.erb
       format.json { render json: @companies }
     end
+=end
   end
 
   # GET /companies/1
