@@ -38,7 +38,8 @@ class TestsController < ApplicationController
   # POST /tests
   # POST /tests.json
   def search
-    puts "doing search"
+    @test = Test.new(params[:test])
+    puts "search query is: " + @test.name
 
 
     render 'tests/search_results'
