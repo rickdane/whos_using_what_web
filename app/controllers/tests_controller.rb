@@ -39,6 +39,12 @@ class TestsController < ApplicationController
   # POST /tests.json
   def search
     @test = Test.new(params[:test])
+    @results = Array.new
+    
+    #mock results
+    @results.push("some company")
+    @results.push("another company")
+    
     puts "search query is: " + @test.name
 
 
