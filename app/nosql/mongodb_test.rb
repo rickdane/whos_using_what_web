@@ -10,7 +10,7 @@ class MongodbTest
   def initialize
     @config = YAML.load_file(File.expand_path("../../../config/mongo.env", __FILE__))
     ENV["mongo.host"]= @config["mongo.host"]
-    ENV["mongo.port"]= @config["mongo.port"]
+    ENV["mongo.port"]= @config["mongo.port"].to_s
     ENV["mongo.user"]= @config["mongo.user"]
     ENV["mongo.pass"]= @config["mongo.pass"]
     ENV["mongo.dbname"] = @config["mongo.dbname"]
