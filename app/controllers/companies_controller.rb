@@ -6,6 +6,8 @@ class CompaniesController < ApplicationController
 
   def initialize
 
+    super
+
     @mongo_client = MongoHelper.get_mongo_connection
 
   end

@@ -19,8 +19,15 @@
 
 
 <div data-role="page">
-
-  <%= yield %>
+  <div id="container1">
+    <% if @cur_view_user["logged_in"] %>
+        <%= render "shared/menu_logged_in" %>
+    <% else %>
+        <%= render "shared/menu_logged_out" %>
+    <% end %>
+    </br>
+    <%= yield %>
+  </div>
 </div>
 </body>
 </html>

@@ -2,6 +2,15 @@ class SessionsController < ApplicationController
   def new
   end
 
+  def create_session (user)
+    #todo obviously bad practice to use email for this, just for testing, need to implement this properly
+    remember_token = user.email
+    cookies[:remember_token] = {value: remember_token,
+                                expires: 20.years.from_now.utc}
+    self.current_user = user
+
+  end
+
   def create
 
     auth_hash = request.env['omniauth.auth']
@@ -18,15 +27,6 @@ class SessionsController < ApplicationController
     end
 
     create_session (@authorization.user)
-  end
-
-  def create_session (user)
-    #todo obviously bad practice to use email for this, just for testing, need to implement this properly
-    remember_token = user.email
-    cookies[:remember_token] = {value: remember_token,
-                                expires: 20.years.from_now.utc}
-    self.current_user = user
-
   end
 
   def failure

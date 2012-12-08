@@ -1,6 +1,21 @@
+require 'whos_using_what/linkedin_client'
+
 class SearchesController < ApplicationController
 
   before_filter :initial_filter
+
+  def initialize
+    super
+
+    unless Rails.env.production?
+      @config = YAML.load_file(File.expand_path("../../../config/keys.env", __FILE__))
+      ENV["linkedin.api_key"]= @config["linkedin.api_key"]
+      ENV["linkedin.api_secret"] = @config["linkedin.api_secret"]
+      ENV["linkedin.user_token"] = @config["linkedin.user_token"]
+      ENV["linkedin.user_secret"]= @config["linkedin.user_secret"]
+    end
+
+  end
 
   #todo make this as mix-in method for use in other controllers
   def initial_filter
@@ -40,11 +55,14 @@ class SearchesController < ApplicationController
   def search
     @search = Search.new(params[:search])
     @results = Array.new
-    
+
+    #todo grab user info to verify linkedin
+    @linkedin_client = LinkedinClient.new(ENV["linkedin.api_key"], ENV["linkedin.api_secret"], ENV["linkedin.user_token"], ENV["linkedin.user_secret"], "http://linkedin.com")
+
     #mock results
     @results.push("some company")
     @results.push("another company")
-    
+
     puts "search query is: " + @search.name
 
 
