@@ -28,27 +28,27 @@ class SearchesController < ApplicationController
   # GET /tests/new
   # GET /tests/new.json
   def new
-   @test = Search.new
+    @search = Search.new
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @test }
+      format.json { render json: @search }
     end
   end
 
   # POST /tests
   # POST /tests.json
   def search
-    @test = Search.new(params[:test])
+    @search = Search.new(params[:search])
     @results = Array.new
     
     #mock results
     @results.push("some company")
     @results.push("another company")
     
-    puts "search query is: " + @test.name
+    puts "search query is: " + @search.name
 
 
-    render 'tests/search_results'
+    render 'searches/search_results'
   end
 
 end
