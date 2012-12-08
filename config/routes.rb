@@ -11,7 +11,7 @@ WhosUsingWhatWeb::Application.routes.draw do
   match '/auth/failure', :to => 'sessions#failure'
 
   resources :companies
-  resources :tests
+  resources :searches
   root :to => "companies#index"
 
   match 'company/create', :to => 'companies#create'

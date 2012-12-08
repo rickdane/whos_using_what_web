@@ -1,6 +1,6 @@
 class CreateTests < ActiveRecord::Migration
   def change
-    create_table :tests do |t|
+    create_table :searches do |t|
       t.string :name
 
       t.timestamps

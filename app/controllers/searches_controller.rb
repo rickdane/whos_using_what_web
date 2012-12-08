@@ -1,4 +1,4 @@
-class TestsController < ApplicationController
+class SearchesController < ApplicationController
 
   before_filter :initial_filter
 
@@ -28,7 +28,7 @@ class TestsController < ApplicationController
   # GET /tests/new
   # GET /tests/new.json
   def new
-   @test = Test.new
+   @test = Search.new
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @test }
@@ -38,7 +38,7 @@ class TestsController < ApplicationController
   # POST /tests
   # POST /tests.json
   def search
-    @test = Test.new(params[:test])
+    @test = Search.new(params[:test])
     @results = Array.new
     
     #mock results
