@@ -20,6 +20,17 @@ class User < ActiveRecord::Base
     authorizations.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
   end
 
+  def encrypt_password
+    if password.present?
+      self.salt = make_salt if new_record?
+      self.encrypted_password = encrypt(password)
+    end
+  end
+
+  def before_save
+    encrypt_password
+  end
+
 
   protected
 
