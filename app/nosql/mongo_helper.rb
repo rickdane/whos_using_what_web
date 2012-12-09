@@ -17,19 +17,19 @@ class MongoHelper
 
   end
 
-if (ENV["mongo.uri"] == nil)
-  @config = YAML.load_file(File.expand_path("../../../config/mongo.env", __FILE__))
-  ENV["mongo.host"]= @config["mongo.host"]
-  ENV["mongo.port"]= @config["mongo.port"].to_s
-  ENV["mongo.user"]= @config["mongo.user"]
-  ENV["mongo.pass"]= @config["mongo.pass"]
-  ENV["mongo.dbname"] = @config["mongo.dbname"]
-  ENV["mongo.uri"] = "mongodb://" << ENV["mongo.user"] << ":" << ENV["mongo.pass"] << "@" <<
-      ENV["mongo.host"] <<":" << ENV["mongo.port"] <<"/" << ENV["mongo.dbname"]
-end
+  if (ENV["mongo.uri"] == nil)
+    @config = YAML.load_file(File.expand_path("../../../config/mongo.env", __FILE__))
+    ENV["mongo.host"]= @config["mongo.host"]
+    ENV["mongo.port"]= @config["mongo.port"].to_s
+    ENV["mongo.user"]= @config["mongo.user"]
+    ENV["mongo.pass"]= @config["mongo.pass"]
+    ENV["mongo.dbname"] = @config["mongo.dbname"]
+    ENV["mongo.uri"] = "mongodb://" << ENV["mongo.user"] << ":" << ENV["mongo.pass"] << "@" <<
+        ENV["mongo.host"] <<":" << ENV["mongo.port"] <<"/" << ENV["mongo.dbname"]
 
- get_connection
+  end
 
+  get_connection
 
 
   def self.get_mongo_connection

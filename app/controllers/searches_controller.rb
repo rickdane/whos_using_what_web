@@ -1,4 +1,5 @@
 require 'whos_using_what/linkedin_client'
+require_relative '../nosql/mongo_helper'
 
 class SearchesController < ApplicationController
 
@@ -47,6 +48,7 @@ class SearchesController < ApplicationController
   # GET /tests/new
   # GET /tests/new.json
   def new
+    MongoHelper.get_connection
     @search = Search.new
     respond_to do |format|
       format.html # new.html.erb
