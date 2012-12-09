@@ -1,14 +1,14 @@
 class User < ActiveRecord::Base
   has_many :authorizations
   validates :name, :email, :presence => true
-  attr_accessible :email, :name
+  attr_accessible :email, :name, :authorizations
 
   def apply_omniauth(omniauth)
     case omniauth['provider']
       when 'linkedin'
         self.apply_linkedin(omniauth)
     end
-    authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'], :token =>(omniauth['credentials']['token'] rescue nil))
+    authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'], :token => (omniauth['credentials']['token'] rescue nil))
   end
 
 
@@ -23,4 +23,6 @@ class User < ActiveRecord::Base
   def self.create_from_hash!(hash)
     create(:name => hash['user_info']['name'])
   end
+
+
 end

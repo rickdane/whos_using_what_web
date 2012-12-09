@@ -7,11 +7,15 @@ class SessionsController < ApplicationController
     remember_token = user.email
     cookies[:remember_token] = {value: remember_token,
                                 expires: 20.years.from_now.utc}
+    auths = Authorization.find_all_by_user_id user.id
     self.current_user = user
 
   end
 
   def create
+
+    #important to call this to render any other sessions for user invalid
+    reset_session
 
     auth_hash = request.env['omniauth.auth']
     @authorization = Authorization.find_by_provider_and_uid(auth_hash["provider"], auth_hash["uid"])
