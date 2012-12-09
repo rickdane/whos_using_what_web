@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
   end
 
   def create_session (user)
+
     #todo obviously bad practice to use email for this, just for testing, need to implement this properly
     remember_token = user.email
     cookies[:remember_token] = {value: remember_token,
@@ -11,6 +12,14 @@ class SessionsController < ApplicationController
     self.current_user = user
 
   end
+
+
+  def destroy
+
+    cookies[:remember_token] = nil
+
+  end
+
 
   def create
 
@@ -32,6 +41,7 @@ class SessionsController < ApplicationController
       else
         #redirect to try again
       end
+
     end
 
     #this is what actually enables the  before_filter :authenticate_user! to work in the controllers
@@ -45,12 +55,4 @@ class SessionsController < ApplicationController
   def failure
   end
 
-  def destroy
-    @cached_user_name = self.current_user.name
-    session[:logged_in] = false
-    session[:user_id] = nil
-    @current_user = nil
-
-    redirect_to :controller => 'companies', :action => 'index'
-  end
 end
