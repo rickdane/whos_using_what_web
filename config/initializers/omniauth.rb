@@ -9,4 +9,5 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   end
 
   provider :linkedin, ENV["linkedin.api_key"], ENV["linkedin.api_secret"]
+
 end

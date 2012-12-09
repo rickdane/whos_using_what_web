@@ -18,19 +18,28 @@ class SessionsController < ApplicationController
     reset_session
 
     auth_hash = request.env['omniauth.auth']
+
     @authorization = Authorization.find_by_provider_and_uid(auth_hash["provider"], auth_hash["uid"])
     #display container variable
-    @wrapper_authorization = Hash.new
+
     if @authorization
-      @wrapper_authorization["display"] = "Welcome back #{@authorization.user.name}! You have already signed up."
+      user = @authorization.user
     else
       user = User.new :name => auth_hash["info"]["name"], :email => auth_hash["info"]["email"]
       user.authorizations.build :provider => auth_hash["provider"], :uid => auth_hash["uid"]
-      user.save
-      @wrapper_authorization["display"] = "Hi #{user.name}! You've signed up."
+      if user.save :validate => false
+        #user was created
+      else
+        #redirect to try again
+      end
     end
 
-    create_session (@authorization.user)
+    #this is what actually enables the  before_filter :authenticate_user! to work in the controllers
+    user.apply_omniauth(auth_hash)
+
+    create_session (user)
+
+    sign_in_and_redirect(:user, user)
   end
 
   def failure

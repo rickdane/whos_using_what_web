@@ -20,7 +20,7 @@
 
 <div data-role="page">
   <div id="container1">
-    <% if @cur_view_user["logged_in"] %>
+    <% if current_user.present? %>
         <%= render "shared/menu_logged_in" %>
     <% else %>
         <%= render "shared/menu_logged_out" %>

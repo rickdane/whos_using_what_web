@@ -2,10 +2,14 @@ require 'whos_using_what/linkedin_client'
 
 class SearchesController < ApplicationController
 
-  before_filter :initial_filter
+  # before_filter :initial_filter
+  before_filter :authenticate_user! #:except => [:some_action_without_auth]
+# Access Current User
 
   def initialize
     super
+
+    #@things = current_user.things
 
     unless Rails.env.production?
       @config = YAML.load_file(File.expand_path("../../../config/keys.env", __FILE__))

@@ -16,6 +16,8 @@ gem 'mongo'
 gem 'handler'
 gem 'bson_ext'
 gem 'omniauth'
+gem 'cancan'
+gem 'devise'
 gem 'omniauth-linkedin'
 
 

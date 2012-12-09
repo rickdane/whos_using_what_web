@@ -1,20 +1,29 @@
 WhosUsingWhatWeb::Application.routes.draw do
-  resources :tests
 
-
-  get "sessions/new"
-  get "sessions/create"
-  get "sessions/failure"
-  get "sessions/destroy"
-
-  match '/auth/:provider/callback', :to => 'sessions#create'
-  match '/auth/failure', :to => 'sessions#failure'
+  devise_for :users
 
   resources :companies
   resources :searches
-  root :to => "companies#index"
+  resources :sessions
+
+  root :to => "searches#new"
+
+  #this is for oauth re-routing
+  match '/auth/:provider/callback', :to=> 'sessions#create'
+  match '/auth/failure', :to => 'sessions#failure'
+
 
   match 'company/create', :to => 'companies#create'
-  match 'people/search', :to => 'searches#search'
+  match 'people/search', :to => 'searches#new'
+  match 'login', :to => 'sessions#create'
+  match 'logout', :to => 'sessions#destroy'
+
+  devise_for :users,
+             :as => '',
+             :path_names => {
+                 :sign_in => "/sessions/new",
+                 :sign_out => "logout",
+                 :sign_up => "register"
+             }
 
 end
