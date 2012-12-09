@@ -4,11 +4,11 @@ class SessionsController < ApplicationController
 
   def create_session (user)
 
-    user = user.email
+
     #todo shouldn't store entire user object, need to re-work this
     cookies[:user_data] = {value: user,
                            expires: 20.years.from_now.utc}
-    auths = Authorization.find_all_by_user_id user.id
+   auths = Authorization.find_all_by_user_id user.id
     self.current_user = user
 
   end
@@ -20,6 +20,8 @@ class SessionsController < ApplicationController
     cookies[:_whos_using_what_web_session] = nil
 
     reset_session
+
+    redirect_to  "/users/sign_in"
 
   end
 
