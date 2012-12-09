@@ -4,10 +4,10 @@ class SessionsController < ApplicationController
 
   def create_session (user)
 
-    #todo obviously bad practice to use email for this, just for testing, need to implement this properly
-    remember_token = user.email
-    cookies[:remember_token] = {value: remember_token,
-                                expires: 20.years.from_now.utc}
+    user = user.email
+    #todo shouldn't store entire user object, need to re-work this
+    cookies[:user_data] = {value: user,
+                           expires: 20.years.from_now.utc}
     auths = Authorization.find_all_by_user_id user.id
     self.current_user = user
 
@@ -16,7 +16,10 @@ class SessionsController < ApplicationController
 
   def destroy
 
-    cookies[:remember_token] = nil
+    cookies[:user_data] = nil
+    cookies[:_whos_using_what_web_session] = nil
+
+    reset_session
 
   end
 
