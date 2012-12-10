@@ -17,7 +17,8 @@ class ApplicationController < ActionController::Base
 
   #for mobile version of app
   def mobile_request?
-    request.subdomains.first == 'm'
+    #hack for request.domain in case issue with subdomain
+    request.subdomains.first == 'm' || request.domain.first == 'm'
   end
 
   helper_method :mobile_request?

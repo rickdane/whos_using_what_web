@@ -30,6 +30,18 @@
 }
 
 
+#m.container1 {
+    overflow: hidden;
+    padding: 50px;
+    border-top-left-radius: 10% 5%;
+    border-bottom-left-radius: 10% 5%;
+    border-bottom-right-radius: 10% 5%;
+    border-top-right-radius: 10% 5%;;
+    border:1px solid #FF9900;
+    border-radius:10px;
+    border-color: #000000;
+}
+
 
 
 
