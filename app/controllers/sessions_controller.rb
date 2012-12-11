@@ -9,7 +9,6 @@ class SessionsController < ApplicationController
     cookies[:user_data] = {value: user,
                            expires: 20.years.from_now.utc}
     auths = Authorization.find_all_by_user_id user.id
-    self.current_user = user
 
   end
 
