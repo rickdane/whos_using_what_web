@@ -1,5 +1,5 @@
 require 'whos_using_what/linkedin_client'
-require_relative '../nosql/mongo_helper'
+#require_relative '../nosql/mongo_helper'
 
 class SearchesController < ApplicationController
 
@@ -48,8 +48,8 @@ class SearchesController < ApplicationController
 
   def new
 
-    MongoHelper.get_connection
-    @search = Search.new
+    #MongoHelper.get_connection
+   # @search = Search.new
 
   end
 
