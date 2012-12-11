@@ -1,4 +1,4 @@
-<%= render :template => 'layouts/application' %>
+<%= render :template => 'layouts/header' %>
   <div id="container1">
     <%= link_to "View mobile site", url_for(:mobile_site => 1) if mobile_browser? %>
     <br/>
@@ -10,3 +10,5 @@
     </br>
     <%= yield %>
   </div>
+
+<%= render :template => 'layouts/footer' %>

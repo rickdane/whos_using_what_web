@@ -1,10 +1,39 @@
-<h2>Authenticate with LinkedIn:</h2>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-Our search relies on data from LinkedIn, please authenticate with your LinkedIn credentials to continue.
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-<br/>
-<br/>
+  <title>Hiring=>To</title>
 
-<a href="/auth/linkedin" target="_blank" >- Authenticate</a>
+  <%= stylesheet_link_tag "application" %>
+
+  <%= javascript_include_tag "application" %>
+
+</head>
+
+<body>
+
+<div data-role="page">
+
+  <div id="container1">
+    <%= link_to "View mobile site", url_for(:mobile_site => 1) if mobile_browser? %>
+    <br/>
+    <%= yield %>
+
+    <h2>Authenticate with LinkedIn:</h2>
+
+    Our search relies on data from LinkedIn, please authenticate with your LinkedIn credentials to continue.
+
+    <br/>
+    <br/>
+
+    <a href="/auth/linkedin" target="_blank">- Authenticate</a>
+  </div>
 
 
+</div>
+
+</body>
+</html>
