@@ -5,12 +5,11 @@ class SearchesController < ApplicationController
 
   # before_filter :initial_filter
   before_filter :authenticate_user! #:except => [:some_action_without_auth]
-# Access Current User
+                                    # Access Current User
 
   def initialize
-    super
 
-    #@things = current_user.things
+    super
 
     unless Rails.env.production?
       @config = YAML.load_file(File.expand_path("../../../config/keys.env", __FILE__))
@@ -45,19 +44,14 @@ class SearchesController < ApplicationController
   end
 
 
-  # GET /tests/new
-  # GET /tests/new.json
   def new
+
     MongoHelper.get_connection
     @search = Search.new
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @search }
-    end
+
   end
 
-  # POST /tests
-  # POST /tests.json
+
   def search
     @search = Search.new(params[:search])
     @results = Array.new
@@ -70,7 +64,6 @@ class SearchesController < ApplicationController
     @results.push("another company")
 
     puts "search query is: " + @search.name
-
 
     render 'searches/search_results'
   end

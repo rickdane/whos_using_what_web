@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
   <title>Hiring=>To</title>
 
   <%= stylesheet_link_tag "application" %>
@@ -14,19 +15,7 @@
 
 <body>
 
+<%= yield %>
 
-<div data-role="page">
-  <div id="container1">
-    <%= link_to "View mobile site", url_for(:mobile_site => 1) if mobile_browser? %>
-    <br/>
-    <% if current_user.present? %>
-        <%= render "shared/menu_logged_in" %>
-    <% else %>
-        <%= render "shared/menu_logged_out" %>
-    <% end %>
-    </br>
-    <%= yield %>
-  </div>
-</div>
 </body>
 </html>

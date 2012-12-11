@@ -1,0 +1,13 @@
+<div data-role="page">
+  <div id="m.container1">
+    <%= link_to "View full site", url_for(:full_site => 1) %>
+    <br/>
+    <% if current_user.present? %>
+        <%= render "shared/menu_logged_in" %>
+    <% else %>
+        <%= render "shared/menu_logged_out" %>
+    <% end %>
+    </br>
+    <%= yield %>
+  </div>
+</div>
