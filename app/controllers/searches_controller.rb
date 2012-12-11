@@ -3,6 +3,8 @@ require_relative '../nosql/mongo_helper'
 
 class SearchesController < ApplicationController
 
+  layout 'searches'
+
   # before_filter :initial_filter
   before_filter :authenticate_user! #:except => [:some_action_without_auth]
                                     # Access Current User

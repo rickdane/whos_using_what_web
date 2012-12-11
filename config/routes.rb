@@ -21,8 +21,7 @@ WhosUsingWhatWeb::Application.routes.draw do
              :as => '',
              :path_names => {
                  :sign_in => "/sessions/new",
-                 :sign_out => "logout",
-                 :sign_up => "register"
+                 :sign_out => "logout"
              }
 
 end
