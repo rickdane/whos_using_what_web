@@ -1,5 +1,5 @@
 require 'whos_using_what/linkedin_client'
-#require_relative '../nosql/mongo_helper'
+require_relative '../nosql/mongo_helper'
 
 class SearchesController < ApplicationController
 
@@ -8,8 +8,15 @@ class SearchesController < ApplicationController
   before_filter :authenticate_user!
 
   def authenticate_user!
-   # super
-    session[:logged_in]
+
+    signed_in = signed_in?
+
+    if !signed_in
+
+      redirect_to "/authenticate"
+    end
+
+    signed_in
 
   end
 

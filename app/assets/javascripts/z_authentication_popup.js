@@ -5,8 +5,7 @@ poll_for_login_status = function (interval) {
         success:function (resp) {
             if (resp == true) {
                 interval = null
-                document.location="/"
-
+                document.location = "/searches/new"
             }
         },
         dataType:'json'
@@ -14,7 +13,7 @@ poll_for_login_status = function (interval) {
 
 }
 
-var polling_interval = 2500
+var polling_interval = 5000
 
 function AuthenticationPopup() {
 

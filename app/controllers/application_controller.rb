@@ -2,6 +2,15 @@ class ApplicationController < ActionController::Base
   layout "application"
   protect_from_forgery
 
+  @@mongo = nil
+
+  def initialize
+    super
+    if @@mongo == nil
+      @@mongo = MongoHelper.get_connection
+      @@collection = @@mongo['users']
+    end
+  end
 
   #for mobile version of app
   before_filter :prepend_view_path_if_mobile
@@ -35,8 +44,16 @@ class ApplicationController < ActionController::Base
   end
 
   def signed_in?
-    return session[:logged_in]
+
+    arr = @@collection.find_one(session[:session_id] => "true").to_a
+    if arr.size < 1
+      return false
+    else
+      return true
+    end
+
   end
+
 
   helper_method :current_user, :signed_in?
 
@@ -46,5 +63,6 @@ class ApplicationController < ActionController::Base
     session[:user_id] = user.id
     session[:logged_in] = true
   end
+
 
 end

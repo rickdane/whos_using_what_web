@@ -13,8 +13,14 @@ class SessionsController < ApplicationController
                            expires: 20.years.from_now.utc}
     auths = Authorization.find_all_by_user_id user.id
 
-    session[:logged_in] = true
-    session[:current_user] = user
+    arr = @@collection.find_one(session[:session_id] => "true").to_a
+    if arr.size < 1
+      @@collection.insert({session[:session_id] => "true"})
+    else
+
+      @@collection.update({"_id" => arr[0][1]}, {"$set" => {session[:session_id] => "true"}})
+      # @@collection.update(session[:session_id], "true")
+    end
 
   end
 
@@ -36,6 +42,12 @@ class SessionsController < ApplicationController
     cookies[:user_data] = nil
     cookies[:_whos_using_what_web_session] = nil
 
+    #for new nosql session functionality
+    arr = @@collection.find_one(session[:session_id] => "true").to_a
+    if arr.size >1
+      @@collection.update({"_id" => arr[0][1]}, {"$set" => {session[:session_id] => "false"}})
+    end
+
     reset_session
 
     redirect_to "/authenticate"
@@ -44,9 +56,6 @@ class SessionsController < ApplicationController
 
 
   def create
-
-    #important to call this to render any other sessions for user invalid
-    reset_session
 
     auth_hash = request.env['omniauth.auth']
 
