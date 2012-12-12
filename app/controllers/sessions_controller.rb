@@ -44,7 +44,7 @@ class SessionsController < ApplicationController
 
   def loginstatus
 
-    render :json => user_signed_in?
+    render :json => signed_in?
 
   end
 
@@ -97,7 +97,7 @@ class SessionsController < ApplicationController
     #todo, this is broken
     user.apply_omniauth(auth_hash)
 
-
+    #todo: in process of potentially removing devise completely as am using custom login functionality
     #sign_in_and_redirect(:user, user)
 
     create_session (user)
