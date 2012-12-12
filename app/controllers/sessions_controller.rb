@@ -1,18 +1,30 @@
 class SessionsController < ApplicationController
 
-  layout 'sessions'
-
   def new
-
   end
 
-  def create_session (user)
 
+  def create_session (user)
 
     #todo shouldn't store entire user object, need to re-work this
     cookies[:user_data] = {value: user,
                            expires: 20.years.from_now.utc}
     auths = Authorization.find_all_by_user_id user.id
+    # @current_user = user
+
+  end
+
+  def loginstatus
+
+
+    user_si = user_signed_in?
+
+    render :json => user_signed_in?
+
+  end
+
+  def show
+
 
   end
 
@@ -62,7 +74,6 @@ class SessionsController < ApplicationController
   end
 
   def failure
-
 
 
   end

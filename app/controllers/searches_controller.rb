@@ -25,6 +25,7 @@ class SearchesController < ApplicationController
 
   #todo make this as mix-in method for use in other controllers
   def initial_filter
+
     @cur_view_user = Hash.new
 
     logged_in = session[:logged_in]
@@ -40,16 +41,11 @@ class SearchesController < ApplicationController
 
   end
 
-  def get_people_for_company
-
-
-  end
-
 
   def new
 
     #MongoHelper.get_connection
-   # @search = Search.new
+    @search = Search.new
 
   end
 
