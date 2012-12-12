@@ -5,9 +5,13 @@ class SearchesController < ApplicationController
 
   layout 'searches'
 
-  # before_filter :initial_filter
-  before_filter :authenticate_user! #:except => [:some_action_without_auth]
-                                    # Access Current User
+  before_filter :authenticate_user!
+
+  def authenticate_user!
+    super
+    session[:logged_in]
+
+  end
 
   def initialize
 
@@ -45,6 +49,8 @@ class SearchesController < ApplicationController
   def new
 
     @search = Search.new
+
+    render :template => "searches/new"
 
   end
 

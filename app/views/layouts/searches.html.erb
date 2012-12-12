@@ -5,7 +5,7 @@
 
     <%= link_to "View mobile site", url_for(:mobile_site => 1) if mobile_browser? %>
     <br/>
-    <% if current_user.present? %>
+    <% if signed_in? %>
         <%= render "shared/menu_logged_in" %>
     <% else %>
         <%= render "shared/menu_logged_out" %>

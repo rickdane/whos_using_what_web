@@ -5,8 +5,6 @@ WhosUsingWhatWeb::Application.routes.draw do
   resources :searches
   resources :sessions
 
-  root :to => "searches#new"
-
   ENV['home_url']  = "/"
 
   #this is for oauth re-routing
@@ -19,12 +17,11 @@ WhosUsingWhatWeb::Application.routes.draw do
   match 'login', :to => 'sessions#create'
   match 'logout', :to => 'sessions#destroy'
 
-  devise_for :users,
-             :as => '',
-             :path_names => {
-                 :sign_in => "/sessions/new",
-                 :sign_out => "logout",
-                 :sign_up => "register"
-             }
+  match 'authenticate', :to => 'sessions#new'
+
+  root :to => "searches#new"
+  root :to => redirect("/users/login")
+
+  devise_for :users, :path => '', :path_names => {:sign_in => 'authenticate', :sign_out => 'logout'}
 
 end

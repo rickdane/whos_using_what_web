@@ -31,15 +31,16 @@ class ApplicationController < ActionController::Base
 
 
   def current_user
-    @current_user ||= User.find_by_id(session[:user_id])
+    return session[:current_user]
   end
 
   def signed_in?
-    user_signed_in?
+    return session[:logged_in]
   end
 
   helper_method :current_user, :signed_in?
 
+  #todo see about getting ride of this as this seems to duplicate purpose of another method
   def current_user=(user)
     @current_user = user
     session[:user_id] = user.id

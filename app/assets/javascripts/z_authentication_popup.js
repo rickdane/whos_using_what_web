@@ -5,7 +5,8 @@ poll_for_login_status = function (interval) {
         success:function (resp) {
             if (resp == true) {
                 interval = null
-                window.location.reload()
+                document.location="/"
+
             }
         },
         dataType:'json'

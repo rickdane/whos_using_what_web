@@ -2,7 +2,8 @@ class SessionsController < ApplicationController
 
   def new
 
-    saa = ""
+    render :template => "sessions/new"
+
   end
 
   def create_session (user)
@@ -11,7 +12,9 @@ class SessionsController < ApplicationController
     cookies[:user_data] = {value: user,
                            expires: 20.years.from_now.utc}
     auths = Authorization.find_all_by_user_id user.id
-    # @current_user = user
+
+    session[:logged_in] = true
+    session[:current_user] = user
 
   end
 
@@ -20,6 +23,7 @@ class SessionsController < ApplicationController
     render :json => user_signed_in?
 
   end
+
 
   def show
 
@@ -34,7 +38,7 @@ class SessionsController < ApplicationController
 
     reset_session
 
-    redirect_to "/users/sign_in"
+    redirect_to "/authenticate"
 
   end
 
