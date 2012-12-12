@@ -99,8 +99,6 @@ class SessionsController < ApplicationController
 
     #sign_in_and_redirect(:user, user)
 
-    s = ""
-
     create_session (user)
 
   end
