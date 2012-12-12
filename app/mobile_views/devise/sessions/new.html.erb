@@ -21,7 +21,7 @@
 
   <div id="m.container1">
 
-    <%= link_to "View mobile site", url_for(:mobile_site => 1) if mobile_browser? %>
+    <%= link_to "View full site", url_for(:full_site => 1) if mobile_browser? %>
     <br/>
     <%= yield %>
 
