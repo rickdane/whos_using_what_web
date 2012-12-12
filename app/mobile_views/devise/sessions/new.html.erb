@@ -11,14 +11,17 @@
 
   <%= javascript_include_tag "application" %>
 
+
 </head>
 
 <body>
 
-<div data-role="page">
 
-  <div id="container1">
-    <%=#todo this link does not work due to Jquery mobile bug # link_to "View full site", url_for(:full_site => 1) %>
+<div data-role="page" data-url="<%= request.path %>">
+
+  <div id="m.container1">
+
+    <%= link_to "View mobile site", url_for(:mobile_site => 1) if mobile_browser? %>
     <br/>
     <%= yield %>
 
@@ -29,7 +32,8 @@
     <br/>
     <br/>
 
-    <a href="/auth/linkedin" target="_blank">- Authenticate</a>
+    <a href="#" onclick="authenticationPopup.exec('/auth/linkedin')"><strong>Click to Authenticate</strong></a>
+
   </div>
 
 

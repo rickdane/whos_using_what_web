@@ -1,6 +1,5 @@
 <%= render :template => 'layouts/header' %>
   <div id="m.container1">
-    <%= #todo this link does not work due to Jquery mobile bug  #link_to "View full site", url_for(:full_site => 1) %>
     <br/>
     <% if current_user.present? %>
         <%= render "shared/menu_logged_in" %>
@@ -11,3 +10,4 @@
     <%= yield %>
   </div>
 <%= render :template => 'layouts/footer' %>
+
