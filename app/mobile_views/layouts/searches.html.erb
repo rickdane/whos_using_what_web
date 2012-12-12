@@ -1,13 +1,13 @@
 <%= render :template => 'layouts/header' %>
-  <div id="m.container1">
-    <br/>
-    <% if current_user.present? %>
-        <%= render "shared/menu_logged_in" %>
-    <% else %>
-        <%= render "shared/menu_logged_out" %>
-    <% end %>
-    </br>
-    <%= yield %>
-  </div>
+<div id="m.container1">
+  <br/>
+  <% if signed_in? %>
+      <%= render "shared/menu_logged_in" %>
+  <% else %>
+      <%= render "shared/menu_logged_out" %>
+  <% end %>
+  </br>
+  <%= yield %>
+</div>
 <%= render :template => 'layouts/footer' %>
 
