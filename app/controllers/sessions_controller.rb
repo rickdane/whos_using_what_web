@@ -13,12 +13,12 @@ class SessionsController < ApplicationController
                            expires: 20.years.from_now.utc}
     auths = Authorization.find_all_by_user_id user.id
 
-    arr = @@collection.find_one(session[:session_id] => "true").to_a
+    arr = @@collection.find_one(cookies['_whos_using_what_web_session'] => "true").to_a
     if arr.size < 1
-      @@collection.insert({session[:session_id] => "true"})
+      @@collection.insert({cookies['_whos_using_what_web_session'] => "true"})
     else
 
-      @@collection.update({"_id" => arr[0][1]}, {"$set" => {session[:session_id] => "true"}})
+      @@collection.update({"_id" => arr[0][1]}, {"$set" => {cookies['_whos_using_what_web_session']=> "true"}})
       # @@collection.update(session[:session_id], "true")
     end
 
@@ -43,9 +43,9 @@ class SessionsController < ApplicationController
     cookies[:_whos_using_what_web_session] = nil
 
     #for new nosql session functionality
-    arr = @@collection.find_one(session[:session_id] => "true").to_a
+    arr = @@collection.find_one(cookies['_whos_using_what_web_session']  => "true").to_a
     if arr.size >1
-      @@collection.update({"_id" => arr[0][1]}, {"$set" => {session[:session_id] => "false"}})
+      @@collection.update({"_id" => arr[0][1]}, {"$set" => {cookies['_whos_using_what_web_session'] => "false"}})
     end
 
     reset_session
