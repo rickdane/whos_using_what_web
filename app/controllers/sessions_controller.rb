@@ -1,5 +1,9 @@
 class SessionsController < ApplicationController
 
+  def new
+
+    saa = ""
+  end
 
   def create_session (user)
 
