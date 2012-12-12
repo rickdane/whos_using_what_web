@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4723b746-1f57-4366-90fa-a10e932e7630" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/application_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
     </list>
     <ignored path="whos_using_what_web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,19 +24,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sessions_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sessions_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="47" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.49586776">
+            <state line="36" column="47" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="application_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="53" column="0" selection-start="1132" selection-end="1200" vertical-scroll-proportion="0.0">
+            <state line="15" column="45" selection-start="344" selection-end="344" vertical-scroll-proportion="0.6198347">
               <folding />
             </state>
           </provider>
@@ -106,8 +105,8 @@
         <option value="$PROJECT_DIR$/app/views/shared/_menu_logged_in.html.erb" />
         <option value="$USER_HOME$/.rvm/gems/ruby-1.9.3-p327/gems/devise-2.1.2/lib/devise/controllers/helpers.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
+        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
       </list>
     </option>
   </component>
@@ -119,8 +118,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="356" />
-    <option name="y" value="364" />
+    <option name="x" value="526" />
+    <option name="y" value="437" />
     <option name="width" value="1459" />
     <option name="height" value="693" />
   </component>
@@ -640,7 +639,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="356" y="364" width="1459" height="693" extended-state="0" />
+    <frame x="526" y="437" width="1459" height="693" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5124555" sideWeight="0.5380242" order="7" side_tool="false" content_ui="tabs" />
@@ -834,16 +833,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="1132" selection-end="1200" vertical-scroll-proportion="0.0">
+        <state line="36" column="47" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="47" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.49586776">
+        <state line="15" column="45" selection-start="344" selection-end="344" vertical-scroll-proportion="0.6198347">
           <folding />
         </state>
       </provider>
