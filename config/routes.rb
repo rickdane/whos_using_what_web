@@ -20,8 +20,8 @@ WhosUsingWhatWeb::Application.routes.draw do
   match 'authenticate', :to => 'sessions#new'
 
   root :to => "searches#new"
-  root :to => redirect("/users/login")
 
-  devise_for :users, :path => '', :path_names => {:sign_in => 'authenticate', :sign_out => 'logout'}
+  devise_for :users, :path => '', :path_names => {:sign_in => 'authenticate',
+                                                  :sign_out => 'logout'}
 
 end

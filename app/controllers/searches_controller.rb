@@ -8,7 +8,7 @@ class SearchesController < ApplicationController
   before_filter :authenticate_user!
 
   def authenticate_user!
-    super
+   # super
     session[:logged_in]
 
   end
