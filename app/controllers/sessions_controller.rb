@@ -11,11 +11,11 @@ class SessionsController < ApplicationController
     #todo shouldn't store entire user object, need to re-work this
     cookies[:user_data] = {value: user,
                            expires: 20.years.from_now.utc}
-    auths = Authorization.find_all_by_user_id user.id
+    # auths = Authorization.find_all_by_user_id user.id
 
 
     arr = @@collection.find_one(session[:session_id] => "true").to_a
-    puts "--create, attempting to find session with key of: " + session[:session_id]
+    logger.info "--create, attempting to find session with key of: " + session[:session_id]
 
     arrfalse = @@collection.find_one(session[:session_id] => "false").to_a
     if arr.size < 1 && arrfalse.size < 1
@@ -101,6 +101,8 @@ class SessionsController < ApplicationController
     #sign_in_and_redirect(:user, user)
 
     create_session (user)
+
+    redirect_to "/"
 
   end
 

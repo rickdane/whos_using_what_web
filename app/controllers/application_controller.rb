@@ -50,7 +50,7 @@ class ApplicationController < ActionController::Base
       return false
     end
     arr = @@collection.find_one(session[:session_id] => "true").to_a
-    puts "--attempting to find session with key of: " + session[:session_id]
+    logger.info "--attempting to find session with key of: " + session[:session_id]
     if arr.size < 1
       return false
     else
