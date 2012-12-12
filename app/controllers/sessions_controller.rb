@@ -14,15 +14,15 @@ class SessionsController < ApplicationController
     auths = Authorization.find_all_by_user_id user.id
 
 
-    arr = @@collection.find_one(@session_key => "true").to_a
-    puts "--create, attempting to find session with key of: " + @session_key
+    arr = @@collection.find_one(session[:session_id] => "true").to_a
+    puts "--create, attempting to find session with key of: " + session[:session_id]
 
-    arrfalse = @@collection.find_one(@session_key => "false").to_a
+    arrfalse = @@collection.find_one(session[:session_id] => "false").to_a
     if arr.size < 1 && arrfalse.size < 1
-      @@collection.insert({@session_key => "true"})
+      @@collection.insert({session[:session_id] => "true"})
     else
 
-      @@collection.update({"_id" => arr[0][1]}, {"$set" => {@session_key => "true"}})
+      @@collection.update({"_id" => arr[0][1]}, {"$set" => {session[:session_id] => "true"}})
       # @@collection.update(session[:session_id], "true")
     end
 
@@ -30,14 +30,14 @@ class SessionsController < ApplicationController
   end
 
   def self.create_session_custom
-    arr = @@collection.find_one(@session_key => "true").to_a
+    arr = @@collection.find_one(session[:session_id] => "true").to_a
 
-    arrfalse = @@collection.find_one(@session_key => "false").to_a
+    arrfalse = @@collection.find_one(session[:session_id] => "false").to_a
     if arr.size < 1 && arrfalse.size < 1
       @@collection.insert({@session_key => "true"})
     else
 
-      @@collection.update({"_id" => arr[0][1]}, {"$set" => {@session_key => "true"}})
+      @@collection.update({"_id" => arr[0][1]}, {"$set" => {session[:session_id] => "true"}})
       # @@collection.update(session[:session_id], "true")
     end
   end

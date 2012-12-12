@@ -11,11 +11,6 @@ class ApplicationController < ActionController::Base
       @@collection = @@mongo['users']
     end
 
-    @session_key = nil
-    if (session != nil)
-      @session_key = session[:session_id]
-    end
-
   end
 
   #for mobile version of app
@@ -51,11 +46,11 @@ class ApplicationController < ActionController::Base
 
   def signed_in?
 
-    if  @session_key == nil
+    if  session[:session_id] == nil
       return false
     end
-    arr = @@collection.find_one(@session_key => "true").to_a
-    puts "--attempting to find session with key of: " + @session_key
+    arr = @@collection.find_one(session[:session_id] => "true").to_a
+    puts "--attempting to find session with key of: " + session[:session_id]
     if arr.size < 1
       return false
     else
