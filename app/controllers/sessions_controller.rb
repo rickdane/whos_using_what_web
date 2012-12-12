@@ -17,8 +17,6 @@ class SessionsController < ApplicationController
 
   def loginstatus
 
-    user_si = user_signed_in?
-
     render :json => user_signed_in?
 
   end

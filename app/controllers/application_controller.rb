@@ -1,49 +1,43 @@
 class ApplicationController < ActionController::Base
-
+  layout "application"
   protect_from_forgery
 
-  before_filter :set_mobile_preferences
-  before_filter :redirect_to_mobile_if_applicable
+
+  #for mobile version of app
   before_filter :prepend_view_path_if_mobile
 
   private
 
-  def set_mobile_preferences
-    if params[:mobile_site]
-      cookies.delete(:prefer_full_site)
-    elsif params[:full_site]
-      cookies.permanent[:prefer_full_site] = 1
-      redirect_to_full_site if mobile_request?
-    end
-  end
-
+  #for mobile version of app
   def prepend_view_path_if_mobile
     if mobile_request?
       prepend_view_path Rails.root + 'app' + 'mobile_views'
     end
   end
 
-  def redirect_to_full_site
-    redirect_to request.referer.gsub(/m\./, '') and return
-  end
-
-  def redirect_to_mobile_if_applicable
-    unless mobile_request? || cookies[:prefer_full_site] || !mobile_browser?
-      redirect_to request.protocol + "m." + request.host_with_port.gsub(/^www\./, '') +
-                      request.request_uri and return
-    end
-  end
-
+  #for mobile version of app
   def mobile_request?
-    #hack for local testing to check reglar domain too
+    #hack for request.domain in case issue with subdomain
     request.subdomains.first == 'm' || request.domain.first == 'm'
   end
 
   helper_method :mobile_request?
 
-  def mobile_browser?
-    request.env["HTTP_USER_AGENT"] && request.env["HTTP_USER_AGENT"][/(iPhone|iPod|iPad|Android)/]
+
+  def current_user
+    @current_user ||= User.find_by_id(session[:user_id])
   end
 
-  helper_method :mobile_browser?
+  def signed_in?
+    user_signed_in?
+  end
+
+  helper_method :current_user, :signed_in?
+
+  def current_user=(user)
+    @current_user = user
+    session[:user_id] = user.id
+    session[:logged_in] = true
+  end
+
 end
