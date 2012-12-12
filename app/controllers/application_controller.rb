@@ -45,7 +45,10 @@ class ApplicationController < ActionController::Base
 
   def signed_in?
 
-    arr = @@collection.find_one(cookies['_whos_using_what_web_session'] => "true").to_a
+    if  session[:session_id] == nil
+      return false
+    end
+      arr = @@collection.find_one(session[:session_id] => "true").to_a
     if arr.size < 1
       return false
     else
