@@ -44,7 +44,6 @@ class SearchesController < ApplicationController
 
   def new
 
-    #MongoHelper.get_connection
     @search = Search.new
 
   end

@@ -23,6 +23,12 @@ class ApplicationController < ActionController::Base
 
   helper_method :mobile_request?
 
+  def mobile_browser?
+    request.env["HTTP_USER_AGENT"] && request.env["HTTP_USER_AGENT"][/(iPhone|iPod|iPad|Android)/]
+  end
+
+  helper_method :mobile_browser?
+
 
   def current_user
     @current_user ||= User.find_by_id(session[:user_id])
