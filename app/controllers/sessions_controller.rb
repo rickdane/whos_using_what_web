@@ -13,30 +13,31 @@ class SessionsController < ApplicationController
                            expires: 20.years.from_now.utc}
     auths = Authorization.find_all_by_user_id user.id
 
-=begin
-    arr = @@collection.find_one(session[:session_id] => "true").to_a
 
-    arrfalse = @@collection.find_one(session[:session_id] => "false").to_a
+    arr = @@collection.find_one(@session_key => "true").to_a
+    puts "--create, attempting to find session with key of: " + @session_key
+
+    arrfalse = @@collection.find_one(@session_key => "false").to_a
     if arr.size < 1 && arrfalse.size < 1
-      @@collection.insert({session[:session_id] => "true"})
+      @@collection.insert({@session_key => "true"})
     else
 
-      @@collection.update({"_id" => arr[0][1]}, {"$set" => {session[:session_id]=> "true"}})
+      @@collection.update({"_id" => arr[0][1]}, {"$set" => {@session_key => "true"}})
       # @@collection.update(session[:session_id], "true")
     end
-=end
+
 
   end
 
   def self.create_session_custom
-    arr = @@collection.find_one(session[:session_id] => "true").to_a
+    arr = @@collection.find_one(@session_key => "true").to_a
 
-    arrfalse = @@collection.find_one(session[:session_id] => "false").to_a
+    arrfalse = @@collection.find_one(@session_key => "false").to_a
     if arr.size < 1 && arrfalse.size < 1
-      @@collection.insert({session[:session_id] => "true"})
+      @@collection.insert({@session_key => "true"})
     else
 
-      @@collection.update({"_id" => arr[0][1]}, {"$set" => {session[:session_id]=> "true"}})
+      @@collection.update({"_id" => arr[0][1]}, {"$set" => {@session_key => "true"}})
       # @@collection.update(session[:session_id], "true")
     end
   end
@@ -62,7 +63,7 @@ class SessionsController < ApplicationController
     #for new nosql session functionality
     arr = @@collection.find_one(session[:session_id] => "true").to_a
     if arr.size >1
-      @@collection.update({"_id" => arr[0][1]}, {"$set" => {session[:session_id]=> "false"}})
+      @@collection.update({"_id" => arr[0][1]}, {"$set" => {session[:session_id] => "false"}})
     end
 
     reset_session
