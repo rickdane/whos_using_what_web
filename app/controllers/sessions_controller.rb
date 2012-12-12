@@ -13,6 +13,7 @@ class SessionsController < ApplicationController
                            expires: 20.years.from_now.utc}
     auths = Authorization.find_all_by_user_id user.id
 
+=begin
     arr = @@collection.find_one(session[:session_id] => "true").to_a
 
     arrfalse = @@collection.find_one(session[:session_id] => "false").to_a
@@ -23,7 +24,21 @@ class SessionsController < ApplicationController
       @@collection.update({"_id" => arr[0][1]}, {"$set" => {session[:session_id]=> "true"}})
       # @@collection.update(session[:session_id], "true")
     end
+=end
 
+  end
+
+  def self.create_session_custom
+    arr = @@collection.find_one(session[:session_id] => "true").to_a
+
+    arrfalse = @@collection.find_one(session[:session_id] => "false").to_a
+    if arr.size < 1 && arrfalse.size < 1
+      @@collection.insert({session[:session_id] => "true"})
+    else
+
+      @@collection.update({"_id" => arr[0][1]}, {"$set" => {session[:session_id]=> "true"}})
+      # @@collection.update(session[:session_id], "true")
+    end
   end
 
   def loginstatus
@@ -78,11 +93,15 @@ class SessionsController < ApplicationController
     end
 
     #this is what actually enables the  before_filter :authenticate_user! to work in the controllers
+    #todo, this is broken
     user.apply_omniauth(auth_hash)
 
-    create_session (user)
 
-    sign_in_and_redirect(:user, user)
+    #sign_in_and_redirect(:user, user)
+
+    s = ""
+
+    create_session (user)
 
   end
 
