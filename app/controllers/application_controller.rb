@@ -43,7 +43,7 @@ class ApplicationController < ActionController::Base
   def redirect_to_mobile_if_applicable
     unless mobile_request? || cookies[:prefer_full_site] || !mobile_browser?
       redirect_to request.protocol + "m." + request.host_with_port.gsub(/^www\./, '') +
-                      request.request_uri and return
+                      request.fullpath and return
     end
   end
 
