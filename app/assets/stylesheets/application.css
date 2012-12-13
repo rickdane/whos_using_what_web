@@ -13,8 +13,17 @@
  *
  */
 
+.ui-body-c, .ui-overlay-c {
+    /*background: linear-gradient(#F9F9F9, #EEEEEE) repeat scroll 0 0 #F9F9F9;   */
+    background: url("tile_bg.png") !important;
+    border: 1px solid #AAAAAA;
+    color: #333333;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+
 #container1 {
     position:absolute;
+    background: white;
     left: 200px;
     top: 50px;
     overflow: hidden;
@@ -27,11 +36,13 @@
     border:1px solid #FF9900;
     border-radius:10px;
     border-color: #000000;
+
 }
 
 
 #m.container1 {
     overflow: hidden;
+    background: white;
     border-top-left-radius: 10% 5%;
     border-bottom-left-radius: 10% 5%;
     border-bottom-right-radius: 10% 5%;
@@ -40,6 +51,11 @@
     border-radius:10px;
     border-color: #000000;
 }
+
+input.ui-input-text {
+    background: white !important;
+}
+
 
 
 
