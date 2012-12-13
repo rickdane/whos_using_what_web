@@ -1,5 +1,15 @@
-<% @results.each do |result| %>
+<br/>
+<ul data-role="listview" data-divider-theme="b" data-inset="true">
+  <li data-role="list-divider" role="heading">
+    Results
+  </li>
+  <% @results.each do |result| %>
 
-<%= result %> <br/>
+      <li data-theme="c">
+        <a href="#page1" data-transition="slide">
+          <%= result %>
+        </a>
+      </li>
+  <% end %>
 
-<% end %>
+</ul>

@@ -13,7 +13,7 @@ poll_for_login_status = function (interval) {
 
 }
 
-var polling_interval = 5000
+var polling_interval = 2500
 
 function AuthenticationPopup() {
 

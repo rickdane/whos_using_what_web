@@ -12,7 +12,7 @@ WhosUsingWhatWeb::Application.routes.draw do
 
   match '/loginstatus', :to => 'sessions#loginstatus'
 
-  match 'people/search', :to => 'searches#new'
+  match 'people/search', :to => 'searches#search'
   match 'login', :to => 'sessions#create'
   match 'logout', :to => 'sessions#destroy'
 

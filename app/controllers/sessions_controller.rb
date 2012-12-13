@@ -14,7 +14,9 @@ class SessionsController < ApplicationController
     if arr.size < 1
       doc = {:session_id => session[:session_id],
              :active => true,
-      :user_email =>user.email}
+             :user => {
+                 :email => user.email
+             }}
       @@collection.insert(doc)
     else
 

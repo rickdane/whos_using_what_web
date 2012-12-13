@@ -1,6 +1,6 @@
 <%= form_for(@search, :url => "../people/search" ) do |f| %>
   <% if @search.errors.any? %>
-        <div id="error_explanation" xmlns="http://www.w3.org/1999/html">
+        <div id="error_explanation" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
       <h2><%= pluralize(@search.errors.count, "error") %> prohibited this test from being saved:</h2>
 
       <ul>
@@ -13,10 +13,11 @@
 
   <div class="field">
  <br/>
-    <br/>
     <%= f.text_field :name %>
+    </br>
   </div>
   <div class="actions">
-    <%= f.submit "Search" %>
+    <%= f.submit "Search", 'data-icon'=>"search"  %>
+
   </div>
 <% end %>

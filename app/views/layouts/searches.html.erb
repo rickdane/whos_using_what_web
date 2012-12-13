@@ -1,7 +1,14 @@
 <%= render :template => 'layouts/header' %>
 
 
-  <div id="container1">
+<div id="container1">
+
+  <div data-theme="c" data-role="header">
+    <h3>
+      Hiring=&gt;To
+    </h3>
+  </div>
+  <div data-role="content">
 
     <%= link_to "View mobile site", url_for(:mobile_site => 1) if mobile_browser? %>
     <br/>
@@ -13,5 +20,7 @@
     </br>
     <%= yield %>
   </div>
+
+</div>
 
 <%= render :template => 'layouts/footer' %>
