@@ -72,13 +72,12 @@ class ApplicationController < ActionController::Base
     if  session[:session_id] == nil
       return false
     end
-    arr = @@collection.find_one(session[:session_id] => "true").to_a
-    logger.info "--attempting to find session with key of: " + session[:session_id]
-    if arr.size < 1
+    doc = @@collection.find_one(:session_id => session[:session_id],
+                                :active => true)
+    if !doc
       return false
-    else
-      return true
     end
+    true
 
   end
 

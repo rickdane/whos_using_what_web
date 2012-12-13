@@ -8,22 +8,17 @@ class SessionsController < ApplicationController
 
   def create_session (user)
 
-    #todo shouldn't store entire user object, need to re-work this
-    cookies[:user_data] = {value: user,
-                           expires: 20.years.from_now.utc}
     # auths = Authorization.find_all_by_user_id user.id
 
-
-    arr = @@collection.find_one(session[:session_id] => "true").to_a
-    logger.info "--create, attempting to find session with key of: " + session[:session_id]
-
-    arrfalse = @@collection.find_one(session[:session_id] => "false").to_a
-    if arr.size < 1 && arrfalse.size < 1
-      @@collection.insert({session[:session_id] => "true"})
+    arr = @@collection.find_one(:session_id => session[:session_id]).to_a
+    if arr.size < 1
+      doc = {:session_id => session[:session_id],
+             :active => true,
+      :user_email =>user.email}
+      @@collection.insert(doc)
     else
 
-      @@collection.update({"_id" => arr[0][1]}, {"$set" => {session[:session_id] => "true"}})
-      # @@collection.update(session[:session_id], "true")
+      @@collection.update({"_id" => arr[0][1]}, {"$set" => {:active => true}})
     end
 
 
@@ -45,14 +40,9 @@ class SessionsController < ApplicationController
 
   def destroy
 
-    cookies[:user_data] = nil
     cookies[:_whos_using_what_web_session] = nil
 
-    #for new nosql session functionality
-    arr = @@collection.find_one(session[:session_id] => "true").to_a
-    if arr.size >1
-      @@collection.update({"_id" => arr[0][1]}, {"$set" => {session[:session_id] => "false"}})
-    end
+    @@collection.remove(:session_id => session[:session_id])
 
     reset_session
 
