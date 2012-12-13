@@ -14,6 +14,8 @@ class ApplicationController < ActionController::Base
   end
 
   #for mobile version of app
+  before_filter :set_mobile_preferences
+  before_filter :redirect_to_mobile_if_applicable
   before_filter :prepend_view_path_if_mobile
 
   private
