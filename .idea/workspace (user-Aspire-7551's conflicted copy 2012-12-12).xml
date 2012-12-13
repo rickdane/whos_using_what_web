@@ -2,26 +2,131 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4723b746-1f57-4366-90fa-a10e932e7630" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/devise/mailer/reset_password_instructions.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/devise/mailer/unlock_instructions.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/devise/shared/_links.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/config/initializers/devise.rb" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/whos_using_what_web.iml" afterPath="$PROJECT_DIR$/.idea/whos_using_what_web.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/user.rb" afterPath="$PROJECT_DIR$/app/models/user.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.generators" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.rakeTasks" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/whos_using_what_web.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/127.0.0.1:3000" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/127.0.0.1" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/ajax-loader.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/images/rails.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/mailers/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/doc/README_FOR_APP" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/assets/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/tasks/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/favicon.ico" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/integration/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/assets/stylesheets/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/vendor/plugins/.gitkeep" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.rdoc" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Rakefile" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/jquery.cookies.2.2.0.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/jquery.min-1.7.2.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/jquery.mobile-1.2.0.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/javascripts/z_authentication_popup.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/assets/stylesheets/jquery.mobile-1.2.0.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/searches_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/application_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/companies_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/home_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/posts_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/sessions_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/tests_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/logic/linkedin_api_client.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/mobile_views/layouts/searches.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/authorization.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/role.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/search.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/user.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/nosql/mongo_helper.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/confirmations/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/mailer/confirmation_instructions.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/mailer/reset_password_instructions.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/mailer/unlock_instructions.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/passwords/edit.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/passwords/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/registrations/edit.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/registrations/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/shared/_links.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/devise/unlocks/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/footer.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/header.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/searches.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/layouts/sessions.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/searches/_form.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/searches/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/searches/search_results.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/shared/_menu_logged_in.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/shared/_menu_logged_out.html.erb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config.ru" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/application.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/boot.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/database.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/environment.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/environments/development.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/environments/production.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/environments/test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/backtrace_silencers.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/devise.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/inflections.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/mime_types.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/omniauth.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/secret_token.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/session_store.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/initializers/wrap_parameters.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/keys.env" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/locales/devise.en.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/locales/en.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/routes.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121204081054_create_posts.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121205220729_create_companies.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121206035001_create_users.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121206035011_create_authorizations.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121207174408_create_searches.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121208180638_create_roles.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121208183409_add.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20121209042842_add_devise_to_users.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/schema.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/seeds.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/404.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/422.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/500.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/robots.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/script/rails" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/authorizations.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/companies.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/posts.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/roles.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/tests.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/users.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/sessions_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/functional/tests_controller_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/performance/browsing_test.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/test_helper.rb" />
     </list>
     <ignored path="whos_using_what_web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +144,71 @@
     <disable_hints />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/routes.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sessions_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="77" column="84" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.2773925">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helpers.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p327/gems/devise-2.1.2/lib/devise/controllers/helpers.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="124" column="13" selection-start="4827" selection-end="4827" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="implicit_render.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/implicit_render.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="0" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="0" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searches.html.erb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/layouts/searches.html.erb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="0" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searches_controller.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/searches_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="0" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -52,22 +221,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/app/mobile_views/layouts/searches.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/header.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/sessions.html.erb" />
         <option value="$PROJECT_DIR$/app/mobile_views/devise/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/devise/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/sessions/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/searches.html.erb" />
+        <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/assets/javascripts/z_authentication_popup.js" />
         <option value="$PROJECT_DIR$/config/mongo.env" />
         <option value="$PROJECT_DIR$/app/nosql/mongo_helper.rb" />
         <option value="$PROJECT_DIR$/app/controllers/searches_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/shared/_menu_logged_in.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$USER_HOME$/.rvm/gems/ruby-1.9.3-p327/gems/devise-2.1.2/lib/devise/controllers/helpers.rb" />
         <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/config/initializers/devise.rb" />
-        <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/models/user.rb" />
+        <option value="$USER_HOME$/.rvm/gems/ruby-1.9.3-p327/gems/devise-2.1.2/lib/devise/controllers/helpers.rb" />
       </list>
     </option>
   </component>
@@ -129,6 +298,86 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devise (v2.1.2, ruby-1.9.3-p327) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whos_using_what_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devise (v2.1.2, ruby-1.9.3-p327) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devise" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whos_using_what_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devise (v2.1.2, ruby-1.9.3-p327) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devise" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whos_using_what_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devise (v2.1.2, ruby-1.9.3-p327) [gem]" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whos_using_what_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="whos_using_what_web" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -172,24 +421,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="whos_using_what_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="whos_using_what_web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="initializers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -278,6 +509,54 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whos_using_what_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whos_using_what_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devise" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whos_using_what_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whos_using_what_web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="devise" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="sessions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -695,11 +974,10 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32945737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26734006" sideWeight="0.15762274" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26734006" sideWeight="0.21576227" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.61757106" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26734006" sideWeight="0.7080103" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26734006" sideWeight="0.28294572" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45478037" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4715762" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -707,6 +985,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32945737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -768,7 +1047,19 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$PROJECT_DIR$/app/models/user.rb</url>
-          <line>25</line>
+          <line>30</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/sessions_controller.rb</url>
+          <line>59</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/sessions_controller.rb</url>
+          <line>69</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="ruby-line">
+          <url>file://$PROJECT_DIR$/app/controllers/sessions_controller.rb</url>
+          <line>31</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="ruby-line">
           <url>file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p327/gems/devise-2.1.2/lib/devise/controllers/helpers.rb</url>
@@ -790,6 +1081,26 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/config/keys.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/mongo.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="5" selection-start="94" selection-end="94" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/sessions/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="34" selection-start="280" selection-end="280" vertical-scroll-proportion="0.35181236" />
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_dispatch/middleware/flash.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="243" column="0" selection-start="7058" selection-end="7058" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/assets/javascripts/z_authentication_popup.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="51" selection-start="237" selection-end="237" vertical-scroll-proportion="-0.5010571" />
@@ -808,6 +1119,13 @@
     <entry file="file://$PROJECT_DIR$/app/views/layouts/searches.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="0" selection-start="393" selection-end="393" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="27" selection-start="27" selection-end="27" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -831,7 +1149,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="0" selection-start="1873" selection-end="1873" vertical-scroll-proportion="0.0">
+        <state line="51" column="0" selection-start="1101" selection-end="1101" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -850,44 +1168,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="12" selection-start="306" selection-end="306" vertical-scroll-proportion="1.011236">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/environment.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="118" selection-end="118" vertical-scroll-proportion="0.2247191">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="527" selection-end="527" vertical-scroll-proportion="0.60674155">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/user.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="19" selection-start="922" selection-end="922" vertical-scroll-proportion="0.26966292">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/sessions_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="0" selection-start="958" selection-end="958" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/initializers/backtrace_silencers.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="77" column="84" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.2773925">
           <folding />
         </state>
       </provider>

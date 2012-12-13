@@ -29,18 +29,6 @@ class SessionsController < ApplicationController
 
   end
 
-  def self.create_session_custom
-    arr = @@collection.find_one(session[:session_id] => "true").to_a
-
-    arrfalse = @@collection.find_one(session[:session_id] => "false").to_a
-    if arr.size < 1 && arrfalse.size < 1
-      @@collection.insert({@session_key => "true"})
-    else
-
-      @@collection.update({"_id" => arr[0][1]}, {"$set" => {session[:session_id] => "true"}})
-      # @@collection.update(session[:session_id], "true")
-    end
-  end
 
   def loginstatus
 

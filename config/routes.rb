@@ -1,6 +1,5 @@
 WhosUsingWhatWeb::Application.routes.draw do
 
-  devise_for :users
 
   resources :searches
   resources :sessions
@@ -20,8 +19,5 @@ WhosUsingWhatWeb::Application.routes.draw do
   match 'authenticate', :to => 'sessions#new'
 
   root :to => "searches#new"
-
-  devise_for :users, :path => '', :path_names => {:sign_in => 'authenticate',
-                                                  :sign_out => 'logout'}
 
 end
