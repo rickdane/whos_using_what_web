@@ -10,7 +10,7 @@
   </div>
   <div data-role="content">
 
-    <%= link_to "View mobile site", url_for(:mobile_site => 1) if mobile_browser? %>
+    <!--#(make this ruby output) link_to "View mobile site", url_for(:mobile_site => 1) if mobile_browser?-->
     <br/>
     <% if signed_in? %>
         <%= render "shared/menu_logged_in" %>

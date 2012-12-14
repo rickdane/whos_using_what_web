@@ -43,6 +43,7 @@
 #mcontainer1 {
     overflow: hidden;
     background: white;
+    padding: 3px;
     border-top-left-radius: 10% 5%;
     border-bottom-left-radius: 10% 5%;
     border-bottom-right-radius: 10% 5%;
