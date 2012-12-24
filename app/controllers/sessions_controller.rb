@@ -10,8 +10,8 @@ class SessionsController < ApplicationController
 
     # auths = Authorization.find_all_by_user_id user.id
 
-    arr = @@collection.find_one(:session_id => session[:session_id]).to_a
-    if arr.size < 1
+    resp_doc = @@collection.find_one(:session_id => session[:session_id])
+    if resp_doc != nil
       doc = {:session_id => session[:session_id],
              :active => true,
              :user => {

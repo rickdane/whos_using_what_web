@@ -1,5 +1,10 @@
-require 'whos_using_what/linkedin_client'
+require 'whos_using_what/api_clients/linkedin_client'
 require_relative '../nosql/mongo_helper'
+require 'whos_using_what/data_searchers/companies_searcher'
+require 'whos_using_what/data_gatherers/geo_tagger'
+
+#only for testing
+
 
 class SearchesController < ApplicationController
 
@@ -63,6 +68,17 @@ class SearchesController < ApplicationController
 
 
   def search
+
+    #------- just for testing
+    log = LoggerFactory.get_default_logger
+
+    geo_tagger = GeoTagger.new log
+    gather_companies = GatherCompanies.new
+    companies_searcher = CompaniesSearcher.new geo_tagger
+    near = companies_searcher.zip_code_search "95688"
+    #-------
+
+
     @search = Search.new(params[:search])
     @results = Array.new
 

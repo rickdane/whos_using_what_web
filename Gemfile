@@ -9,7 +9,7 @@ group :development do
   gem 'sqlite3'
 end
 
-gem 'whos_using_what', '~> 0.1.5'
+gem 'whos_using_what', '~> 0.2.12'
 gem 'pg'
 gem 'rack'
 gem 'mongo'
