@@ -1,6 +1,5 @@
 WhosUsingWhatWeb::Application.routes.draw do
 
-
   resources :searches
   resources :sessions
 

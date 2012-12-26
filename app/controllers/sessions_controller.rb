@@ -8,6 +8,9 @@ class SessionsController < ApplicationController
 
   def create_session (user)
 
+    #set permissions scope
+    request.env['omniauth.strategy'].options[:scope] = "r_basicprofile r_emailaddress r_network"
+
     resp_doc = @@collection.find_one(:session_id => session[:session_id])
     if resp_doc == nil
       doc = {:session_id => session[:session_id],
@@ -62,7 +65,7 @@ class SessionsController < ApplicationController
       user = @authorization.user
     else
       user = User.new :name => auth_hash["info"]["name"], :email => auth_hash["info"]["email"]
-      user.authorizations.build :provider => auth_hash["provider"], :uid => auth_hash["uid"], :scope => "r_basicprofile+r_emailaddress+r_network"
+      user.authorizations.build :provider => auth_hash["provider"], :uid => auth_hash["uid"]
       if user.save :validate => false
         #user was created
       else
