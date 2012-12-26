@@ -6,24 +6,29 @@ class SessionsController < ApplicationController
 
   end
 
-  def create_session (user)
+  def create_db_session_helper user, auth_hash
 
     #set permissions scope
     request.env['omniauth.strategy'].options[:scope] = "r_basicprofile r_emailaddress r_network"
 
-    resp_doc = @@collection.find_one(:session_id => session[:session_id])
-    if resp_doc == nil
-      doc = {:session_id => session[:session_id],
-             :active => true,
-             :user => {
-                 :email => user.email
-             }}
-      @@collection.insert(doc)
+    credentials_linkedin = {
+        :token => auth_hash['credentials']['token'],
+        :secret => auth_hash['credentials']['secret']
+    }
+
+    user_doc = @@users_collection.find_one(:session_id => session[:session_id])
+    if user_doc == nil
+      user_doc = {:session_id => session[:session_id],
+                  :active => true,
+                  :user => {
+                      :email => user.email
+                  },
+                  :credentials_linkedin => credentials_linkedin}
+      @@users_collection.insert(user_doc)
     else
       # TODO this logic may need to be re-visited
-      @@collection.update({"_id" => resp_doc[0][1]}, {"$set" => {:active => true}})
+      @@users_collection.update({"_id" => user_doc['_id']}, {"$set" => {:active => true}})
     end
-
 
   end
 
@@ -45,7 +50,7 @@ class SessionsController < ApplicationController
 
     cookies[:_whos_using_what_web_session] = nil
 
-    @@collection.remove(:session_id => session[:session_id])
+    @@users_collection.remove(:session_id => session[:session_id])
 
     reset_session
 
@@ -77,7 +82,7 @@ class SessionsController < ApplicationController
     #todo: in process of potentially removing devise completely as am using custom login functionality
     #sign_in_and_redirect(:user, user)
 
-    create_session (user)
+    create_db_session_helper user, auth_hash
 
     redirect_to "/"
 

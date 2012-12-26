@@ -19,6 +19,7 @@ class SearchesController < ApplicationController
     if !signed_in
 
       redirect_to "/authenticate"
+
     end
 
     signed_in
@@ -70,20 +71,27 @@ class SearchesController < ApplicationController
   def search
 
     #------- just for testing
+=begin
     log = LoggerFactory.get_default_logger
 
     geo_tagger = GeoTagger.new log
     gather_companies = GatherCompanies.new
     companies_searcher = CompaniesSearcher.new geo_tagger
     near = companies_searcher.zip_code_search "95688"
+=end
     #-------
 
 
     @search = Search.new(params[:search])
     @results = Array.new
 
+    cur_user = @@users_collection.find_one(:session_id => session[:session_id])
+
     #todo grab user info to verify linkedin
-    @linkedin_client = LinkedinClient.new(ENV["linkedin.api_key"], ENV["linkedin.api_secret"], ENV["linkedin.user_token"], ENV["linkedin.user_secret"], "http://linkedin.com")
+    @linkedin_client = LinkedinClient.new(ENV["linkedin.api_key"], ENV["linkedin.api_secret"], cur_user['credentials_linkedin']['token'], cur_user['credentials_linkedin']['secret'], "http://linkedin.com")
+
+
+   people = @linkedin_client.query_people_from_company "apple", "san jose, ca"
 
     #mock results
     @results.push("some company")

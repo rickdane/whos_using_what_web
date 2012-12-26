@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     super
     if @@mongo == nil
       @@mongo = MongoHelper.get_connection
-      @@collection = @@mongo['users']
+      @@users_collection = @@mongo['users']
     end
 
   end
@@ -72,7 +72,7 @@ class ApplicationController < ActionController::Base
     if  session[:session_id] == nil
       return false
     end
-    doc = @@collection.find_one(:session_id => session[:session_id],
+    doc = @@users_collection.find_one(:session_id => session[:session_id],
                                 :active => true)
     if !doc
       return false
