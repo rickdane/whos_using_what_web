@@ -8,10 +8,8 @@ class SessionsController < ApplicationController
 
   def create_session (user)
 
-    # auths = Authorization.find_all_by_user_id user.id
-
     resp_doc = @@collection.find_one(:session_id => session[:session_id])
-    if resp_doc != nil
+    if resp_doc == nil
       doc = {:session_id => session[:session_id],
              :active => true,
              :user => {
@@ -19,8 +17,8 @@ class SessionsController < ApplicationController
              }}
       @@collection.insert(doc)
     else
-
-      @@collection.update({"_id" => arr[0][1]}, {"$set" => {:active => true}})
+      # TODO this logic may need to be re-visited
+      @@collection.update({"_id" => resp_doc[0][1]}, {"$set" => {:active => true}})
     end
 
 
@@ -64,7 +62,7 @@ class SessionsController < ApplicationController
       user = @authorization.user
     else
       user = User.new :name => auth_hash["info"]["name"], :email => auth_hash["info"]["email"]
-      user.authorizations.build :provider => auth_hash["provider"], :uid => auth_hash["uid"]
+      user.authorizations.build :provider => auth_hash["provider"], :uid => auth_hash["uid"], :scope => "r_basicprofile+r_emailaddress+r_network"
       if user.save :validate => false
         #user was created
       else
@@ -72,10 +70,6 @@ class SessionsController < ApplicationController
       end
 
     end
-
-    #this is what actually enables the  before_filter :authenticate_user! to work in the controllers
-    #todo, this is broken
-    user.apply_omniauth(auth_hash)
 
     #todo: in process of potentially removing devise completely as am using custom login functionality
     #sign_in_and_redirect(:user, user)
