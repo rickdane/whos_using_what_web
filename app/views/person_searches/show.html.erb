@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Zipcode:</b>
+  <%= @person_search.zipcode %>
+</p>
+
+<p>
+  <b>Programming language:</b>
+  <%= @person_search.programming_language %>
+</p>
+
+
+<%= link_to 'Edit', edit_person_search_path(@person_search) %> |
+<%= link_to 'Back', person_searches_path %>

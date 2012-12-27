@@ -137,6 +137,7 @@ class SearchesController < ApplicationController
           break
         end
 
+
         container[:people].push person
 
         iter += iter
