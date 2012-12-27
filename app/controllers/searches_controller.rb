@@ -7,19 +7,21 @@ require_relative '../models/person_search'
 
 class SearchesController < ApplicationController
 
-  def initialize
+  layout 'searches'
+
+  before_filter :authenticate_user!
+
+  def init
 
     @mongo_client = MongoHelper.get_mongo_connection
     @companies_coll = @mongo_client['companies']
     @coords_coll = @mongo_client['coordinates']
-
-    layout 'searches'
-
-    before_filter :authenticate_user!
   end
 
-
   def authenticate_user!
+
+    # TOOD this is a hack, re-factor
+    init
 
     signed_in = signed_in?
 
@@ -109,7 +111,7 @@ class SearchesController < ApplicationController
     @linkedin_client = LinkedinClient.new(ENV["linkedin.api_key"], ENV["linkedin.api_secret"], cur_user['credentials_linkedin']['token'], cur_user['credentials_linkedin']['secret'], "http://linkedin.com")
 
     # perform geo-location company search
-    nearby_companies = @companies_coll.find({"loc" => {"$near" => [coords['loc']['lat'], coords['loc']['lon']]}})
+    nearby_companies = @companies_coll.find({"loc" => {"$near" => [coords['loc']['lat'], coords['loc']['lon']]}}).limit(10)
 
     nearby_companies.each do |nearby_company|
       raw_results = @linkedin_client.query_people_from_company "apple", coords['city'] << ", " << coords['state']
