@@ -7,13 +7,17 @@ require_relative '../models/person_search'
 
 class SearchesController < ApplicationController
 
-  @mongo_client = MongoHelper.get_mongo_connection
-  @companies_coll = @mongo_client['companies']
-  @coords_coll = @mongo_client['coordinates']
+  def initialize
 
-  layout 'searches'
+    @mongo_client = MongoHelper.get_mongo_connection
+    @companies_coll = @mongo_client['companies']
+    @coords_coll = @mongo_client['coordinates']
 
-  before_filter :authenticate_user!
+    layout 'searches'
+
+    before_filter :authenticate_user!
+  end
+
 
   def authenticate_user!
 
@@ -94,7 +98,7 @@ class SearchesController < ApplicationController
 
     # TODO need to provide validation of zip input field (implement at model level)
     coords = @coords_coll.find_one({
-                                       :zip => req_zip
+                                       :zip => @req_zip
                                    })
     if coords == nil
       # TODO need to have "no results display option for this case"
