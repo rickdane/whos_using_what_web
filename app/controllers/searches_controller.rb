@@ -115,7 +115,12 @@ class SearchesController < ApplicationController
 
     nearby_companies.each do |nearby_company|
       container = {
-          :company => nearby_company,
+          :company => {
+              :name => nearby_company['name'],
+              :url => nearby_company['websiteUrl'],
+              :logo_url => nearby_company['logoUrl'],
+              :loc => nearby_company['loc']
+          },
           :people => []
       }
       raw_results = @linkedin_client.query_people_from_company nearby_company['name'], coords['city'] << ", " << coords['state']
@@ -132,7 +137,7 @@ class SearchesController < ApplicationController
           break
         end
 
-        container['people'].push person
+        container[:people].push person
 
         iter += iter
       end
