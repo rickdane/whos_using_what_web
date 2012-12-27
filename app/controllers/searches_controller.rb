@@ -91,11 +91,12 @@ class SearchesController < ApplicationController
     @linkedin_client = LinkedinClient.new(ENV["linkedin.api_key"], ENV["linkedin.api_secret"], cur_user['credentials_linkedin']['token'], cur_user['credentials_linkedin']['secret'], "http://linkedin.com")
 
 
-   people = @linkedin_client.query_people_from_company "apple", "san jose, ca"
+    raw_results = @linkedin_client.query_people_from_company "apple", "san jose, ca"
+    people = raw_results['people']['values']
 
-    #mock results
-    @results.push("some company")
-    @results.push("another company")
+    people.each do |person|
+      @results.push person['firstName']  << " " << person['lastName']
+    end
 
     puts "search query is: " + @search.name
 
