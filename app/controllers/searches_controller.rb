@@ -114,21 +114,30 @@ class SearchesController < ApplicationController
     nearby_companies = @companies_coll.find({"loc" => {"$near" => [coords['loc']['lat'], coords['loc']['lon']]}}).limit(10)
 
     nearby_companies.each do |nearby_company|
+      container = {
+          :company => nearby_company,
+          :people => []
+      }
       raw_results = @linkedin_client.query_people_from_company nearby_company['name'], coords['city'] << ", " << coords['state']
       people = raw_results['people']['values']
 
       if !people
         next
       end
+
       limit = 3
       iter = 1
       people.each do |person|
         if iter > limit
           break
         end
-        @results.push person['firstName'] << " " << person['lastName']
+
+        container['people'].push person
+
         iter += iter
       end
+
+      @results.push container
 
     end
 
