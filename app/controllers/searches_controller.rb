@@ -2,11 +2,14 @@ require 'whos_using_what/api_clients/linkedin_client'
 require_relative '../nosql/mongo_helper'
 require 'whos_using_what/data_searchers/companies_searcher'
 require 'whos_using_what/data_gatherers/geo_tagger'
-
-#only for testing
+require_relative '../models/person_search'
 
 
 class SearchesController < ApplicationController
+
+  @mongo_client = MongoHelper.get_mongo_connection
+  @companies_coll = @mongo_client['companies']
+  @coords_coll = @mongo_client['coordinates']
 
   layout 'searches'
 
@@ -61,7 +64,7 @@ class SearchesController < ApplicationController
 
   def new
 
-    @search = Search.new
+    @person_search = PersonSearch.new
 
     render :template => "searches/new"
 
@@ -81,26 +84,43 @@ class SearchesController < ApplicationController
 =end
     #-------
 
-
-    @search = Search.new(params[:search])
+    @person_search = params[:person_search]
     @results = Array.new
+
+    @req_zip = @person_search['zipcode']
+    @req_prog_language = @person_search['programming_language']
 
     cur_user = @@users_collection.find_one(:session_id => session[:session_id])
 
-    #todo grab user info to verify linkedin
+    # TODO need to provide validation of zip input field (implement at model level)
+    coords = @coords_coll.find_one({
+                                       :zip => req_zip
+                                   })
+    if coords == nil
+      # TODO need to have "no results display option for this case"
+      render 'searches/search_results'
+    end
+
+    # create the linkedin client that is specific to the user TODO see about keeping this cached within session
     @linkedin_client = LinkedinClient.new(ENV["linkedin.api_key"], ENV["linkedin.api_secret"], cur_user['credentials_linkedin']['token'], cur_user['credentials_linkedin']['secret'], "http://linkedin.com")
 
+    # perform geo-location company search
+    nearby_companies = @companies_coll.find({"loc" => {"$near" => [coords['loc']['lat'], coords['loc']['lon']]}})
 
-    raw_results = @linkedin_client.query_people_from_company "apple", "san jose, ca"
-    people = raw_results['people']['values']
+    nearby_companies.each do |nearby_company|
+      raw_results = @linkedin_client.query_people_from_company "apple", coords['city'] << ", " << coords['state']
+      people = raw_results['people']['values']
 
-    people.each do |person|
-      @results.push person['firstName']  << " " << person['lastName']
+      people.each do |person|
+        @results.push person['firstName'] << " " << person['lastName']
+      end
+
     end
 
     puts "search query is: " + @search.name
 
     render 'searches/search_results'
+
   end
 
 end

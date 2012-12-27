@@ -1,5 +1,8 @@
 WhosUsingWhatWeb::Application.routes.draw do
 
+  resources :person_searches
+
+
   resources :searches
   resources :sessions
 
