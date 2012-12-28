@@ -104,6 +104,26 @@ class SearchesController < ApplicationController
     # perform geo-location company search
     nearby_companies = @companies_coll.find({"loc" => {"$near" => [coords['loc']['lat'], coords['loc']['lon']]}}).limit(10)
 
+    #just mock data for testing without api call
+    if true
+      container = {
+          :company => {
+              :name => 'some company',
+              :url => 'http://',
+              :logo_url => 'http://',
+              :loc => ''
+          },
+          :people => [{'firstName' => "Tom",
+                       'lastName' => "Clancy",
+                       'headline' => "Author",
+                       'publicProfileUrl' => "http://",
+                       'pictureUrl' => "http://"}]
+      }
+      @results.push container
+
+    end
+
+
     #TODO need to rework to use facet linkedin search from client as can't make this many calls for 1 search (due to threshold limits)
 =begin
     nearby_companies.each do |nearby_company|
