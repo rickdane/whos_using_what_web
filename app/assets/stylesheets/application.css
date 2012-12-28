@@ -21,10 +21,32 @@
     text-shadow: 0 1px 0 #FFFFFF;
 }
 
+.hto_result A:link {
+    color: #191970;
+    text-decoration: none;
+}
+
+.hto_result A:visited {
+    color: #191970;
+    text-decoration: none;
+}
+
+.hto_result A:active {
+    color: #191970;
+    text-decoration: none;
+}
+
+.hto_result A:hover {
+    color: #a9a9a9 !important;
+    text-decoration: none !important;
+    background-color: transparent;
+
+}
+
 .hto_result {
     -moz-border-radius: 15px;
     border-radius: 15px;
-    padding: 5px;
+    padding: 10px;
     background-color: #d3d3d3;
     border: 1px solid #AAAAAA;
 
@@ -36,11 +58,11 @@
 }
 
 .hto_company_div {
-    background-color: #d3d3d3;
+    background-color: #EAEAFF;
     border: 1px solid #AAAAAA;
     -moz-border-radius: 15px;
     border-radius: 15px;
-    padding: 5px;
+    padding: 10px;
 }
 
 .hto_logo {
