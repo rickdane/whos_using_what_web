@@ -96,70 +96,70 @@ class SearchesController < ApplicationController
     if coords == nil
       # TODO need to have "no results display option for this case"
       render 'searches/search_results'
+      return
     end
 
     # create the linkedin client that is specific to the user TODO see about keeping this cached within session
     @linkedin_client = LinkedinClient.new(ENV["linkedin.api_key"], ENV["linkedin.api_secret"], cur_user['credentials_linkedin']['token'], cur_user['credentials_linkedin']['secret'], "http://linkedin.com")
 
     # perform geo-location company search
-    nearby_companies = @companies_coll.find({"loc" => {"$near" => [coords['loc']['lat'], coords['loc']['lon']]}}).limit(10)
+    nearby_companies = @companies_coll.find({"loc" => {"$near" => [coords['loc']['lat'], coords['loc']['lon']]}}).limit(5)
 
-    #just mock data for testing without api call
-    if true
-      container = {
-          :company => {
-              :name => 'some company',
-              :url => 'http://',
-              :logo_url => 'http://',
-              :loc => ''
-          },
-          :people => [{'firstName' => "Tom",
-                       'lastName' => "Clancy",
-                       'headline' => "Author",
-                       'publicProfileUrl' => "http://",
-                       'pictureUrl' => "http://"}]
-      }
-      @results.push container
+    company_containers = Hash.new
+    company_ids = []
 
-    end
-
-
-    #TODO need to rework to use facet linkedin search from client as can't make this many calls for 1 search (due to threshold limits)
-=begin
     nearby_companies.each do |nearby_company|
-      container = {
-          :company => {
-              :name => nearby_company['name'],
-              :url => nearby_company['websiteUrl'],
-              :logo_url => nearby_company['logoUrl'],
-              :loc => nearby_company['loc']
-          },
-          :people => []
-      }
-      raw_results = @linkedin_client.query_people_from_company nearby_company['name'], coords['city'] << ", " << coords['state']
-      people = raw_results['people']['values']
 
-      if !people
-        next
+      company_id = nearby_company['id']
+
+      if company_id
+        company_id = company_id.to_s
+        company_ids.push company_id
+
+        container = {
+            :company => {
+                :name => nearby_company['name'],
+                :url => nearby_company['websiteUrl'],
+                :logo_url => nearby_company['logoUrl'],
+                :loc => nearby_company['loc']
+            },
+            :people => []
+        }
+        company_containers[company_id] = container
+        @results.push container
       end
-
-      limit = 3
-      iter = 1
-      people.each do |person|
-        if iter > limit
-          break
-        end
-
-
-        container[:people].push person
-
-        iter += iter
-      end
-
-      @results.push container
-
     end
-=end
+
+    #just for testing, to ensure that we have at least one result back
+    #------------
+    company_ids.push '2003'
+    container = {
+        :company => {
+            :name => 'Healthline Networks',
+            :url => 'http://',
+            :logo_url => 'http://',
+            :loc => ''
+        },
+        :people => []
+    }
+    company_containers['2003'] = container
+    @results.push container
+    #------------
+
+    #todo work out location issue, consider removing search by location
+
+    raw_results = @linkedin_client.query_people_from_company_ids company_ids, 'software', 'us:84'
+    people = raw_results['people']['values']
+    if people
+      people.each do |person|
+
+        #todo get company id from person and then:
+        cur_company_id = '' #todo figure out how to get this
+        company_containers[cur_company_id][:people].push person
+
+      end
+    end
+
 
     render 'searches/search_results'
 
