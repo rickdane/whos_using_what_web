@@ -22,8 +22,12 @@
 }
 
 .hto_result {
+    -moz-border-radius: 15px;
+    border-radius: 15px;
     padding: 5px;
-    background-color: grey;
+    background-color: #d3d3d3;
+    border: 1px solid #AAAAAA;
+
 }
 
 .hto_company_logo {
@@ -32,9 +36,11 @@
 }
 
 .hto_company_div {
+    background-color: #d3d3d3;
+    border: 1px solid #AAAAAA;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
     padding: 5px;
-    background-color: blue;
-    color: white;
 }
 
 .hto_logo {
