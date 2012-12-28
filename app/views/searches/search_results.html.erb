@@ -3,13 +3,43 @@
   <li data-role="list-divider" role="heading">
     Results
   </li>
-  <% @results.each do |result| %>
+  <br/>
+  <br/>
+  <% @results.each do |result|
 
-      <li data-theme="c">
-        <a href="#page1" data-transition="slide">
-          <%= result %>
-        </a>
-      </li>
+    company = result[:company]
+    people = result[:people]
+
+  %>
+
+      <!--  <li data-theme="c">-->
+      <div class='hto_result'>
+        <div class='hto_company_div'>
+          <a href="<%= company[:url] %> target='_blank'">
+
+            <%= company[:name] %>
+          </a>
+          <br/>
+          <img class='hto_company_logo' src='<%= company[:logo_url] %>'>
+          <br/>
+        </div>
+
+        <div class='hto_inner'>
+
+          <% people.each do |person| %>
+              <a href="<%= person['publicProfileUrl'] %> target='_blank'">
+                <div id="personContainer">
+                  <img class='hto_logo' src="<%= person['pictureUrl'] %>">
+                  <%= person['firstName'] %> <%= person['lastName'] %> - <%= person['headline'] %>
+
+                  <br/>
+                </div>
+              </a>
+          <% end %>
+        </div>
+        <!--      </li>-->
+        <br/>
+        <br/>
   <% end %>
 
 </ul>

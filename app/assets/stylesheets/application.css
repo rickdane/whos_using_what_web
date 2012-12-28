@@ -21,24 +21,49 @@
     text-shadow: 0 1px 0 #FFFFFF;
 }
 
+.hto_result {
+    padding: 5px;
+    background-color: grey;
+}
+
+.hto_company_logo {
+    width: 15%;
+    height: 15%;
+}
+
+.hto_company_div {
+    padding: 5px;
+    background-color: blue;
+    color: white;
+}
+
+.hto_logo {
+    width: 50px;
+    height: 50px;
+}
+
+.hto_inner {
+    position: relative;
+    left: 20px;
+}
+
 #container1 {
-    position:absolute;
+    position: absolute;
     background: white;
     left: 200px;
     top: 50px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     width: 500px;
-    height: 1200px;
+    /*height: 1200px;*/
     border-top-left-radius: 10% 5%;
     border-bottom-left-radius: 10% 5%;
     border-bottom-right-radius: 10% 5%;
     border-top-right-radius: 10% 5%;;
-    border:1px solid #FF9900;
-    border-radius:10px;
+    border: 1px solid #FF9900;
+    border-radius: 10px;
     border-color: #000000;
 
 }
-
 
 #mcontainer1 {
     overflow: hidden;
@@ -48,8 +73,8 @@
     border-bottom-left-radius: 10% 5%;
     border-bottom-right-radius: 10% 5%;
     border-top-right-radius: 10% 5%;;
-    border:1px solid #FF9900;
-    border-radius:10px;
+    border: 1px solid #FF9900;
+    border-radius: 10px;
     border-color: #000000;
 }
 

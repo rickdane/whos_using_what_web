@@ -79,22 +79,13 @@ class SearchesController < ApplicationController
 
   def search
 
-    #------- just for testing
-=begin
-    log = LoggerFactory.get_default_logger
-
-    geo_tagger = GeoTagger.new log
-    gather_companies = GatherCompanies.new
-    companies_searcher = CompaniesSearcher.new geo_tagger
-    near = companies_searcher.zip_code_search "95688"
-=end
-    #-------
+    # TODO this is being called twice when search form is submitted, once as POST and once as GET, figure out why and fix this, as it should only call as POST
 
     @person_search = params[:person_search]
     @results = Array.new
 
-    @req_zip = @person_search['zipcode']
-    @req_prog_language = @person_search['programming_language']
+    @req_zip = @person_search[:zipcode]
+    @req_prog_language = @person_search[:programming_language]
 
     cur_user = @@users_collection.find_one(:session_id => session[:session_id])
 
