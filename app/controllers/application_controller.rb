@@ -64,7 +64,7 @@ class ApplicationController < ActionController::Base
 
 
   def current_user
-    return session[:current_user]
+    return @@users_collection.find_one(:session_id => session[:session_id])
   end
 
   def signed_in?
@@ -73,7 +73,7 @@ class ApplicationController < ActionController::Base
       return false
     end
     doc = @@users_collection.find_one(:session_id => session[:session_id],
-                                :active => true)
+                                      :active => true)
     if !doc
       return false
     end

@@ -21,6 +21,10 @@
     text-shadow: 0 1px 0 #FFFFFF;
 }
 
+.hto_td {
+    padding: 4px;
+}
+
 .hto_result A:link {
     color: #191970;
     text-decoration: none;

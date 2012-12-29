@@ -30,9 +30,17 @@
           <% people.each do |person| %>
               <a href="<%= person['publicProfileUrl'] %>" target='_blank'>
                 <div id="personContainer">
-                  <img class='hto_logo' src="<%= person['pictureUrl'] %>">
-                  <%= person['firstName'] %> <%= person['lastName'] %> - <%= person['headline'] %>
+                  <table>
+                    <tr>
+                      <td class='hto_td'>
+                        <img class='hto_logo' src="<%= person['pictureUrl'] %>">
+                      </td>
+                      <td>
+                        <%= person['firstName'] %> <%= person['lastName'] %> - <%= person['headline'] %>
 
+                      </td>
+                    </tr>
+                  </table>
                   <br/>
                 </div>
               </a>
