@@ -3,9 +3,12 @@ require_relative '../nosql/mongo_helper'
 require 'whos_using_what/data_searchers/companies_searcher'
 require 'whos_using_what/data_gatherers/geo_tagger'
 require_relative '../models/person_search'
+require_relative '../../app/api_utils/linkedin_api_util'
 
 
 class SearchesController < ApplicationController
+
+  include LinkedinApiUtil
 
   layout 'searches'
 
@@ -130,36 +133,41 @@ class SearchesController < ApplicationController
       end
     end
 
-    #just for testing, to ensure that we have at least one result back
-    #------------
-    company_ids.push '2003'
-    container = {
-        :company => {
-            :name => 'Healthline Networks',
-            :url => 'http://',
-            :logo_url => 'http://',
-            :loc => ''
-        },
-        :people => []
-    }
-    company_containers['2003'] = container
-    @results.push container
-    #------------
-
     #todo work out location issue, consider removing search by location
 
-    raw_results = @linkedin_client.query_people_from_company_ids company_ids, 'software', 'us:84'
+    raw_results = people_search @linkedin_client, company_ids, 'software', 'us:84'
+
+    # raw_results = @linkedin_client.query_people_from_company_ids company_ids, 'software', 'us:84'
     people = raw_results['people']['values']
+    cur_company_id = nil
     if people
       people.each do |person|
 
         #todo get company id from person and then:
-        cur_company_id = '' #todo figure out how to get this
-        company_containers[cur_company_id][:people].push person
+        positions = person['positions']
+        if positions
+          positions = positions['values']
+        end
+
+        if !positions
+          next
+        end
+        positions.each do |position|
+          if !position['isCurrent']
+            next
+          end
+          cur_company_id = position['company']['id']
+        end
+
+        if !cur_company_id
+          next
+        end
+        if company_containers[cur_company_id.to_s]
+          company_containers[cur_company_id.to_s][:people].push person
+        end
 
       end
     end
-
 
     render 'searches/search_results'
 
