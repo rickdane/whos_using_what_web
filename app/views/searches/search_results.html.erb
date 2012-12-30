@@ -1,10 +1,20 @@
-<br xmlns="http://www.w3.org/1999/html"/>
+<br xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"/>
 <ul data-role="listview" data-divider-theme="b" data-inset="true">
   <li data-role="list-divider" role="heading">
     Results
   </li>
   <br/>
   <br/>
+
+  <script type="text/javascript" src="http://api.simplyhired.com/c/jobs-api/js/xml-v2.js"></script>
+
+  <div style="text-align: right;">
+    <a STYLE="text-decoration:none" href="http://www.simplyhired.com/"><span style="color: rgb(0, 0, 0);">Jobs</span></a>
+    by
+    <a STYLE="text-decoration:none" href="http://www.simplyhired.com/"><span style="color: rgb(0, 159, 223); font-weight: bold;">Simply</span><span style="color: rgb(163, 204, 64); font-weight: bold;">Hired</span></a>
+  </div>
+  <br/>
+
   <% @results.each do |result|
 
     company = result[:company]
@@ -16,7 +26,7 @@
       <div class='hto_result'>
         <div class='hto_company_div'>
 
-          <%= company[:name] %>
+          <strong>    <%= company[:name] %>  </strong>
           </a>
           <br/>
         </div>
@@ -25,17 +35,20 @@
         <div class='hto_inner'>
 
           <% jobs.each do |job| %>
+              <br/>
               <strong> <%= job[:title] %> </strong> in <i><%= job[:location] %> </i> -  <%= job[:description] %>
               <br/>
               <br/>
+              <a href="<%= job[:url] %>" target='_blank' onMouseDown="xml_sclk(this)"> View Full Job Listing </a>
+              <br/>
           <% end %>
           </br>
-          Connect with LinkedIn:
+          <strong> Connect with LinkedIn: </strong>
           <br/>
           <br/>
           <a href="<%= linkedin_search_urls[:hiring] %>" target='_blank'> Human Resources </a>
           <br/>
-          <a href="<%= linkedin_search_urls[:hiring] %>" target='_blank'> Keyword </a>
+          <a href="<%= linkedin_search_urls[:keyword] %>" target='_blank'> "<%= @req_prog_language %>" </a>
         </div>
       </div>
       <br/>

@@ -159,10 +159,13 @@ class SearchesController < ApplicationController
 
       container = company_containers[company_name_clean]
 
+      url = job['src'].attributes["url"]
+
       job_map = {
           :title => job['jt'],
           :location => job['loc'],
-          :description => job['e']
+          :description => job['e'],
+          :url => url
       }
 
       if !container
