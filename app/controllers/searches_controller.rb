@@ -144,7 +144,7 @@ class SearchesController < ApplicationController
 
     @results = Array.new
 
-    xml_resp = @simply_hired_client.perform_search @req_prog_language, @req_location, @number_results_per_page, @exclude_recruiters, @page_number
+    xml_resp = @simply_hired_client.perform_search @req_prog_language, @req_location, @number_results_per_page, @exclude_recruiters
 
     company_containers = Hash.new
     company_names = []

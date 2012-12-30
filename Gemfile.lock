@@ -166,7 +166,7 @@ GEM
       selenium-webdriver (>= 2.18.0)
     webrobots (0.0.13)
     websocket (1.0.6)
-    whos_using_what (1.1.2)
+    whos_using_what (1.1.4)
       crack
       headless
       json
@@ -197,4 +197,4 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
-  whos_using_what (~> 1.1.2)
+  whos_using_what (~> 1.1.4)
