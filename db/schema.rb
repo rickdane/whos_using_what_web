@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121230193743) do
+ActiveRecord::Schema.define(:version => 20121230201459) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20121230193743) do
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
     t.boolean  "fieldname"
+    t.string   "page_number"
   end
 
   create_table "posts", :force => true do |t|

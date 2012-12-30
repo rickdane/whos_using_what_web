@@ -20,6 +20,7 @@
       <%= check_box_tag :exclude_recruiters %>
       <%= label_tag :exclude_recruiters, "Exclude Recruiters?" %>
       </br>
+      Page number: <%= f.text_field :page_number %>
     </div>
     <div class="actions">
       <%= f.submit "Search", 'data-icon' => "search" %>

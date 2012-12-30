@@ -134,6 +134,8 @@ class SearchesController < ApplicationController
     @person_search = params[:person_search]
 
     @req_location = @person_search[:zipcode]
+    #TODO need to re-work this
+    @page_number = Integer(@person_search[:page_number])
     @req_prog_language = @person_search[:programming_language]
     @exclude_recruiters = false
     if params['exclude_recruiters'] == "1"
@@ -142,7 +144,7 @@ class SearchesController < ApplicationController
 
     @results = Array.new
 
-    xml_resp = @simply_hired_client.perform_search @req_prog_language, @req_location, @number_results_per_page, @exclude_recruiters
+    xml_resp = @simply_hired_client.perform_search @req_prog_language, @req_location, @number_results_per_page, @exclude_recruiters, @page_number
 
     company_containers = Hash.new
     company_names = []
