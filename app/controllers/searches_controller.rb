@@ -120,6 +120,8 @@ class SearchesController < ApplicationController
 
   end
 
+  @number_results_per_page = 20
+
   def search
 
     # TODO this is being called twice when search form is submitted, once as POST and once as GET, figure out why and fix this, as it should only call as POST
@@ -131,12 +133,16 @@ class SearchesController < ApplicationController
 
     @person_search = params[:person_search]
 
-    @req_zip = @person_search[:zipcode]
+    @req_location = @person_search[:zipcode]
     @req_prog_language = @person_search[:programming_language]
+    @exclude_recruiters = false
+    if params['exclude_recruiters'] == "1"
+      @exclude_recruiters = false
+    end
 
     @results = Array.new
 
-    xml_resp = @simply_hired_client.perform_search @req_prog_language, "san francisco, ca"
+    xml_resp = @simply_hired_client.perform_search @req_prog_language, @req_location, @number_results_per_page, @exclude_recruiters
 
     company_containers = Hash.new
     company_names = []

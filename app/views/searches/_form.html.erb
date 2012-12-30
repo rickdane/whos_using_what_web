@@ -15,7 +15,10 @@
       <br/>
       Programming Language: <%= f.text_field :programming_language %>
       <br/>
-      ZipCode: <%= f.text_field :zipcode %>
+      Location: <%= f.text_field :zipcode %>
+      <br/>
+      <%= check_box_tag :exclude_recruiters %>
+      <%= label_tag :exclude_recruiters, "Exclude Recruiters?" %>
       </br>
     </div>
     <div class="actions">

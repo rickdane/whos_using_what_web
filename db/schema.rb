@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121227045850) do
+ActiveRecord::Schema.define(:version => 20121230193743) do
 
   create_table "authorizations", :force => true do |t|
     t.string   "provider"
@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(:version => 20121227045850) do
     t.string   "programming_language"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
+    t.boolean  "fieldname"
   end
 
   create_table "posts", :force => true do |t|

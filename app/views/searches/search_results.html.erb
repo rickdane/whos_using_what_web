@@ -36,19 +36,18 @@
 
           <% jobs.each do |job| %>
               <br/>
-              <strong> <%= job[:title] %> </strong> in <i><%= job[:location] %> </i> -  <%= job[:description] %>
-              <br/>
-              <br/>
-              <a href="<%= job[:url] %>" target='_blank' onMouseDown="xml_sclk(this)"> View Full Job Listing </a>
+              <a href="<%= job[:url] %>" target='_blank' onMouseDown="xml_sclk(this)">   <strong> <%= job[:title] %> </strong> in <i><%= job[:location] %> </i> </a> -  <%= job[:description] %>
+
               <br/>
           <% end %>
           </br>
-          <strong> Connect with LinkedIn: </strong>
+          <strong> Connect with LinkedIn: </strong> View LinkedIn searches that are relevant to this company in order to
+          connect.
           <br/>
           <br/>
-          <a href="<%= linkedin_search_urls[:hiring] %>" target='_blank'> Human Resources </a>
+          - <a href="<%= linkedin_search_urls[:hiring] %>" target='_blank'> Human Resources </a>
           <br/>
-          <a href="<%= linkedin_search_urls[:keyword] %>" target='_blank'> "<%= @req_prog_language %>" </a>
+          - <a href="<%= linkedin_search_urls[:keyword] %>" target='_blank'> "<%= @req_prog_language %>" </a>
         </div>
       </div>
       <br/>
