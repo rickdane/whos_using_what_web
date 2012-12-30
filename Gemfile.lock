@@ -46,6 +46,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.4.0)
+    crack (0.3.1)
     diff-lcs (1.1.3)
     domain_name (0.5.6)
       unf (~> 0.0.3)
@@ -165,7 +166,8 @@ GEM
       selenium-webdriver (>= 2.18.0)
     webrobots (0.0.13)
     websocket (1.0.6)
-    whos_using_what (1.0.7)
+    whos_using_what (1.0.9)
+      crack
       headless
       json
       mechanize
@@ -195,4 +197,4 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
-  whos_using_what (~> 1.0.7)
+  whos_using_what (~> 1.0.9)

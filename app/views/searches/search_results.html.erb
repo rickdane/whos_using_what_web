@@ -1,4 +1,4 @@
-<br/>
+<br xmlns="http://www.w3.org/1999/html"/>
 <ul data-role="listview" data-divider-theme="b" data-inset="true">
   <li data-role="list-divider" role="heading">
     Results
@@ -8,46 +8,36 @@
   <% @results.each do |result|
 
     company = result[:company]
-    people = result[:people]
+    jobs = result[:jobs]
+    linkedin_search_urls = result[:linkedin_search_urls]
 
   %>
 
-      <!--  <li data-theme="c">-->
       <div class='hto_result'>
         <div class='hto_company_div'>
-          <a href="<%= company[:url] %>" target='_blank'>
 
-            <%= company[:name] %>
+          <%= company[:name] %>
           </a>
-          <br/>
-          <img class='hto_company_logo' src='<%= company[:logo_url] %>'>
           <br/>
         </div>
         <br/>
 
         <div class='hto_inner'>
 
-          <% people.each do |person| %>
-              <a href="<%= person['publicProfileUrl'] %>" target='_blank'>
-                <div id="personContainer">
-                  <table>
-                    <tr>
-                      <td class='hto_td'>
-                        <img class='hto_logo' src="<%= person['pictureUrl'] %>">
-                      </td>
-                      <td>
-                        <%= person['firstName'] %> <%= person['lastName'] %> - <%= person['headline'] %>
-
-                      </td>
-                    </tr>
-                  </table>
-                  <br/>
-                </div>
-              </a>
+          <% jobs.each do |job| %>
+              <strong> <%= job[:title] %> </strong> in <i><%= job[:location] %> </i> -  <%= job[:description] %>
+              <br/>
+              <br/>
           <% end %>
+          </br>
+          Connect with LinkedIn:
+          <br/>
+          <br/>
+          <a href="<%= linkedin_search_urls[:hiring] %>" target='_blank'> Human Resources </a>
+          <br/>
+          <a href="<%= linkedin_search_urls[:hiring] %>" target='_blank'> Keyword </a>
         </div>
       </div>
-      <!--      </li>-->
       <br/>
       <br/>
   <% end %>
