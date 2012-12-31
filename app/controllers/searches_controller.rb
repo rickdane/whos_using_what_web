@@ -136,8 +136,6 @@ class SearchesController < ApplicationController
     @person_search = params[:person_search]
 
     @req_location = @person_search[:zipcode]
-    #TODO need to re-work this
-    @page_number = Integer(@person_search[:page_number])
     @req_prog_language = @person_search[:programming_language]
     @exclude_recruiters = false
     if params['exclude_recruiters'] == "1"
