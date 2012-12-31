@@ -5,6 +5,7 @@ require 'whos_using_what/data_searchers/companies_searcher'
 require 'whos_using_what/data_gatherers/geo_tagger'
 require_relative '../models/person_search'
 require_relative '../../app/api_utils/linkedin_api_util'
+require 'will_paginate'
 
 
 class SearchesController < ApplicationController
@@ -120,7 +121,8 @@ class SearchesController < ApplicationController
 
   end
 
-  @number_results_per_page = 20
+  @@number_results_per_page = 20
+  @@total_results = 100
 
   def search
 
@@ -144,7 +146,7 @@ class SearchesController < ApplicationController
 
     @results = Array.new
 
-    xml_resp = @simply_hired_client.perform_search @req_prog_language, @req_location, @number_results_per_page, @exclude_recruiters
+    xml_resp = @simply_hired_client.perform_search @req_prog_language, @req_location, @@total_results, @exclude_recruiters
 
     company_containers = Hash.new
     company_names = []
@@ -199,6 +201,22 @@ class SearchesController < ApplicationController
       end
 
       container[:jobs].push job_map
+
+    end
+
+    #pagination logic
+    current_page = params[:page]
+    if !current_page
+      current_page = 1
+    end
+
+    begin
+
+      @page_results = @results.paginate :page => current_page, :per_page => @@number_results_per_page
+
+    rescue Exception => e
+      puts e.message
+      puts e.backtrace
 
     end
 

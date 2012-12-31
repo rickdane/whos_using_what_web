@@ -177,6 +177,7 @@ GEM
       rest-client
       rspec
       watir-webdriver
+    will_paginate (3.0.3)
 
 PLATFORMS
   ruby
@@ -198,3 +199,4 @@ DEPENDENCIES
   sqlite3
   uglifier (>= 1.0.3)
   whos_using_what (~> 1.1.4)
+  will_paginate (~> 3.0)

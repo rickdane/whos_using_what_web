@@ -15,7 +15,7 @@
   </div>
   <br/>
 
-  <% @results.each do |result|
+  <% @page_results.each do |result|
 
     company = result[:company]
     jobs = result[:jobs]
@@ -36,7 +36,8 @@
 
           <% jobs.each do |job| %>
               <br/>
-              <a href="<%= job[:url] %>" target='_blank' onMouseDown="xml_sclk(this)">   <strong> <%= job[:title] %> </strong> in <i><%= job[:location] %> </i> </a> -  <%= job[:description] %>
+              <a href="<%= job[:url] %>" target='_blank' onMouseDown="xml_sclk(this)">
+                <strong> <%= job[:title] %> </strong> in <i><%= job[:location] %> </i> </a> -  <%= job[:description] %>
 
               <br/>
           <% end %>
@@ -53,5 +54,6 @@
       <br/>
       <br/>
   <% end %>
-
 </ul>
+
+<%= will_paginate @page_results %>
