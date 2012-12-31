@@ -6,6 +6,7 @@ require 'whos_using_what/data_gatherers/geo_tagger'
 require_relative '../models/person_search'
 require_relative '../../app/api_utils/linkedin_api_util'
 require 'will_paginate'
+require 'will_paginate/array'
 
 
 class SearchesController < ApplicationController
@@ -145,7 +146,7 @@ class SearchesController < ApplicationController
     @results = Array.new
 
     xml_resp = @simply_hired_client.perform_search @req_prog_language, @req_location, @@total_results, @exclude_recruiters
-          puts       xml_resp
+
     company_containers = Hash.new
     company_names = []
 
