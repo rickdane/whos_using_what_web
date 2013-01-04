@@ -17,7 +17,7 @@ class WhosUsingWhatController < ApplicationController
     @linkedin_client = LinkedinClient.new(ENV["linkedin.api_key"], ENV["linkedin.api_secret"], cur_user['credentials_linkedin']['token'], cur_user['credentials_linkedin']['secret'], "http://linkedin.com")
 
     url = base_url <<
-        "people-search:(people:(id,first-name,last-name,public-profile-url,picture-url,headline,positions:(is-current,company:(id,name,url,industries,employee-count-range))))" <<
+        "people-search:(people:(id,first-name,last-name,public-profile-url,picture-url,headline,positions:(is-current,company:(id,name,size))))" <<
         "?facets=location" <<
         "&facet=location," << location <<
         "&keyword=" << keyword << "&start=10"
