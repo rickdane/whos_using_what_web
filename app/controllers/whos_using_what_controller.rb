@@ -7,7 +7,7 @@ class WhosUsingWhatController < ApplicationController
     base_url = "http://api.linkedin.com/v1/"
     cur_user = current_user
 
-    location = 'us:84'
+    location = 'us:82'
 
     @mongo_client = MongoHelper.get_mongo_connection
     @whos_using_what_coll = @mongo_client['whos_using_what']
