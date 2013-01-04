@@ -1,7 +1,7 @@
 WhosUsingWhatWeb::Application.routes.draw do
 
   resources :person_searches
-
+  resources :whos_using_what
 
   resources :searches
 

@@ -129,7 +129,7 @@ class SearchesController < ApplicationController
 
     # TODO this is being called twice when search form is submitted, once as POST and once as GET, figure out why and fix this, as it should only call as POST
 
-    cur_user = @@users_collection.find_one(:session_id => session[:session_id])
+    cur_user = current_user
 
     # create the linkedin client that is specific to the user TODO see about keeping this cached within session
     @linkedin_client = LinkedinClient.new(ENV["linkedin.api_key"], ENV["linkedin.api_secret"], cur_user['credentials_linkedin']['token'], cur_user['credentials_linkedin']['secret'], "http://linkedin.com")
