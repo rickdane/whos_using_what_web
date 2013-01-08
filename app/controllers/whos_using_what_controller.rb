@@ -20,7 +20,7 @@ class WhosUsingWhatController < ApplicationController
         "people-search:(people:(id,first-name,last-name,public-profile-url,picture-url,headline,positions:(is-current,company:(id,name,size))))" <<
         "?facets=location" <<
         "&facet=location," << location <<
-        "&keyword=" << keyword << "&start=10"
+        "&keywords=" << keyword << "&start=10"
 
     results = @linkedin_client.json_api_call_helper url, {}, true
 
@@ -28,10 +28,20 @@ class WhosUsingWhatController < ApplicationController
 
     results.each do |result|
       company = result['positions']['values'][0]['company']
-      l = ""
+
+      existing_company = @whos_using_what_coll.find_one('id' => company['id'])
+
+      if (!existing_company)
+        company['keyword_count'] = 1
+        @whos_using_what_coll.insert(company)
+      else
+        company = existing_company
+        count = company['keyword_count'] + 1
+        @whos_using_what_coll.update({"_id" => company['_id']}, {"$set" => {'keyword_count' => count}})
+      end
+
     end
 
-    s = ""
 
   end
 
