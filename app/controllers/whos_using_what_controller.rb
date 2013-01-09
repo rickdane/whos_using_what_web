@@ -3,11 +3,13 @@ require_relative '../nosql/mongo_helper'
 
 class WhosUsingWhatController < ApplicationController
 
-  def show
-    base_url = "http://api.linkedin.com/v1/"
-    cur_user = current_user
+  @@base_url = "http://api.linkedin.com/v1/"
+  @@num_pages_to_scrape = 4
+  @@location = 'us:82'
 
-    location = 'us:82'
+  def show
+
+    cur_user = current_user
 
     @mongo_client = MongoHelper.get_mongo_connection
     @whos_using_what_coll = @mongo_client['whos_using_what']
@@ -16,11 +18,22 @@ class WhosUsingWhatController < ApplicationController
 
     @linkedin_client = LinkedinClient.new(ENV["linkedin.api_key"], ENV["linkedin.api_secret"], cur_user['credentials_linkedin']['token'], cur_user['credentials_linkedin']['secret'], "http://linkedin.com")
 
-    url = base_url <<
+    i = 0
+    while (i < @@num_pages_to_scrape)
+      gather_results i * 10, keyword
+      i = i +1
+    end
+
+
+  end
+
+  def gather_results start, keyword
+
+    url = @@base_url <<
         "people-search:(people:(id,first-name,last-name,public-profile-url,picture-url,headline,positions:(is-current,company:(id,name,size))))" <<
         "?facets=location" <<
-        "&facet=location," << location <<
-        "&keywords=" << keyword << "&start=10"
+        "&facet=location," << @@location <<
+        "&keywords=" << keyword << "&start=" << start.to_s
 
     results = @linkedin_client.json_api_call_helper url, {}, true
 
@@ -41,7 +54,6 @@ class WhosUsingWhatController < ApplicationController
       end
 
     end
-
 
   end
 
