@@ -62,7 +62,7 @@ class WhosUsingWhatController < ApplicationController
         begin
           range_str = company['size']
           if range_str
-            range_arr = range_str.split " ".first
+            range_arr = range_str.split " "
             range_str = range_arr[0]
             range_arr = range_str.split "-"
             if !range_arr[0].include? '+'
