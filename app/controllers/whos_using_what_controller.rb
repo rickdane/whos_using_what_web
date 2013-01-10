@@ -6,7 +6,7 @@ class WhosUsingWhatController < ApplicationController
 
   @@base_url = "http://api.linkedin.com/v1/"
   @@num_pages_to_scrape = 25
-  @@location = 'us:82'
+  @@location = 'us:84'
 
   def show
 
