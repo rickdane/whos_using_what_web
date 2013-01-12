@@ -1,4 +1,5 @@
 require_relative '../nosql/mongo_helper'
+require_relative '../models/company_search'
 
 class CompanySearchesController < ApplicationController
 
