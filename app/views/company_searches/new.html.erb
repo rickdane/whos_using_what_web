@@ -1,0 +1,26 @@
+<h2>Find companies that use a certain technology:</h2>
+
+<%= form_for(@company_search, :url => "../company_searches/search", :method => 'post') do |f| %>
+    <% if @company_search.errors.any? %>
+        <div id="error_explanation" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+          <h2><%= pluralize(@search.errors.count, "error") %> prohibited this test from being saved:</h2>
+
+          <ul>
+            <% @company_search.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <br/>
+      Location: <%= f.text_field :location %>
+      <br/>
+      </br>
+    </div>
+    <div class="actions">
+      <%= f.submit "Search", 'data-icon' => "search" %>
+
+    </div>
+<% end %>

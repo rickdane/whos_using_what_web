@@ -20,7 +20,7 @@ class SearchesController < ApplicationController
   def init
 
     @mongo_client = MongoHelper.get_mongo_connection
-    @companies_coll = @mongo_client['companies']
+    @companies_coll = @mongo_client['company_searches']
     @coords_coll = @mongo_client['coordinates']
     @simply_hired_client = SimplyHiredClient.new
 

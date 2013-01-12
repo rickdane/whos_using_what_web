@@ -1,6 +1,7 @@
 WhosUsingWhatWeb::Application.routes.draw do
 
   resources :person_searches
+  resources :company_searches
   resources :whos_using_what
 
   resources :searches
@@ -23,6 +24,7 @@ WhosUsingWhatWeb::Application.routes.draw do
   match '/loginstatus', :to => 'sessions#loginstatus'
 
   match 'people/search', :to => 'searches#search'
+  match 'company_searches/search', :to => 'company_searches#search'
   match 'login', :to => 'sessions#create'
   match 'logout', :to => 'sessions#destroy'
 
