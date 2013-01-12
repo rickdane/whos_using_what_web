@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8d110625-5601-4f76-b063-ecb019de3121" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/company_searches_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/company_searches_controller.rb" />
-    </list>
+    <list default="true" id="8d110625-5601-4f76-b063-ecb019de3121" name="Default" comment="" />
     <ignored path="whos_using_what_web.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,16 +22,7 @@
       <file leaf-file-name="company_searches_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/company_searches_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="35" selection-start="76" selection-end="76" vertical-scroll-proportion="0.021645023">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rescue.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p327/gems/actionpack-3.2.9/lib/action_controller/metal/rescue.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="0" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0">
+            <state line="1" column="35" selection-start="76" selection-end="76" vertical-scroll-proportion="0.020920502">
               <folding />
             </state>
           </provider>
@@ -854,7 +843,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/company_searches_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="35" selection-start="76" selection-end="76" vertical-scroll-proportion="0.021645023">
+        <state line="1" column="35" selection-start="76" selection-end="76" vertical-scroll-proportion="0.020920502">
           <folding />
         </state>
       </provider>
