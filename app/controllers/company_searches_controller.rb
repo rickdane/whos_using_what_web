@@ -16,25 +16,41 @@ class CompanySearchesController < ApplicationController
 
   end
 
+  def prepare_linkedin_url_company_name_helper company_name
+
+    if company_name[" "]
+      company_name[" "] = "-"
+    end
+
+    if company_name[","]
+      company_name[","] = ""
+    end
+
+    company_name.downcase
+
+  end
+
   @@number_results_per_page = 10
 
   def search
 
     @results = Array.new
 
-    docs = @whos_using_what_coll.find()
+    docs = @whos_using_what_coll.find({'location' => params['company_search']['location']})
 
     docs.each do |doc|
 
+      url_company_name =   prepare_linkedin_url_company_name_helper (doc['name'])
+
       container = {
           :company => {
-              :name => "ll",
-              :url => "lll"
+              :name => doc['name'],
+              :url => "http://www.linkedin.com/company/" << url_company_name
           },
           :jobs => [],
           :linkedin_search_urls => {
-              :hiring => "http://www.linkedin.com/",
-              :keyword => "http://www.linkedin.com/"
+              :hiring => "http://www.linkedin.com/company/" << url_company_name,
+              :keyword => "http://www.linkedin.com/company/" << url_company_name
           }
       }
       @results.push container
