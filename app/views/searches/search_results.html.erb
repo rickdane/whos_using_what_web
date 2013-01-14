@@ -6,7 +6,7 @@
   <br/>
   <br/>
 
-<!--  <script type="text/javascript" src="http://api.simplyhired.com/c/jobs-api/js/xml-v2.js"></script>
+  <!--  <script type="text/javascript" src="http://api.simplyhired.com/c/jobs-api/js/xml-v2.js"></script>
 
   <div style="text-align: right;">
     <a STYLE="text-decoration:none" href="http://www.simplyhired.com/"><span style="color: rgb(0, 0, 0);">Jobs</span></a>
@@ -41,23 +41,26 @@
 
               <br/>
           <% end %>
-          </br>
-          <!--          <strong> Connect with LinkedIn: </strong> View LinkedIn searches that are relevant to this company in order to
-          connect.-->
+          <!--          </br>
+          <strong> Connect with LinkedIn: </strong> View LinkedIn searches that are relevant to this company in order to
+          connect.
           <br/>
-          <br/>
+          <br/>-->
           <% if linkedin_search_urls[:hiring] %>
               - <a href="<%= linkedin_search_urls[:hiring] %>" target='_blank'> Human Resources </a>
+              <br/>
           <% end %>
-          <br/>
+
           <% if linkedin_search_urls[:keyword] %>
-              - <a href="<%= linkedin_search_urls[:keyword] %>" target='_blank'> "<%= @req_prog_language %>" </a>
+              <br/> - <a href="<%= linkedin_search_urls[:keyword] %>" target='_blank'> "<%= @req_prog_language %>" </a>
           <% end %>
           <% if linkedin_search_urls[:search_engine_search] %>
               - <a href="<%= linkedin_search_urls[:search_engine_search] %>" target='_blank'> Search Engine Search </a>
+              <br/>
           <% end %>
           <% if linkedin_search_urls[:li_company_page] %>
               - <a href="<%= linkedin_search_urls[:li_company_page] %>" target='_blank'> Linkedin Company Page </a>
+              <br/>
           <% end %>
         </div>
       </div>
