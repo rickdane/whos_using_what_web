@@ -1,8 +1,5 @@
 class AddExcludeRecruitersToPersonSearch < ActiveRecord::Migration
   def change
-    begin
-      add_column :person_searches, :fieldname, :boolean
-    rescue
-    end
+    #add_column :person_searches, :fieldname, :boolean
   end
 end
