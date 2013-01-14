@@ -17,6 +17,8 @@ WhosUsingWhatWeb::Application.routes.draw do
 
   ENV['home_url'] = "/"
 
+  match 'company_search/search', :to => 'company_searches#search'
+
   #this is for oauth re-routing
   match '/auth/:provider/callback', :to => 'sessions#create'
   match '/auth/failure', :to => 'sessions#failure'
@@ -24,7 +26,6 @@ WhosUsingWhatWeb::Application.routes.draw do
   match '/loginstatus', :to => 'sessions#loginstatus'
 
   match 'people/search', :to => 'searches#search'
-  match 'company_searches/search', :to => 'company_searches#search'
   match 'login', :to => 'sessions#create'
   match 'logout', :to => 'sessions#destroy'
 
