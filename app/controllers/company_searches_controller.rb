@@ -32,8 +32,12 @@ class CompanySearchesController < ApplicationController
   end
 
   @@number_results_per_page = 10
+  #this is just for POC, would need to get this based on user input
+  @@keyword = 'ruby'
 
   def search
+
+    @req_prog_language = @@keyword
 
     @results = Array.new
 
@@ -41,7 +45,7 @@ class CompanySearchesController < ApplicationController
 
     docs.each do |doc|
 
-      url_company_name =   prepare_linkedin_url_company_name_helper (doc['name'])
+      url_company_name = prepare_linkedin_url_company_name_helper (doc['name'])
 
       container = {
           :company => {
@@ -50,8 +54,8 @@ class CompanySearchesController < ApplicationController
           },
           :jobs => [],
           :linkedin_search_urls => {
-              :hiring => "http://www.linkedin.com/company/" << url_company_name,
-              :keyword => "http://www.linkedin.com/company/" << url_company_name
+              :li_company_page => "http://www.linkedin.com/company/" << url_company_name,
+              :search_engine_search => "http://www.google.com/search?q=" << doc['name'] << " " << @@keyword
           }
       }
       @results.push container
