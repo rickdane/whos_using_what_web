@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d110625-5601-4f76-b063-ecb019de3121" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20121230193743_add_exclude_recruiters_to_person_search.rb" afterPath="$PROJECT_DIR$/db/migrate/20121230193743_add_exclude_recruiters_to_person_search.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20121230193743_add_exclude_recruiters_to_person_search.rb" afterPath="" />
     </list>
     <ignored path="whos_using_what_web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -21,19 +21,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="20121230201459_add_page_number_to_person_search.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="20121230201459_add_page_number_to_person_search.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20121230201459_add_page_number_to_person_search.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="4" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0">
+            <state line="5" column="36" selection-start="138" selection-end="138" vertical-scroll-proportion="0.16778524">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20121230193743_add_exclude_recruiters_to_person_search.rb" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20121230193743_add_exclude_recruiters_to_person_search.rb">
+      <file leaf-file-name="person_search.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/person_search.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="5" selection-start="85" selection-end="85" vertical-scroll-proportion="0.06711409">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20121227045850_create_person_searches.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20121227045850_create_person_searches.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -75,8 +84,8 @@
         <option value="$PROJECT_DIR$/app/views/company_searches/search.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/company_searches_controller.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
-        <option value="$PROJECT_DIR$/db/migrate/20121230201459_add_page_number_to_person_search.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20121230193743_add_exclude_recruiters_to_person_search.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20121230201459_add_page_number_to_person_search.rb" />
       </list>
     </option>
   </component>
@@ -785,16 +794,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/person_searches/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/person_searches/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="26" column="66" selection-start="682" selection-end="682" vertical-scroll-proportion="0.0" />
@@ -865,16 +864,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20121230201459_add_page_number_to_person_search.rb">
+    <entry file="file://$PROJECT_DIR$/app/models/person_search.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="4" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20121230193743_add_exclude_recruiters_to_person_search.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121227045850_create_person_searches.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="5" selection-start="85" selection-end="85" vertical-scroll-proportion="0.06711409">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rvm/gems/ruby-1.9.3-p327/gems/activerecord-3.2.9/lib/active_record/connection_adapters/sqlite_adapter.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="393" column="4" selection-start="11486" selection-end="11486" vertical-scroll-proportion="0.19354838">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121230201459_add_page_number_to_person_search.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="36" selection-start="138" selection-end="138" vertical-scroll-proportion="0.16778524">
           <folding />
         </state>
       </provider>
