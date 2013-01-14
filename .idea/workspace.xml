@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8d110625-5601-4f76-b063-ecb019de3121" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/company_searches_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/company_searches_controller.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/searches/search_results.html.erb" afterPath="$PROJECT_DIR$/app/views/searches/search_results.html.erb" />
     </list>
     <ignored path="whos_using_what_web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -22,19 +21,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="company_searches_controller.rb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="company_searches_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/company_searches_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="41" selection-start="1338" selection-end="1338" vertical-scroll-proportion="0.0">
+            <state line="46" column="58" selection-start="930" selection-end="930" vertical-scroll-proportion="0.7991266">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="search_results.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="search_results.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/searches/search_results.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="50" selection-start="735" selection-end="735" vertical-scroll-proportion="-0.875576">
+            <state line="15" column="50" selection-start="735" selection-end="735" vertical-scroll-proportion="15.833333">
               <folding />
             </state>
           </provider>
@@ -67,8 +66,8 @@
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/db/migrate/20121230193743_add_exclude_recruiters_to_person_search.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20121230201459_add_page_number_to_person_search.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/company_searches_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/searches/search_results.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/company_searches_controller.rb" />
       </list>
     </option>
   </component>
@@ -767,16 +766,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/company_searches_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/searches/search_results.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="41" selection-start="1338" selection-end="1338" vertical-scroll-proportion="0.0">
+        <state line="15" column="50" selection-start="735" selection-end="735" vertical-scroll-proportion="15.833333">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/searches/search_results.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/company_searches_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="50" selection-start="735" selection-end="735" vertical-scroll-proportion="-0.875576">
+        <state line="46" column="58" selection-start="930" selection-end="930" vertical-scroll-proportion="0.7991266">
           <folding />
         </state>
       </provider>

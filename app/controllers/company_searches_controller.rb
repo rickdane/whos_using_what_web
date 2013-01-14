@@ -41,7 +41,7 @@ class CompanySearchesController < ApplicationController
 
     @results = Array.new
 
-    docs = @whos_using_what_coll.find({'location' => params['company_search']['location']})
+    docs = @whos_using_what_coll.find({'location' => params['company_search']['location']}).sort({'employee_range_low' => -1})
 
     docs.each do |doc|
 
