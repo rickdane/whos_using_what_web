@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d110625-5601-4f76-b063-ecb019de3121" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20121230193743_add_exclude_recruiters_to_person_search.rb" afterPath="$PROJECT_DIR$/db/migrate/20121230193743_add_exclude_recruiters_to_person_search.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20121230201459_add_page_number_to_person_search.rb" afterPath="$PROJECT_DIR$/db/migrate/20121230201459_add_page_number_to_person_search.rb" />
     </list>
     <ignored path="whos_using_what_web.iws" />
@@ -24,10 +22,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="20121230201459_add_page_number_to_person_search.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="20121230201459_add_page_number_to_person_search.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20121230201459_add_page_number_to_person_search.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="5" selection-start="78" selection-end="78" vertical-scroll-proportion="0.06369427">
+            <state line="2" column="4" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20121230193743_add_exclude_recruiters_to_person_search.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/db/migrate/20121230193743_add_exclude_recruiters_to_person_search.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="51" selection-start="175" selection-end="175" vertical-scroll-proportion="0.25477707">
               <folding />
             </state>
           </provider>
@@ -68,9 +75,9 @@
         <option value="$PROJECT_DIR$/app/views/company_searches/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/company_searches/search.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/company_searches_controller.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20121230193743_add_exclude_recruiters_to_person_search.rb" />
         <option value="$PROJECT_DIR$/Gemfile" />
         <option value="$PROJECT_DIR$/db/migrate/20121230201459_add_page_number_to_person_search.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20121230193743_add_exclude_recruiters_to_person_search.rb" />
       </list>
     </option>
   </component>
@@ -384,16 +391,16 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="80" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="134" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="99" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="151" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="121" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../whos_using_what_gem" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="101" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1138" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="123" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="1080" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="1045" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="147" />
     <property name="GoToClass.includeJavaFiles" value="false" />
@@ -845,13 +852,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20121230193743_add_exclude_recruiters_to_person_search.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="30" selection-start="132" selection-end="132" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/whos_using_what_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="125" selection-start="304" selection-end="304" vertical-scroll-proportion="0.0">
@@ -868,7 +868,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20121230201459_add_page_number_to_person_search.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="5" selection-start="78" selection-end="78" vertical-scroll-proportion="0.06369427">
+        <state line="2" column="4" selection-start="77" selection-end="77" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20121230193743_add_exclude_recruiters_to_person_search.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="51" selection-start="175" selection-end="175" vertical-scroll-proportion="0.25477707">
           <folding />
         </state>
       </provider>
