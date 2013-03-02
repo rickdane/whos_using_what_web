@@ -1,0 +1,18 @@
+<%= render :template => 'layouts/header' %>
+
+
+<div id="mcontainer1">
+
+  <div data-theme="c" data-role="header">
+    <h3>
+      Hiring=&gt;To
+    </h3>
+  </div>
+
+  <br/>
+  <%= yield %>
+  <br/>
+  <br/>
+  <br/>
+</div>
+<%= render :template => 'layouts/footer' %>

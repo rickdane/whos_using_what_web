@@ -1,0 +1,2 @@
+module AnewtablesHelper
+end

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Rake:</b>
+  <%= @something.rake %>
+</p>
+
+<p>
+  <b>Db:</b>
+  <%= @something.db %>
+</p>
+
+
+<%= link_to 'Edit', edit_something_path(@something) %> |
+<%= link_to 'Back', somethings_path %>

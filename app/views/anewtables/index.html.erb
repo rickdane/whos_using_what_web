@@ -1,0 +1,23 @@
+<h1>Listing anewtables</h1>
+
+<table>
+  <tr>
+    <th>Tablevalue</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @anewtables.each do |anewtable| %>
+  <tr>
+    <td><%= anewtable.tablevalue %></td>
+    <td><%= link_to 'Show', anewtable %></td>
+    <td><%= link_to 'Edit', edit_anewtable_path(anewtable) %></td>
+    <td><%= link_to 'Destroy', anewtable, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Anewtable', new_anewtable_path %>

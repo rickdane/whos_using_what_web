@@ -15,8 +15,7 @@ class SearchesController < ApplicationController
 
   layout 'searches'
 
-#no need to authenticate user any longer as want to expose this publicly
-  #before_filter :authenticate_user!
+  before_filter :authenticate_user!
 
   def init
 

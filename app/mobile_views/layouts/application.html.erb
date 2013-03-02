@@ -1,4 +1,22 @@
 <%= render :template => 'layouts/header' %>
+
+<script type="text/javascript">
+
+if (navigator.geolocation) {
+    alert("found location")
+
+navigator.geolocation.getCurrentPosition(function(position){
+    var lat = position.coords.latitude;
+    var lon = position.coords.longitude;
+    alert(lat)
+alert(lon)
+},function(error){
+    //use error.code to determine what went wrong
+});
+}
+
+</script>
+
 <div id="mcontainer1">
 
   <div data-theme="c" data-role="header">
