@@ -3,207 +3,213 @@
 
 <head>
 
-  <meta charset="utf-8"/>
+<meta charset="utf-8"/>
 
-  <script type="text/javascript">
+<script type="text/javascript">
 
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-38957491-1']);
-      _gaq.push(['_trackPageview']);
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-38957491-1']);
+    _gaq.push(['_trackPageview']);
 
-      (function() {
-          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
 
-  </script>
+</script>
 
-  <style>
-          /*----- Calculator By www.widgetgenerators.blogspot.com ------ */
+<style>
+    .btnLogin
+    {
+        -moz-border-radius:2px;
+        -webkit-border-radius:2px;
+        border-radius:15px;
+        background:#a1d8f0;
+        background:-moz-linear-gradient(top, #badff3, #7acbed);
+        background:-webkit-gradient(linear, center top, center bottom, from(#badff3), to(#7acbed));
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#badff3', EndColorStr='#7acbed')";
+        border:1px solid #7db0cc !important;
+        cursor: pointer;
+        padding:11px 16px;
+        font:bold 11px/14px Verdana, Tahomma, Geneva;
+        text-shadow:rgba(0,0,0,0.2) 0 1px 0px;
+        color:#fff;
+        -moz-box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
+        -webkit-box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
+        box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
+        margin-center:12px;
+        padding:7px 21px;
+    }
 
-      .btnLogin
-      {
-          -moz-border-radius:2px;
-          -webkit-border-radius:2px;
-          border-radius:15px;
-          background:#a1d8f0;
-          background:-moz-linear-gradient(top, #badff3, #7acbed);
-          background:-webkit-gradient(linear, center top, center bottom, from(#badff3), to(#7acbed));
-          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#badff3', EndColorStr='#7acbed')";
-          border:1px solid #7db0cc !important;
-          cursor: pointer;
-          padding:11px 16px;
-          font:bold 11px/14px Verdana, Tahomma, Geneva;
-          text-shadow:rgba(0,0,0,0.2) 0 1px 0px;
-          color:#fff;
-          -moz-box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
-          -webkit-box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
-          box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
-          margin-center:12px;
-          padding:7px 21px;
-      }
+    .btnLogin:hover,
+    .btnLogin:focus,
+    .btnLogin:active{
+        background:#a1d8f0;
+        background:-moz-linear-gradient(top, #7acbed, #badff3);
+        background:-webkit-gradient(linear, center top, center bottom, from(#7acbed), to(#badff3));
+        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#7acbed', EndColorStr='#badff3')";
+    }
+    .btnLogin:active
+    {
+        text-shadow:rgba(0,0,0,0.3) 0 -1px 0px;
+    }
 
-      .btnLogin:hover,
-      .btnLogin:focus,
-      .btnLogin:active{
-          background:#a1d8f0;
-          background:-moz-linear-gradient(top, #7acbed, #badff3);
-          background:-webkit-gradient(linear, center top, center bottom, from(#7acbed), to(#badff3));
-          -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#7acbed', EndColorStr='#badff3')";
-      }
-      .btnLogin:active
-      {
-          text-shadow:rgba(0,0,0,0.3) 0 -1px 0px;
-      }
-          /*----- Calculator By www.widgetgenerators.blogspot.com ------ */
-  </style>
+    .main_table {
+        height:  100%;
+    }
+
+    html, body    {
+        height: 85%;
+        width: 95%;
+    }
+</style>
 
 
 
-  <script language='JavaScript'>
-      <!--------------------------------------------------------------------
-              Memory  = "0";      // initialise memory variable
-      Current = "0";      //   and value of Display ("current" value)
-      Operation = 0;      // Records code for eg * / etc.
-      MAXLENGTH = 30;     // maximum number of digits before decimal!
+<script language='JavaScript'>
+    <!--------------------------------------------------------------------
+            Memory  = "0";      // initialise memory variable
+    Current = "0";      //   and value of Display ("current" value)
+    Operation = 0;      // Records code for eg * / etc.
+    MAXLENGTH = 30;     // maximum number of digits before decimal!
 
-      function AddDigit(dig)          //ADD A DIGIT TO DISPLAY (keep as 'Current')
-      { if (Current.indexOf("!") == -1)  //if not already an error
-      { if (    (eval(Current) == 0)
-              && (Current.indexOf(".") == -1)
-              ) { Current = dig;
-      } else
-      { Current = Current + dig;
-      };
-          Current = Current.toLowerCase(); //FORCE LOWER CASE
-      } else
-      { Current = "Hint! Press 'AC'";  //Help out, if error present.
-      };
-          if (Current.indexOf("e0") != -1)
-          { var epos = Current.indexOf("e");
-              Current = Current.substring(0,epos+1) + Current.substring(epos+2);
-          };
-          if (Current.length > MAXLENGTH)
-          { Current = "Aargh! Too long"; //don't allow over MAXLENGTH digits before "." ???
-          };
-          document.Calculator.Display.value = Current;
-      }
+    function AddDigit(dig)          //ADD A DIGIT TO DISPLAY (keep as 'Current')
+    { if (Current.indexOf("!") == -1)  //if not already an error
+    { if (    (eval(Current) == 0)
+            && (Current.indexOf(".") == -1)
+            ) { Current = dig;
+    } else
+    { Current = Current + dig;
+    };
+        Current = Current.toLowerCase(); //FORCE LOWER CASE
+    } else
+    { Current = "Hint! Press 'AC'";  //Help out, if error present.
+    };
+        if (Current.indexOf("e0") != -1)
+        { var epos = Current.indexOf("e");
+            Current = Current.substring(0,epos+1) + Current.substring(epos+2);
+        };
+        if (Current.length > MAXLENGTH)
+        { Current = "Aargh! Too long"; //don't allow over MAXLENGTH digits before "." ???
+        };
+        document.Calculator.Display.value = Current;
+    }
 
-      function Dot()                  //PUT IN "." if appropriate.
-      {
-          if ( Current.length == 0)     //no leading ".", use "0."
-          { Current = "0.";
-          } else
-          {  if (   ( Current.indexOf(".") == -1)
-                  &&( Current.indexOf("e") == -1)
-                  )
-          { Current = Current + ".";
-          };   };
-          document.Calculator.Display.value = Current;
-      }
+    function Dot()                  //PUT IN "." if appropriate.
+    {
+        if ( Current.length == 0)     //no leading ".", use "0."
+        { Current = "0.";
+        } else
+        {  if (   ( Current.indexOf(".") == -1)
+                &&( Current.indexOf("e") == -1)
+                )
+        { Current = Current + ".";
+        };   };
+        document.Calculator.Display.value = Current;
+    }
 
-      function DoExponent()
-      {
-          if ( Current.indexOf("e") == -1 )
-          { Current = Current + "e0";
-              document.Calculator.Display.value = Current;
-          };
-      }
+    function DoExponent()
+    {
+        if ( Current.indexOf("e") == -1 )
+        { Current = Current + "e0";
+            document.Calculator.Display.value = Current;
+        };
+    }
 
-      function PlusMinus()
-      {
-          if  (Current.indexOf("e") != -1)
-          { var epos = Current.indexOf("e-");
-              if (epos != -1)
-              { Current = Current.substring(0,1+epos) + Current.substring(2+epos); //clip out -ve exponent
-              } else
-              { epos = Current.indexOf("e");
-                  Current = Current.substring(0,1+epos) + "-" + Current.substring(1+epos); //insert -ve exponent
-              };
-          } else
-          {  if ( Current.indexOf("-") == 0 )
-          { Current = Current.substring(1);
-          } else
-          { Current = "-" + Current;
-          };
-              if (    (eval(Current) == 0)
-                      && (Current.indexOf(".") == -1 )
-                      ) { Current = "0"; };
-          };
-          document.Calculator.Display.value = Current;
-      }
+    function PlusMinus()
+    {
+        if  (Current.indexOf("e") != -1)
+        { var epos = Current.indexOf("e-");
+            if (epos != -1)
+            { Current = Current.substring(0,1+epos) + Current.substring(2+epos); //clip out -ve exponent
+            } else
+            { epos = Current.indexOf("e");
+                Current = Current.substring(0,1+epos) + "-" + Current.substring(1+epos); //insert -ve exponent
+            };
+        } else
+        {  if ( Current.indexOf("-") == 0 )
+        { Current = Current.substring(1);
+        } else
+        { Current = "-" + Current;
+        };
+            if (    (eval(Current) == 0)
+                    && (Current.indexOf(".") == -1 )
+                    ) { Current = "0"; };
+        };
+        document.Calculator.Display.value = Current;
+    }
 
-      function Clear()                //CLEAR ENTRY
-      { Current = "0";
-          document.Calculator.Display.value = Current;
-      }
+    function Clear()                //CLEAR ENTRY
+    { Current = "0";
+        document.Calculator.Display.value = Current;
+    }
 
-      function AllClear()             //Clear ALL entries!
-      { Current = "0";
-          Operation = 0;                //clear operation
-          Memory = "0";                  //clear memory
-          document.Calculator.Display.value = Current;
-      }
+    function AllClear()             //Clear ALL entries!
+    { Current = "0";
+        Operation = 0;                //clear operation
+        Memory = "0";                  //clear memory
+        document.Calculator.Display.value = Current;
+    }
 
-      function Operate(op)            //STORE OPERATION e.g. + * / etc.
-      {
-          if (Operation != 0) { Calculate(); }; //'Press "=" if pending operation!
-          // note that design is not good for showing *intermediate* results.
+    function Operate(op)            //STORE OPERATION e.g. + * / etc.
+    {
+        if (Operation != 0) { Calculate(); }; //'Press "=" if pending operation!
+        // note that design is not good for showing *intermediate* results.
 
-          if (op.indexOf("*") > -1) { Operation = 1; };       //codes for *
-          if (op.indexOf("/") > -1) { Operation = 2; };       // slash (divide)
-          if (op.indexOf("+") > -1) { Operation = 3; };       // sum
-          if (op.indexOf("-") > -1) { Operation = 4; };       // difference
+        if (op.indexOf("*") > -1) { Operation = 1; };       //codes for *
+        if (op.indexOf("/") > -1) { Operation = 2; };       // slash (divide)
+        if (op.indexOf("+") > -1) { Operation = 3; };       // sum
+        if (op.indexOf("-") > -1) { Operation = 4; };       // difference
 
-          Memory = Current;                 //store value
-          // note how e.g. Current.value gives neither error nor value! ***
-          Current = "";
-          document.Calculator.Display.value = Current;
-      }
+        Memory = Current;                 //store value
+        // note how e.g. Current.value gives neither error nor value! ***
+        Current = "";
+        document.Calculator.Display.value = Current;
+    }
 
-      function Calculate()            //PERFORM CALCULATION (= button)
-      {
-          if (Operation == 1) { Current = eval(Memory) * eval(Current); };
-          if (Operation == 2)
-          { if (eval(Current) != 0)
-          { Current = eval(Memory) / eval(Current)
-          } else
-          { Current = "Aargh! Divide by zero"; //don't allow over MAXLENGTH digits before "." ???
-          }
-          };
-          if (Operation == 3) { Current = eval(Memory) + eval(Current); };
-          if (Operation == 4) { Current = eval(Memory) - eval(Current); };
-          Operation = 0;                //clear operation
-          Memory = "0";                  //clear memory
-          Current = Current + "";       //FORCE A STRING!
-          if (Current.indexOf("Infinity") != -1)        //eg "1e320" * 1
-          { Current = "Aargh! Value too big";
-          };
-          if (Current.indexOf("NaN") != -1)        //eg "1e320" / "1e320"
-          { Current = "Aargh! I don't understand";
-          };
-          document.Calculator.Display.value = Current;
-          // NOTE: if no operation, nothing changes, Current is left the same!
-      }
+    function Calculate()            //PERFORM CALCULATION (= button)
+    {
+        if (Operation == 1) { Current = eval(Memory) * eval(Current); };
+        if (Operation == 2)
+        { if (eval(Current) != 0)
+        { Current = eval(Memory) / eval(Current)
+        } else
+        { Current = "Aargh! Divide by zero"; //don't allow over MAXLENGTH digits before "." ???
+        }
+        };
+        if (Operation == 3) { Current = eval(Memory) + eval(Current); };
+        if (Operation == 4) { Current = eval(Memory) - eval(Current); };
+        Operation = 0;                //clear operation
+        Memory = "0";                  //clear memory
+        Current = Current + "";       //FORCE A STRING!
+        if (Current.indexOf("Infinity") != -1)        //eg "1e320" * 1
+        { Current = "Aargh! Value too big";
+        };
+        if (Current.indexOf("NaN") != -1)        //eg "1e320" / "1e320"
+        { Current = "Aargh! I don't understand";
+        };
+        document.Calculator.Display.value = Current;
+        // NOTE: if no operation, nothing changes, Current is left the same!
+    }
 
-      function FixCurrent()
-      {
-          Current = document.Calculator.Display.value;
-          Current = "" + parseFloat(Current);
-          if (Current.indexOf("NaN") != -1)
-          { Current = "Aargh! I don't understand";
-          };
-          document.Calculator.Display.value = Current;
-      }
+    function FixCurrent()
+    {
+        Current = document.Calculator.Display.value;
+        Current = "" + parseFloat(Current);
+        if (Current.indexOf("NaN") != -1)
+        { Current = "Aargh! I don't understand";
+        };
+        document.Calculator.Display.value = Current;
+    }
 
-      //--------------------------------------------------------------->
-  </script>
+    //--------------------------------------------------------------->
+</script>
 
 </head>
 <body>
 
-<div><table><tr><td> <!-- OUTER MARGIN -->
+<div><table id="main_table"><tr><td> <!-- OUTER MARGIN -->
   <font face="Verdana, Arial, Helvetica">
 
     <div><table border="0"><tr><td><p>&nbsp;</p>
