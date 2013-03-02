@@ -16,7 +16,7 @@ class SearchesController < ApplicationController
   layout 'searches'
 
 #no need to authenticate user any longer as want to expose this publicly
-  #before_filter :authenticate_user!
+  before_filter :init
 
   def init
 
@@ -28,9 +28,6 @@ class SearchesController < ApplicationController
   end
 
   def authenticate_user!
-
-    # TOOD this is a hack, re-factor
-    init
 
     signed_in = signed_in?
 
