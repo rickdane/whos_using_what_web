@@ -133,7 +133,7 @@ class SearchesController < ApplicationController
     cur_user = current_user
 
     # create the linkedin client that is specific to the user TODO see about keeping this cached within session
-    @linkedin_client = LinkedinClient.new(ENV["linkedin.api_key"], ENV["linkedin.api_secret"], cur_user['credentials_linkedin']['token'], cur_user['credentials_linkedin']['secret'], "http://linkedin.com")
+    #@linkedin_client = LinkedinClient.new(ENV["linkedin.api_key"], ENV["linkedin.api_secret"], cur_user['credentials_linkedin']['token'], cur_user['credentials_linkedin']['secret'], "http://linkedin.com")
 
     @person_search = params[:person_search]
 
@@ -141,12 +141,14 @@ class SearchesController < ApplicationController
     @req_prog_language = @person_search[:programming_language]
     @exclude_recruiters = false
     if params['exclude_recruiters'] == "1"
-      @exclude_recruiters = false
+      @exclude_recruiters = true
     end
 
     @results = Array.new
 
     xml_resp = @simply_hired_client.perform_search @req_prog_language, @req_location, @@total_results, @exclude_recruiters
+
+puts xml_resp
 
     company_containers = Hash.new
     company_names = []
