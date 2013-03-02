@@ -70,15 +70,15 @@
 
 
 <script language='JavaScript'>
-    <!--
-    ------------------------------------------------------------------
-            Memory = "0";      // initialise memory variable
+                                  alert("begin")
+    Memory = "0";      // initialise memory variable
     Current = "0";      //   and value of Display ("current" value)
     Operation = 0;      // Records code for eg * / etc.
     MAXLENGTH = 30;     // maximum number of digits before decimal!
 
-    function AddDigit(dig)          //ADD A DIGIT TO DISPLAY (keep as 'Current')
+    function AddDigit(dig)
     {
+        alert(1)
         if (Current.indexOf("!") == -1)  //if not already an error
         {
             if ((eval(Current) == 0)
@@ -253,7 +253,6 @@
         document.Calculator.Display.value = Current;
     }
 
-    //--------------------------------------------------------------->
 </script>
 
 </head>

@@ -8,7 +8,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362248317905" ignored="false" />
     <file path="/application.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362248458215" ignored="false" />
-    <file path="/searches.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362256141195" ignored="false" />
+    <file path="/searches.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362256465539" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +37,7 @@
       <file leaf-file-name="searches.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/searches.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="343" column="110" selection-start="11942" selection-end="11942" vertical-scroll-proportion="0.7601744">
+            <state line="69" column="86" selection-start="2360" selection-end="2360" vertical-scroll-proportion="0.13662791">
               <folding />
             </state>
           </provider>
@@ -1059,7 +1059,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/searches.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="343" column="110" selection-start="11942" selection-end="11942" vertical-scroll-proportion="0.7601744">
+        <state line="69" column="86" selection-start="2360" selection-end="2360" vertical-scroll-proportion="0.13662791">
           <folding />
         </state>
       </provider>
