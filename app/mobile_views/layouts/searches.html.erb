@@ -43,6 +43,11 @@
 
 <script type="text/javascript">
 
+    //for performance on mobile devices
+    $.mobile.defaultPageTransition = 'none'
+    $.mobile.defaultDialogTransition = 'none'
+    $.mobile.buttonMarkup.hoverDelay = 0
+
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-38957491-1']);
     _gaq.push(['_trackPageview']);
