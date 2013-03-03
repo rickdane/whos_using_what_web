@@ -73,6 +73,10 @@ class SearchesController < ApplicationController
 
   end
 
+  def calculator
+    render :template => "searches"
+  end
+
 
   def new
 
