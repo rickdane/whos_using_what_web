@@ -74,7 +74,7 @@ class SearchesController < ApplicationController
   end
 
   def calculator
-    render :template => "searches"
+    render :template => "searches/new"
   end
 
 
