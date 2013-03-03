@@ -37,7 +37,7 @@ WhosUsingWhatWeb::Application.routes.draw do
 
   match 'authenticate', :to => 'sessions#new'
 
-  map.connect 'searches/calculator', :controller => 'searches', :action => 'calculator'
+  #map.connect 'searches/calculator', :controller => 'searches', :action => 'calculator'
 
   root :to => "searches#new"
 
