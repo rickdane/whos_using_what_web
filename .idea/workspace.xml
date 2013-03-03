@@ -3,13 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8d110625-5601-4f76-b063-ecb019de3121" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mobile_views/layouts/searches.html.erb" afterPath="$PROJECT_DIR$/app/mobile_views/layouts/searches.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/searches.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/searches.html.erb" />
     </list>
     <ignored path="whos_using_what_web.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362248317905" ignored="false" />
     <file path="/application.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362248458215" ignored="false" />
-    <file path="/searches.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362301856209" ignored="false" />
+    <file path="/searches.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362302397874" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,19 +25,19 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="searches.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="searches.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/mobile_views/layouts/searches.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="42" selection-start="0" selection-end="12041" vertical-scroll-proportion="-6.875">
+            <state line="13" column="9" selection-start="471" selection-end="471" vertical-scroll-proportion="0.27817404">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searches.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="searches.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/searches.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="364" column="7" selection-start="12041" selection-end="12041" vertical-scroll-proportion="0.9556213">
+            <state line="364" column="7" selection-start="12041" selection-end="12041" vertical-scroll-proportion="-13.183674">
               <folding />
             </state>
           </provider>
@@ -76,8 +75,8 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/searches_old.html.erb" />
         <option value="$PROJECT_DIR$/app/mobile_views/layouts/searches_old.html.erb" />
-        <option value="$PROJECT_DIR$/app/mobile_views/layouts/searches.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/searches.html.erb" />
+        <option value="$PROJECT_DIR$/app/mobile_views/layouts/searches.html.erb" />
       </list>
     </option>
   </component>
@@ -1051,16 +1050,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/mobile_views/layouts/searches.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/searches.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="42" selection-start="0" selection-end="12041" vertical-scroll-proportion="-6.875">
+        <state line="364" column="7" selection-start="12041" selection-end="12041" vertical-scroll-proportion="-13.183674">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/searches.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/mobile_views/layouts/searches.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="364" column="7" selection-start="12041" selection-end="12041" vertical-scroll-proportion="0.9556213">
+        <state line="13" column="9" selection-start="471" selection-end="471" vertical-scroll-proportion="0.27817404">
           <folding />
         </state>
       </provider>
