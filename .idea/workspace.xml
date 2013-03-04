@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d110625-5601-4f76-b063-ecb019de3121" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/routes.rb" afterPath="$PROJECT_DIR$/config/routes.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mobile_views/layouts/searches.html.erb" afterPath="$PROJECT_DIR$/app/mobile_views/layouts/searches.html.erb" />
     </list>
     <ignored path="whos_using_what_web.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362338416393" ignored="false" />
     <file path="/application.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362248458215" ignored="false" />
-    <file path="/searches.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362302397874" ignored="false" />
+    <file path="/searches.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362371114306" ignored="false" />
     <file path="/searches_controller.rb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362302661776" ignored="false" />
     <file path="/routes.rb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362360956938" ignored="false" />
     <file path="/calculator_controller.rb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362360675744" ignored="false" />
@@ -30,10 +29,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="searches.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="searches.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/mobile_views/layouts/searches.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="307" column="124" selection-start="9419" selection-end="9419" vertical-scroll-proportion="-18.666666">
+            <state line="375" column="10" selection-start="12005" selection-end="12005" vertical-scroll-proportion="0.70042795">
               <folding />
             </state>
           </provider>
@@ -66,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config/routes.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="47" selection-start="757" selection-end="757" vertical-scroll-proportion="0.7034483">
+            <state line="24" column="42" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -116,8 +115,8 @@
         <option value="$PROJECT_DIR$/app/controllers/searches_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/calculator_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/calculators_controller.rb" />
-        <option value="$PROJECT_DIR$/app/mobile_views/layouts/searches.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
+        <option value="$PROJECT_DIR$/app/mobile_views/layouts/searches.html.erb" />
       </list>
     </option>
   </component>
@@ -1085,6 +1084,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="42" selection-start="441" selection-end="441" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/searches_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="83" column="39" selection-start="1980" selection-end="1980" vertical-scroll-proportion="0.0">
@@ -1101,14 +1107,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/mobile_views/layouts/searches.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="307" column="124" selection-start="9419" selection-end="9419" vertical-scroll-proportion="-18.666666">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="47" selection-start="757" selection-end="757" vertical-scroll-proportion="0.7034483">
+        <state line="375" column="10" selection-start="12005" selection-end="12005" vertical-scroll-proportion="0.70042795">
           <folding />
         </state>
       </provider>

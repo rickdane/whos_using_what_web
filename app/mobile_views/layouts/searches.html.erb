@@ -85,6 +85,21 @@
         padding: 7px 21px;
     }
 
+    .centered {
+        width: 50% !important;
+        margin: 0px auto !important;
+    }
+
+    .padding {
+        padding-left: 25%;
+        padding-right: 25%;
+    }
+
+        /*Override default highlight of button on click for performance reasons   ui-btn:focus*/
+    .ui-focus {
+        box-shadow: none !important;
+    }
+
     .btnLogin:hover,
     .btnLogin:focus,
     .btnLogin:active {
@@ -137,10 +152,8 @@
         document.getElementById('calculator_display').value = Current;
     }
 
-    function Dot()
-    {
-        if (Current.length == 0)
-        {
+    function Dot() {
+        if (Current.length == 0) {
             Current = "0.";
         } else {
             if (( Current.indexOf(".") == -1)
@@ -294,78 +307,83 @@
       Calculator
     </h2>
 
-    <div data-role="fieldcontain">
-      <fieldset data-role="controlgroup">
-        <label for="calculator_display">
-        </label>
-        <input id="calculator_display" type="text" name="Display" onChange="FixCurrent()"/>
-      </fieldset>
+    <div class="padding">
+      <input id="calculator_display" type="text" name="Display" onChange="FixCurrent()"/>
     </div>
   </div>
   <div data-role="content">
     <div class="ui-grid-d">
       <div class="ui-block-a">
-        <input type="button" name="one" class="btnLogin" value="   1    " OnClick="AddDigit('1')">
+        <input type="button" name="one" value="   1    " OnClick="AddDigit('1')">
       </div>
       <div class="ui-block-b">
-        <input type="button" name="one" class="btnLogin" value="   2    " OnClick="AddDigit('2')">
+        <input type="button" name="one" value="   2    " OnClick="AddDigit('2')">
       </div>
       <div class="ui-block-c">
-        <input type="button" name="one" class="btnLogin" value="   3    " OnClick="AddDigit('3')">
+        <input type="button" name="one" value="   3    " OnClick="AddDigit('3')">
       </div>
       <div class="ui-block-d">
-        <input type="button" name="clear" class="btnLogin" value="    C     " OnClick="Clear()">
+        <input type="button" name="clear" value="    C     " OnClick="Clear()">
       </div>
       <div class="ui-block-e">
-        <input type="button" name="AC" class="btnLogin" value="   AC    " OnClick="AllClear()">
+        <input type="button" name="AC" value="   AC    " OnClick="AllClear()">
       </div>
       <div class="ui-block-a">
-        <input type="button" name="one" class="btnLogin" value="   4    " OnClick="AddDigit('4')">
+        <input type="button" name="one" value="   4    " OnClick="AddDigit('4')">
       </div>
       <div class="ui-block-b">
-        <input type="button" name="one" class="btnLogin" value="   5    " OnClick="AddDigit('5')">
+        <input type="button" name="one" value="   5    " OnClick="AddDigit('5')">
       </div>
       <div class="ui-block-c">
-        <input type="button" name="one" class="btnLogin" value="   6    " OnClick="AddDigit('6')">
+        <input type="button" name="one" value="   6    " OnClick="AddDigit('6')">
       </div>
       <div class="ui-block-d">
-        <input type="button" name="mul" class="btnLogin" value="     *     " OnClick="Operate('*')">
+        <input type="button" name="mul" value="     *     " OnClick="Operate('*')">
       </div>
       <div class="ui-block-e">
-        <input type="button" name="div" class="btnLogin" value="     /      " OnClick="Operate('/')">
+        <input type="button" name="div" value="     /      " OnClick="Operate('/')">
       </div>
       <div class="ui-block-a">
-        <input type="button" name="one" class="btnLogin" value="   7    " OnClick="AddDigit('7')">
+        <input type="button" name="one" value="   7    " OnClick="AddDigit('7')">
       </div>
       <div class="ui-block-b">
-        <input type="button" name="one" class="btnLogin" value="   8    " OnClick="AddDigit('8')">
+        <input type="button" name="one" value="   8    " OnClick="AddDigit('8')">
       </div>
       <div class="ui-block-c">
-        <input type="button" name="one" class="btnLogin" value="   9    " OnClick="AddDigit('9')">
+        <input type="button" name="one" value="   9    " OnClick="AddDigit('9')">
       </div>
       <div class="ui-block-d">
-        <input type="button" name="add" class="btnLogin" value="    +     " OnClick="Operate('+')">
+        <input type="button" name="add" value="    +     " OnClick="Operate('+')">
       </div>
       <div class="ui-block-e">
-        <input type="button" name="sub" class="btnLogin" value="     -      " OnClick="Operate('-')">
+        <input type="button" name="sub" value="     -      " OnClick="Operate('-')">
       </div>
       <div class="ui-block-a">
-        <input type="button" name="plusmin" class="btnLogin" value="  +/-  " OnClick="PlusMinus()">
+        <input type="button" name="plusmin" value="  +/-  " OnClick="PlusMinus()">
       </div>
       <div class="ui-block-b">
-        <input type="button" name="one" class="btnLogin" value="   0    " OnClick="AddDigit('0')">
+        <input type="button" name="one" value="   0    " OnClick="AddDigit('0')">
       </div>
       <div class="ui-block-c">
-        <input type="button" name="two" class="btnLogin" value="    .    " OnClick="Dot()">
+        <input type="button" name="two" value="    .    " OnClick="Dot()">
       </div>
       <div class="ui-block-d">
-        <input type="button" name="result" class="btnLogin" value="     =    " OnClick="Calculate()">
+        <input type="button" name="result" value="     =    " OnClick="Calculate()">
       </div>
       <div class="ui-block-e">
-        <input type="button" name="exp" class="btnLogin" value="  E X P  " OnClick="DoExponent()">
+        <input type="button" name="exp" value="  E X P  " OnClick="DoExponent()">
       </div>
     </div>
+    <br/>
+    <br/>
+
+    Mobile calculator provides an easy to use web-based calculator on mobile devices. Use this calculator for school
+    work, tax preparation, accounting or anything else.
+
+    <br/>
+    <br/>
   </div>
+
 </div>
 </body>
 </html>
