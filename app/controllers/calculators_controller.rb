@@ -4,8 +4,7 @@ class CalculatorsController < ApplicationController
 
   def new
 
-    puts "----> calculator"
-    render :template => "searches/new"
+    render :template => "calculators/new"
 
   end
 
