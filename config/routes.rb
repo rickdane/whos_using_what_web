@@ -36,6 +36,8 @@ WhosUsingWhatWeb::Application.routes.draw do
   match 'login', :to => 'sessions#create'
   match 'logout', :to => 'sessions#destroy'
 
+  match 'calculator', :to => 'calculators#new'
+
   match 'authenticate', :to => 'sessions#new'
 
   #map.connect 'searches/calculator', :controller => 'searches', :action => 'calculator'

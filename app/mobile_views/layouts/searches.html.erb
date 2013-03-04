@@ -120,9 +120,9 @@
                 Current = Current + dig;
             }
 
-            Current = Current.toLowerCase(); //FORCE LOWER CASE
+            Current = Current.toLowerCase();
         } else {
-            Current = "Hint! Press 'AC'";  //Help out, if error present.
+            Current = "Hint! Press 'AC'";
         }
 
         if (Current.indexOf("e0") != -1) {
@@ -137,9 +137,9 @@
         document.getElementById('calculator_display').value = Current;
     }
 
-    function Dot()                  //PUT IN "." if appropriate.
+    function Dot()
     {
-        if (Current.length == 0)     //no leading ".", use "0."
+        if (Current.length == 0)
         {
             Current = "0.";
         } else {
