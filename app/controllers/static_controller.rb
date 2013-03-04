@@ -1,6 +1,6 @@
 
 class StaticController < ApplicationController
 
-  layout 'site_map'
+  layout 'calculator'
 
 end
