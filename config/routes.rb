@@ -1,15 +1,10 @@
 WhosUsingWhatWeb::Application.routes.draw do
 
   resources :anewtables
-
-
   resources :somethings
-
-
   resources :person_searches
   resources :company_searches
   resources :whos_using_what
-
   resources :searches
   resources :calculators
 
