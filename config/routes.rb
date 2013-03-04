@@ -44,5 +44,7 @@ WhosUsingWhatWeb::Application.routes.draw do
 
   root :to => "searches#new"
 
+  match ':action' => 'static#:action'
+
 
 end
