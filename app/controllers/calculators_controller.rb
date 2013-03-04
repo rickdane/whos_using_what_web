@@ -1,6 +1,6 @@
 class CalculatorsController < ApplicationController
 
-  layout 'searches'
+  layout 'calculator'
 
   def new
 
