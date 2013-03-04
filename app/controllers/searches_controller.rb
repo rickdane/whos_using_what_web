@@ -80,6 +80,7 @@ class SearchesController < ApplicationController
 
   def new
 
+    puts "-------------------> "
     @person_search = PersonSearch.new
 
     render :template => "searches/new"

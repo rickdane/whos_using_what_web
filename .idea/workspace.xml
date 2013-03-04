@@ -2,19 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d110625-5601-4f76-b063-ecb019de3121" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/static_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/static_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/searches_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/searches_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static/site_map.html.erb" afterPath="$PROJECT_DIR$/app/views/static/site_map.html.erb" />
     </list>
     <ignored path="whos_using_what_web.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362338416393" ignored="false" />
     <file path="/application.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362248458215" ignored="false" />
     <file path="/searches.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362371297726" ignored="false" />
-    <file path="/searches_controller.rb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362302661776" ignored="false" />
+    <file path="/searches_controller.rb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362375969157" ignored="false" />
     <file path="/routes.rb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362360956938" ignored="false" />
     <file path="/calculator_controller.rb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362372359956" ignored="false" />
     <file path="/temp.rb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362359646008" ignored="false" />
     <file path="/static_controller.rb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362374257644" ignored="false" />
-    <file path="/site_map.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362373575140" ignored="false" />
+    <file path="/site_map.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362374648132" ignored="false" />
     <file path="/new.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362374048966" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,10 +51,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="static_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="static_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/static_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="20" selection-start="69" selection-end="69" vertical-scroll-proportion="0.06392045">
+            <state line="3" column="20" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -98,7 +99,7 @@
       <file leaf-file-name="site_map.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/static/site_map.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="12" selection-start="20" selection-end="20" vertical-scroll-proportion="-1.25">
+            <state line="5" column="6" selection-start="48" selection-end="48" vertical-scroll-proportion="-3.125">
               <folding />
             </state>
           </provider>
@@ -107,7 +108,16 @@
       <file leaf-file-name="searches.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/searches.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="543" selection-end="543" vertical-scroll-proportion="-16.25">
+            <state line="3" column="65" selection-start="67" selection-end="67" vertical-scroll-proportion="-1.875">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searches_controller.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/controllers/searches_controller.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="82" column="31" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.5803184">
               <folding />
             </state>
           </provider>
@@ -136,17 +146,17 @@
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/searches_old.html.erb" />
         <option value="$PROJECT_DIR$/app/mobile_views/layouts/searches_old.html.erb" />
-        <option value="$PROJECT_DIR$/app/controllers/searches_controller.rb" />
         <option value="$PROJECT_DIR$/app/controllers/calculator_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/searches.html.erb" />
         <option value="$PROJECT_DIR$/app/mobile_views/layouts/searches.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/calculators_controller.rb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/layouts/calculator.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/static/site_map.html.erb" />
         <option value="$PROJECT_DIR$/app/views/calculators/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/searches/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/static_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/static/site_map.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/searches_controller.rb" />
       </list>
     </option>
   </component>
@@ -1119,20 +1129,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/searches_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="83" column="39" selection-start="1980" selection-end="1980" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/searches.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="543" selection-end="543" vertical-scroll-proportion="-16.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="37" selection-start="1099" selection-end="1099" vertical-scroll-proportion="0.0">
@@ -1140,23 +1136,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/static/site_map.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="12" selection-start="20" selection-end="20" vertical-scroll-proportion="-1.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/calculators/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="319" column="8" selection-start="10160" selection-end="10160" vertical-scroll-proportion="-24.583334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/static.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1175,6 +1157,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/static_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="20" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/static.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/static/site_map.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="6" selection-start="48" selection-end="48" vertical-scroll-proportion="-3.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/searches/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="148" selection-start="348" selection-end="348" vertical-scroll-proportion="-11.875">
@@ -1182,9 +1185,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/static_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/searches.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="20" selection-start="69" selection-end="69" vertical-scroll-proportion="0.06392045">
+        <state line="3" column="65" selection-start="67" selection-end="67" vertical-scroll-proportion="-1.875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/searches_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="31" selection-start="1973" selection-end="1973" vertical-scroll-proportion="0.5803184">
           <folding />
         </state>
       </provider>
