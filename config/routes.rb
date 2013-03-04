@@ -11,6 +11,7 @@ WhosUsingWhatWeb::Application.routes.draw do
   resources :whos_using_what
 
   resources :searches
+  resources :calculator
 
   #this is way to limit to only GET, POST, etc for specific controller methods
 =begin
