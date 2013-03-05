@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d110625-5601-4f76-b063-ecb019de3121" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/searches_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/searches_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/calculator.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/calculator.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/calculators/new.html.erb" afterPath="$PROJECT_DIR$/app/views/calculators/new.html.erb" />
     </list>
     <ignored path="whos_using_what_web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,16 +38,16 @@
       <file leaf-file-name="calculator.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/calculator.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="128" selection-start="1395" selection-end="1395" vertical-scroll-proportion="-14.333333">
+            <state line="25" column="170" selection-start="1162" selection-end="1162" vertical-scroll-proportion="-15.625">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/calculators/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="328" column="7" selection-start="10346" selection-end="10346" vertical-scroll-proportion="-25.458334">
+            <state line="308" column="19" selection-start="9922" selection-end="9922" vertical-scroll-proportion="0.47941175">
               <folding />
             </state>
           </provider>
@@ -61,10 +62,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searches_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="searches_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/searches_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="20" selection-start="518" selection-end="518" vertical-scroll-proportion="0.32561505">
+            <state line="15" column="20" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -112,7 +113,6 @@
         <option value="$PROJECT_DIR$/app/views/layouts/searches.html.erb" />
         <option value="$PROJECT_DIR$/app/mobile_views/layouts/searches.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/calculators_controller.rb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/calculator.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/static_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/searches/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/searches/new.html.erb" />
@@ -120,8 +120,9 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/app/views/static/site_map.html.erb" />
         <option value="$PROJECT_DIR$/app/views/static/privacy_statement.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/calculators/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/searches_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/calculator.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/calculators/new.html.erb" />
       </list>
     </option>
   </component>
@@ -1133,23 +1134,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/calculator.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="128" selection-start="1395" selection-end="1395" vertical-scroll-proportion="-14.333333">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/static/site_map.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="0" selection-start="234" selection-end="288" vertical-scroll-proportion="-10.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/calculators/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="328" column="7" selection-start="10346" selection-end="10346" vertical-scroll-proportion="-25.458334">
           <folding />
         </state>
       </provider>
@@ -1170,7 +1157,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/searches_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="20" selection-start="518" selection-end="518" vertical-scroll-proportion="0.32561505">
+        <state line="15" column="20" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/calculator.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="170" selection-start="1162" selection-end="1162" vertical-scroll-proportion="-15.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/calculators/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="308" column="19" selection-start="9922" selection-end="9922" vertical-scroll-proportion="0.47941175">
           <folding />
         </state>
       </provider>
