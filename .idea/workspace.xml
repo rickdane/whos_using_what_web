@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8d110625-5601-4f76-b063-ecb019de3121" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/calculators/new.html.erb" afterPath="$PROJECT_DIR$/app/views/calculators/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static/privacy_statement.html.erb" afterPath="$PROJECT_DIR$/app/views/static/privacy_statement.html.erb" />
     </list>
     <ignored path="whos_using_what_web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -16,7 +15,7 @@
     <file path="/temp.rb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362359646008" ignored="false" />
     <file path="/static_controller.rb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362374257644" ignored="false" />
     <file path="/site_map.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362471640631" ignored="false" />
-    <file path="/new.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362471026624" ignored="false" />
+    <file path="/new.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362471874458" ignored="false" />
     <file path="/_form.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362377533368" ignored="false" />
     <file path="/privacy_statement.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362471559668" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,7 +46,7 @@
       <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/calculators/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="313" column="7" selection-start="9948" selection-end="9948" vertical-scroll-proportion="0.55064195">
+            <state line="328" column="7" selection-start="10346" selection-end="10346" vertical-scroll-proportion="0.871612">
               <folding />
             </state>
           </provider>
@@ -1162,7 +1161,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/calculators/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="313" column="7" selection-start="9948" selection-end="9948" vertical-scroll-proportion="0.55064195">
+        <state line="328" column="7" selection-start="10346" selection-end="10346" vertical-scroll-proportion="0.871612">
           <folding />
         </state>
       </provider>
