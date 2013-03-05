@@ -13,7 +13,7 @@ class SearchesController < ApplicationController
 
   include LinkedinApiUtil
 
-  layout 'searches'
+  layout 'calculator'
 
 #no need to authenticate user any longer as want to expose this publicly
   before_filter :init
