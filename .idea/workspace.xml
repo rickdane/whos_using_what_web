@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d110625-5601-4f76-b063-ecb019de3121" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/static/privacy_statement.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/calculators/new.html.erb" afterPath="$PROJECT_DIR$/app/views/calculators/new.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static/site_map.html.erb" afterPath="$PROJECT_DIR$/app/views/static/site_map.html.erb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/static/privacy_statement.html.erb" afterPath="$PROJECT_DIR$/app/views/static/privacy_statement.html.erb" />
     </list>
     <ignored path="whos_using_what_web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,7 +47,7 @@
       <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/calculators/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="329" column="7" selection-start="10339" selection-end="10339" vertical-scroll-proportion="0.871612">
+            <state line="313" column="7" selection-start="9948" selection-end="9948" vertical-scroll-proportion="0.55064195">
               <folding />
             </state>
           </provider>
@@ -67,7 +65,7 @@
       <file leaf-file-name="privacy_statement.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/static/privacy_statement.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="28" selection-start="782" selection-end="782" vertical-scroll-proportion="-9.375">
+            <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="-1.25">
               <folding />
             </state>
           </provider>
@@ -113,8 +111,8 @@
         <option value="$PROJECT_DIR$/app/views/searches/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/config/routes.rb" />
-        <option value="$PROJECT_DIR$/app/views/static/privacy_statement.html.erb" />
         <option value="$PROJECT_DIR$/app/views/static/site_map.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/static/privacy_statement.html.erb" />
         <option value="$PROJECT_DIR$/app/views/calculators/new.html.erb" />
       </list>
     </option>
@@ -1141,9 +1139,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/static/site_map.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="234" selection-end="288" vertical-scroll-proportion="-10.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/static/privacy_statement.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="28" selection-start="782" selection-end="782" vertical-scroll-proportion="-9.375">
+        <state line="2" column="0" selection-start="30" selection-end="30" vertical-scroll-proportion="-1.25">
           <folding />
         </state>
       </provider>
@@ -1155,16 +1160,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/static/site_map.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="234" selection-end="288" vertical-scroll-proportion="-10.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/calculators/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="329" column="7" selection-start="10339" selection-end="10339" vertical-scroll-proportion="0.871612">
+        <state line="313" column="7" selection-start="9948" selection-end="9948" vertical-scroll-proportion="0.55064195">
           <folding />
         </state>
       </provider>
