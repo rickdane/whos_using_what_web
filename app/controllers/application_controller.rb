@@ -41,13 +41,10 @@ class ApplicationController < ActionController::Base
   end
 
   def redirect_to_mobile_if_applicable
-    #TODO there seems to be some issue with this, need to look into it further, disabling for now
-=begin
     unless mobile_request? || cookies[:prefer_full_site] || !mobile_browser?
       redirect_to request.protocol + "m." + request.host_with_port.gsub(/^www\./, '') +
                       request.fullpath and return
     end
-=end
   end
 
 
