@@ -80,7 +80,6 @@ class SearchesController < ApplicationController
 
   def new
 
-    puts "-------------------> "
     @person_search = PersonSearch.new
 
     render :template => "searches/new"
@@ -119,6 +118,18 @@ class SearchesController < ApplicationController
 
   end
 
+  def job
+
+    query = params[:q]
+
+    #hard-coded, for now, this will change
+    @location = "Chicago, Il"
+    @query = query
+
+    search
+
+  end
+
   def prepare_for_url_helper input
 
     input = input.gsub(/\s+/, "+")
@@ -139,8 +150,23 @@ class SearchesController < ApplicationController
 
     @person_search = params[:person_search]
 
-    @req_location = @person_search[:zipcode]
-    @req_prog_language = @person_search[:programming_language]
+if @person_search
+      @req_location = @person_search[:zipcode]
+      @req_prog_language = @person_search[:programming_language]
+else
+    if @location!= nil && @query  != nil
+      @req_location = @location
+      @req_prog_language = @query
+    else
+	      @req_location = params[:location]
+      @req_prog_language = params[:q]
+	end
+end
+
+
+
+    end
+
     @exclude_recruiters = false
     if params['exclude_recruiters'] == "1"
       @exclude_recruiters = true
@@ -149,9 +175,6 @@ class SearchesController < ApplicationController
     @results = Array.new
 
     xml_resp = @simply_hired_client.perform_search @req_prog_language, @req_location, @@total_results, @exclude_recruiters
-
-puts "----> putting xml response"
-puts xml_resp
 
     company_containers = Hash.new
     company_names = []
