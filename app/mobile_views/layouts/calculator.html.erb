@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <title>
+  </title>
+
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css"/>
+  <link rel="stylesheet" href="my.css"/>
+  <script src="http://code.jquery.com/jquery-1.7.2.min.js">
+  </script>
+
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;user-scalable=no">
+  <script type="text/javascript">
+      //disable zoom, must be called after loading jquery and before loading jquery mobile
+      $(document).bind("mobileinit", function (event) {
+          $.extend($.mobile.zoom, {locked: true, enabled: false});
+      });
+  </script>
+
+  <script type="text/javascript">var switchTo5x = true;</script>
+  <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+  <script type="text/javascript">stLight.options({publisher: "20af767c-33e1-4663-80e0-e6a4ca81a1d2", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+
+  <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js">
+  </script>
+  <script src="my.js">
+  </script>
+  <!-- User-generated css -->
+  <style>
+      #footer {
+          padding: 20px;
+      }
+  </style>
+  <!-- User-generated js -->
+  <script>
+      try {
+
+          $(function () {
+
+          });
+
+      } catch (error) {
+          console.error("Your javascript has an error: " + error);
+      }
+  </script>
+
+  <script type="text/javascript">
+
+      //for performance on mobile devices
+      $.mobile.defaultPageTransition = 'none'
+      $.mobile.defaultDialogTransition = 'none'
+      $.mobile.buttonMarkup.hoverDelay = 0
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-38957491-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function () {
+          var ga = document.createElement('script');
+          ga.type = 'text/javascript';
+          ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(ga, s);
+      })();
+
+  </script>
+
+</head>
+
+<body>
+
+<div data-role="content">
+  <%= yield %>
+</div>
+
+
+<div id="footer">
+  <br/>
+  <a href="/privacy_statement">Privacy Statement</a> | <a href="/site_map">Site Map</a>   | <a href="/calculator">Calculator</a>
+  <br/>
+  <br/>
+ <i>(mobile-optimized site, if viewing on full-screen, resize browser window to make app desired size)   <i/>
+</div>
+
+</body>
+</html>
