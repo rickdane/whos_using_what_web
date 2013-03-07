@@ -18,7 +18,7 @@
     <file path="/new.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362504399060" ignored="false" />
     <file path="/_form.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362377533368" ignored="false" />
     <file path="/privacy_statement.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362471559668" ignored="false" />
-    <file path="/calculator.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362642286334" ignored="false" />
+    <file path="/calculator.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362642506839" ignored="false" />
     <file path="/application_controller.rb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362641730944" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +39,7 @@
       <file leaf-file-name="calculator.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/calculator.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="13" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.48747152">
+            <state line="76" column="21" selection-start="2414" selection-end="2414" vertical-scroll-proportion="0.3166287">
               <folding />
             </state>
           </provider>
@@ -1185,7 +1185,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/calculator.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="13" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.48747152">
+        <state line="76" column="21" selection-start="2414" selection-end="2414" vertical-scroll-proportion="0.3166287">
           <folding />
         </state>
       </provider>
