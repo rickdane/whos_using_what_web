@@ -94,7 +94,7 @@ class SearchesController < ApplicationController
 
   end
 
-  #determines if result has already appeared so we don't repeate results
+  #determines if result has already appeared so we don't repeat results
   def is_result_dupe? result
 
     if !@results_dedupe_map
@@ -155,17 +155,15 @@ if @person_search
       @req_prog_language = @person_search[:programming_language]
 else
     	if @location != nil && @query  != nil
+		#this use case isn't in use currently
       		@req_location = @location
       		@req_prog_language = @query
     	else
+		#adwords keyword query, has special output
 	      	@req_location = params[:location]
       		@req_prog_language = params[:q]
 	end
 end
-
-
-
-    end
 
     @exclude_recruiters = false
     if params['exclude_recruiters'] == "1"
