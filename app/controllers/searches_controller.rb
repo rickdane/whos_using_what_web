@@ -163,10 +163,6 @@ else
 	end
 end
 
-
-
-    end
-
     @exclude_recruiters = false
     if params['exclude_recruiters'] == "1"
       @exclude_recruiters = true
