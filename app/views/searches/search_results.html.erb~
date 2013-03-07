@@ -16,7 +16,7 @@
   <br/>
 
   <% 	if @keyword %>
-	Showing results for "<% @keyword %>", we have done our best to show relevant job listings below: 	
+	Showing results for "<%= @keyword %>", we have done our best to show relevant job listings below: 	
  <% 	end  %>
 
   <br/>
