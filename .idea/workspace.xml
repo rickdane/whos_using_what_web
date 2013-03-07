@@ -39,7 +39,7 @@
       <file leaf-file-name="calculator.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/calculator.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="21" selection-start="2414" selection-end="2414" vertical-scroll-proportion="0.3166287">
+            <state line="77" column="0" selection-start="2423" selection-end="2423" vertical-scroll-proportion="0.35079727">
               <folding />
             </state>
           </provider>
@@ -1185,7 +1185,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/calculator.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="21" selection-start="2414" selection-end="2414" vertical-scroll-proportion="0.3166287">
+        <state line="77" column="0" selection-start="2423" selection-end="2423" vertical-scroll-proportion="0.35079727">
           <folding />
         </state>
       </provider>
