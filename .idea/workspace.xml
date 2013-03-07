@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d110625-5601-4f76-b063-ecb019de3121" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/mobile_views/layouts/calculator.html.erb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/calculator.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/calculator.html.erb" />
     </list>
     <ignored path="whos_using_what_web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -18,7 +18,7 @@
     <file path="/new.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362504399060" ignored="false" />
     <file path="/_form.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362377533368" ignored="false" />
     <file path="/privacy_statement.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362471559668" ignored="false" />
-    <file path="/calculator.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362504797411" ignored="false" />
+    <file path="/calculator.html.erb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362642286334" ignored="false" />
     <file path="/application_controller.rb" changelist="8d110625-5601-4f76-b063-ecb019de3121" time="1362641730944" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,7 +39,7 @@
       <file leaf-file-name="calculator.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/calculator.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="23" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.28701594">
+            <state line="75" column="13" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.48747152">
               <folding />
             </state>
           </provider>
@@ -149,8 +149,8 @@
         <option value="$PROJECT_DIR$/app/controllers/searches_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/calculators/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/searches/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/calculator.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/calculator.html.erb" />
       </list>
     </option>
   </component>
@@ -1007,14 +1007,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="26" width="1535" height="876" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30359522" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25891057" sideWeight="0.33155793" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25891057" sideWeight="0.3541944" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25891057" sideWeight="0.3541944" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26845637" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1185,7 +1185,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/calculator.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="23" selection-start="1848" selection-end="1848" vertical-scroll-proportion="0.28701594">
+        <state line="75" column="13" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.48747152">
           <folding />
         </state>
       </provider>
