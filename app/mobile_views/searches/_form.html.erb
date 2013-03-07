@@ -1,0 +1,28 @@
+<%= form_for(@person_search, :url => "../people/search", :method => 'get') do |f| %>
+    <% if @person_search.errors.any? %>
+        <div id="error_explanation" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html">
+          <h2><%= pluralize(@search.errors.count, "error") %> prohibited this test from being saved:</h2>
+
+          <ul>
+            <% @person_search.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div class="field">
+      <br/>
+      Job Keywords: <%= f.text_field :programming_language %>
+      <br/>
+      Location: <%= f.text_field :zipcode %>
+      <br/>
+      <%= check_box_tag :exclude_recruiters %>
+      <%= label_tag :exclude_recruiters, "Exclude Recruiters?" %>
+      </br>
+    </div>
+    <div class="actions">
+      <%= f.submit "Search", 'data-icon' => "search" %>
+
+    </div>
+<% end %>

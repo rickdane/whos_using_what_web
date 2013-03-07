@@ -1,0 +1,72 @@
+<br xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"/>
+<ul data-role="listview" data-divider-theme="b" data-inset="true">
+  <li data-role="list-divider" role="heading">
+    Results
+  </li>
+  <br/>
+  <br/>
+
+  <!--  <script type="text/javascript" src="http://api.simplyhired.com/c/jobs-api/js/xml-v2.js"></script>
+
+  <div style="text-align: right;">
+    <a STYLE="text-decoration:none" href="http://www.simplyhired.com/"><span style="color: rgb(0, 0, 0);">Jobs</span></a>
+    by
+    <a STYLE="text-decoration:none" href="http://www.simplyhired.com/"><span style="color: rgb(0, 159, 223); font-weight: bold;">Simply</span><span style="color: rgb(163, 204, 64); font-weight: bold;">Hired</span></a>
+  </div>-->
+  <br/>
+
+  <% @page_results.each do |result|
+
+    company = result[:company]
+    jobs = result[:jobs]
+    linkedin_search_urls = result[:linkedin_search_urls]
+
+  %>
+
+      <div class='hto_result'>
+        <div class='hto_company_div'>
+
+          <strong> <%= company[:name] %>  </strong>
+          </a>
+          <br/>
+        </div>
+        <br/>
+
+        <div class='hto_inner'>
+
+          <% jobs.each do |job| %>
+              <br/>
+              <a href="<%= job[:url] %>" target='_blank' onMouseDown="xml_sclk(this)">
+                <strong> <%= job[:title] %> </strong> in <i><%= job[:location] %> </i> </a> -  <%= job[:description] %>
+
+              <br/>
+          <% end %>
+          <!--          </br>
+          <strong> Connect with LinkedIn: </strong> View LinkedIn searches that are relevant to this company in order to
+          connect.
+          <br/>
+          <br/>-->
+          <% if linkedin_search_urls[:hiring] %>
+              - <a href="<%= linkedin_search_urls[:hiring] %>" target='_blank'> Human Resources </a>
+              <br/>
+          <% end %>
+
+          <% if linkedin_search_urls[:keyword] %>
+              <br/> - <a href="<%= linkedin_search_urls[:keyword] %>" target='_blank'> "<%= @req_prog_language %>" </a>
+          <% end %>
+          <% if linkedin_search_urls[:search_engine_search] %>
+              - <a href="<%= linkedin_search_urls[:search_engine_search] %>" target='_blank'> Search Engine Search </a>
+              <br/>
+          <% end %>
+          <% if linkedin_search_urls[:li_company_page] %>
+              - <a href="<%= linkedin_search_urls[:li_company_page] %>" target='_blank'> Linkedin Company Page </a>
+              <br/>
+          <% end %>
+        </div>
+      </div>
+      <br/>
+      <br/>
+  <% end %>
+</ul>
+
+<%= will_paginate @page_results %>
