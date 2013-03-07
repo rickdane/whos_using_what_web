@@ -154,12 +154,12 @@ if @person_search
       @req_location = @person_search[:zipcode]
       @req_prog_language = @person_search[:programming_language]
 else
-    if @location!= nil && @query  != nil
-      @req_location = @location
-      @req_prog_language = @query
-    else
-	      @req_location = params[:location]
-      @req_prog_language = params[:q]
+    	if @location != nil && @query  != nil
+      		@req_location = @location
+      		@req_prog_language = @query
+    	else
+	      	@req_location = params[:location]
+      		@req_prog_language = params[:q]
 	end
 end
 
