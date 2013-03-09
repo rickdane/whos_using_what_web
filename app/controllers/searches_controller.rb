@@ -178,57 +178,62 @@ class SearchesController < ApplicationController
     company_containers = Hash.new
     company_names = []
 
-    job_listings = xml_resp['shrs']['rs']['r']
+    begin
+      job_listings = xml_resp['shrs']['rs']['r']
+    end
 
-    job_listings.each do |job|
 
-      #skip if its a dupe
-      # TODO verify whether this is necessary
-      if is_result_dupe? job['e']
-        next
-      end
+    if job_listings
+      job_listings.each do |job|
 
-      if !job['cn'].is_a? String
-        next
-      end
+        #skip if its a dupe
+        # TODO verify whether this is necessary
+        if is_result_dupe? job['e']
+          next
+        end
 
-      company_name_clean = clean_company_name_helper job['cn']
+        if !job['cn'].is_a? String
+          next
+        end
 
-      container = company_containers[company_name_clean]
+        company_name_clean = clean_company_name_helper job['cn']
 
-      url = job['src'].attributes["url"]
+        container = company_containers[company_name_clean]
 
-      job_map = {
-          :title => job['jt'],
-          :location => job['loc'],
-          :description => job['e'],
-          :url => url
-      }
+        url = job['src'].attributes["url"]
 
-      if !container
-        company_names.push company_name_clean
-        url_company_name = prepare_for_url_helper job['cn']
-        url_keyword = prepare_for_url_helper @req_prog_language
-
-        container = {
-            :company => {
-                :name => job['cn'],
-                :url => job['src']
-            },
-            :jobs => [],
-            :linkedin_search_urls => {
-                :hiring => "http://www.linkedin.com/search/fpsearch?keywords=" << "human" << "&company=" << url_company_name << "&currentCompany=C",
-                :keyword => "http://www.linkedin.com/search/fpsearch?keywords=" << url_keyword << "&company=" << url_company_name << "&currentCompany=C"
-            }
+        job_map = {
+            :title => job['jt'],
+            :location => job['loc'],
+            :description => job['e'],
+            :url => url
         }
-        company_containers[company_name_clean] = container
 
-        @results.push container
+        if !container
+          company_names.push company_name_clean
+          url_company_name = prepare_for_url_helper job['cn']
+          url_keyword = prepare_for_url_helper @req_prog_language
+
+          container = {
+              :company => {
+                  :name => job['cn'],
+                  :url => job['src']
+              },
+              :jobs => [],
+              :linkedin_search_urls => {
+                  :hiring => "http://www.linkedin.com/search/fpsearch?keywords=" << "human" << "&company=" << url_company_name << "&currentCompany=C",
+                  :keyword => "http://www.linkedin.com/search/fpsearch?keywords=" << url_keyword << "&company=" << url_company_name << "&currentCompany=C"
+              }
+          }
+          company_containers[company_name_clean] = container
+
+          @results.push container
+
+        end
+
+        container[:jobs].push job_map
 
       end
-
-      container[:jobs].push job_map
-
     end
 
     #pagination logic
