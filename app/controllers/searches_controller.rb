@@ -150,21 +150,21 @@ class SearchesController < ApplicationController
 
     @person_search = params[:person_search]
 
-if @person_search
+    if @person_search
       @req_location = @person_search[:zipcode]
       @req_prog_language = @person_search[:programming_language]
-else
-    	if @location != nil && @query  != nil
-		#this use case isn't in use currently
-      		@req_location = @location
-      		@req_prog_language = @query
-    	else
-		#adwords keyword query, has special output
-	      	@req_location = params[:location]
-      		@req_prog_language = params[:q]
-		@keyword = params[:keyword]
-	end
-end
+    else
+      if @location != nil && @query != nil
+        #this use case isn't in use currently
+        @req_location = @location
+        @req_prog_language = @query
+      else
+        #adwords keyword query, has special output
+        @req_location = params[:location]
+        @req_prog_language = params[:q]
+        @keyword = params[:keyword]
+      end
+    end
 
     @exclude_recruiters = false
     if params['exclude_recruiters'] == "1"
