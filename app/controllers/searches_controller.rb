@@ -179,7 +179,6 @@ class SearchesController < ApplicationController
     company_names = []
 
     if xml_resp && xml_resp['shrs'] && xml_resp['shrs']['rs'] && xml_resp['shrs']['rs']['r']
-      puts "------------> running the damn new code"
       job_listings = xml_resp['shrs']['rs']['r']
     end
 

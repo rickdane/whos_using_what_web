@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d110625-5601-4f76-b063-ecb019de3121" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mobile_views/calculators/new.html.erb" afterPath="$PROJECT_DIR$/app/mobile_views/calculators/new.html.erb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/searches_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/searches_controller.rb" />
     </list>
     <ignored path="whos_using_what_web.iws" />
@@ -78,7 +77,7 @@
       <file leaf-file-name="searches_controller.rb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/searches_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="181" column="51" selection-start="4411" selection-end="4411" vertical-scroll-proportion="0.33333334">
+            <state line="180" column="92" selection-start="4359" selection-end="4359" vertical-scroll-proportion="0.33333334">
               <folding />
             </state>
           </provider>
@@ -1260,7 +1259,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/searches_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="51" selection-start="4411" selection-end="4411" vertical-scroll-proportion="0.33333334">
+        <state line="180" column="92" selection-start="4359" selection-end="4359" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
