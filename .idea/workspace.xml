@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8d110625-5601-4f76-b063-ecb019de3121" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/searches_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/searches_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/layouts/calculator.html.erb" afterPath="$PROJECT_DIR$/app/views/layouts/calculator.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/mobile_views/calculators/new.html.erb" afterPath="$PROJECT_DIR$/app/mobile_views/calculators/new.html.erb" />
     </list>
     <ignored path="whos_using_what_web.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,10 +39,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="calculator.html.erb" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="calculator.html.erb" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/calculator.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="7" selection-start="2720" selection-end="2720" vertical-scroll-proportion="-16.875">
+            <state line="18" column="109" selection-start="782" selection-end="782" vertical-scroll-proportion="0.3272727">
               <folding />
             </state>
           </provider>
@@ -74,10 +75,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="searches_controller.rb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="searches_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/searches_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="180" column="92" selection-start="4359" selection-end="4359" vertical-scroll-proportion="0.33333334">
+            <state line="180" column="92" selection-start="4359" selection-end="4359" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -86,7 +87,7 @@
       <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/mobile_views/calculators/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="318" column="12" selection-start="10308" selection-end="10308" vertical-scroll-proportion="-7.9583335">
+            <state line="315" column="7" selection-start="10288" selection-end="10288" vertical-scroll-proportion="-7.3333335">
               <folding />
             </state>
           </provider>
@@ -159,9 +160,9 @@
         <option value="$PROJECT_DIR$/app/views/searches/search_results.html.erb" />
         <option value="$PROJECT_DIR$/app/views/calculators/new.html.erb" />
         <option value="$PROJECT_DIR$/app/views/searches/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/layouts/calculator.html.erb" />
-        <option value="$PROJECT_DIR$/app/mobile_views/calculators/new.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/searches_controller.rb" />
+        <option value="$PROJECT_DIR$/app/mobile_views/calculators/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/layouts/calculator.html.erb" />
       </list>
     </option>
   </component>
@@ -1236,13 +1237,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/calculator.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="7" selection-start="2720" selection-end="2720" vertical-scroll-proportion="-16.875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/calculators/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="320" column="0" selection-start="10380" selection-end="10721" vertical-scroll-proportion="-8.208333">
@@ -1250,16 +1244,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/mobile_views/calculators/new.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/controllers/searches_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="318" column="12" selection-start="10308" selection-end="10308" vertical-scroll-proportion="-7.9583335">
+        <state line="180" column="92" selection-start="4359" selection-end="4359" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/searches_controller.rb">
+    <entry file="file://$PROJECT_DIR$/app/mobile_views/calculators/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="180" column="92" selection-start="4359" selection-end="4359" vertical-scroll-proportion="0.33333334">
+        <state line="315" column="7" selection-start="10288" selection-end="10288" vertical-scroll-proportion="-7.3333335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/layouts/calculator.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="109" selection-start="782" selection-end="782" vertical-scroll-proportion="0.3272727">
           <folding />
         </state>
       </provider>
