@@ -178,7 +178,7 @@ class SearchesController < ApplicationController
     company_containers = Hash.new
     company_names = []
 
-    begin
+    if xml_resp
       job_listings = xml_resp['shrs']['rs']['r']
     end
 
